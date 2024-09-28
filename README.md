@@ -8,6 +8,184 @@ These are my notes from the book Fundamentals Of Data Engineering.
 
 This is an amazing book for everyone who are involved in data.
 
-I thought, I can share some of my highlights from it.
+I thought, I can share some of my highlights from it. If you want to discover more about any of the topics, please check out the book.
+
+So grateful that this book exists. It truly changed my life. Thanks to [Joe Reis](https://joereis.substack.com/) and [Matt Housley](https://www.linkedin.com/in/housleymatthew/).
 
 If you’re interested in this book, you can purchase one, but you can also get a free copy at [the RedPanda website](https://go.redpanda.com/fundamentals-of-data-engineering).
+
+
+## The summary and the keypoints
+
+The book consists of 3 parts, made up of 11 chapters and 2 appendices.
+
+---
+
+The First part of the book is about Foundation and Building Blocks. 
+
+---
+
+### 1. Data Engineering Described
+
+#### Definition of Data Engineer
+
+Who is a data engineer? Here is Joe's and Matt's definition:
+
+_Data engineering is the development, implementation, and maintenance of systems and processes that take in raw data and produce high-quality, consistent information that supports downstream use cases, such as analysis and machine learning._
+
+_Data engineering is the intersection of security, data management, DataOps, data architecture, orchestration, and software engineering. A data engineer manages the data engineering lifecycle, beginning with getting data from source systems and ending with serving data for use cases, such as analysis or machine learning._
+
+#### Data Engineering Lifecycle
+
+The book is centered around an idea called the **data engineering lifecycle** (Figure 1-1), which gives data engineers the holistic context to view their role.
+
+<p align="center">
+  <img src="img/data_engineering_lifecycle.png">
+</p>
+
+So the book is going to dive deep in the 5 stages and consider the undercurrents of all of these:
+
+- Generation
+- Storage
+- Ingestion
+- Transformation
+- Serving
+
+I believe this is a fantastic way to see the field, free from any single technology and it helps us focus the end goal. 🥳
+
+#### Evolution of the Data Engineer
+
+This bit gives us a history for the Evolution of the Data Engineer.
+
+Most important points are:
+
+- The birth of Data Warehousing
+- Commodity hardware—such as servers, RAM and disks becoming cheaper
+- Distributed computation and storage on massive computing clusters becoming mainstream at a vast scale.
+- Google File System and Apache Hadoop
+- Cloud Compute and Storage becoming popular on AWS, Google Cloud and Microsoft Azure
+- Open source big data tools in the Hadoop ecosystem rapidly spreading
+
+Data engineers managing the data engineering lifecycle have better tools and techniques than ever before. All we have to do is to master them. 😌
+
+#### Data Hierarchy Of Needs
+
+Another crucial idea to understand is the Data Hierarchy Of Needs:
+
+<p align="center">
+  <img src="img/data_hierarchy_of_needs.png">
+</p>
+
+Even though almost everyone is focused on AI/ML applications, a strong Data Engineering Team should provide them with a infrastructure that has:
+
+- Instrumentation, Logging, Support a Variety of Data Sources.
+- Reliable Data Flow, Cleaning. 
+- Monitoring & Useful Metrics.
+
+These are really simple things, but they can be really hard to implement in complex systems.
+
+As an engineer, we work under constraints. We must optimize along these axes:
+
+- Cost
+- Agility
+- Scalability
+- Simplicity
+- Reuse
+- Interoperability
+
+#### Data Maturity
+
+Another great idea from this chapter is Data Maturity.
+
+Data Maturity refers to the organization's advancement in utilizing, integrating, and maximizing data capabilities. Data maturity isn’t determined solely by a company’s age or revenue; an early-stage startup may demonstrate higher data maturity than a century-old corporation with billions in annual revenue. 
+
+What truly matters is how effectively the company leverages data **as a competitive advantage**.
+
+TODO Write more on Data Maturity
+
+#### How to become a Data Engineer ? 🥳
+
+Data engineering is a rapidly growing field, but lacks a formal training path. Universities don't offer standardized programs, and while boot camps exist, a unified curriculum is missing. People enter the field with diverse backgrounds, often transitioning from roles like software engineering or data analysis, and self-study is crucial.
+
+A data engineer must master data management, technology tools, and understand the needs of data consumers like analysts and scientists. Success in data engineering requires both technical expertise and a broader understanding of the business impact of data.
+
+##### Here are the Business Responsibilities:
+
+- Know how to communicate with nontechnical and technical people.
+- Understand how to scope and gather business and product requirements.
+- Understand the cultural foundations of Agile, DevOps, and DataOps.
+- Control costs.
+- Learn continuously.
+
+A successful data engineer always zooms out to understand the big picture and how to achieve outsized value for the business.
+
+##### Here are Technical Responsibilities
+
+Data engineers remain software engineers, in addition to their many other roles.
+
+What languages should a data engineer know?
+
+- SQL,M Python, JVM languages such as Java and Scala, bash
+
+
+#### Data Engineers and Other Technical Roles
+
+It is important to understand the technical stakeholders that you'll be working with.
+
+<p align="center">
+  <img src="img/key_stakeholders.png">
+</p>
+
+See all the details within the section.
+
+#### Data Engineers and Leadership
+
+Data engineers act as connectors within organizations, bridging business and data teams. They now play a key role in strategic planning, helping align business goals with data initiatives and supporting data architects in driving data-centric projects.
+
+##### Data in the C-Suite
+
+C-level executives increasingly recognize data as a core asset.
+
+- CEO: Collaborates with technical leaders on high-level data strategies without delving into technical details.
+- CIO: Manages internal IT and works with data engineers on initiatives like cloud migrations and IT strategy.
+- CTO: Focuses on external-facing technologies, collaborating with data engineers to integrate data sources like mobile and web apps.
+- CDO: Oversees data strategy, governance, and initiatives, ensuring data's business utility.
+- CAO: Specializes in analytics, strategy, and decision-making, often overseeing data science and ML.
+
+### 2. The Data Engineering Lifecycle.
+
+### 3. Designing Good Data Architecture
+
+### 4. Choosing Technologies Across the Data Engineering Lifecycle
+
+---
+
+Then we move onto the second part of the book
+
+---
+
+
+### 5. Data Generation in Source Systems
+
+### 6. Storage
+
+### 7. Ingestion
+
+### 8. Queries, Modeling, and Transformation
+
+### 9. Serving Data for Analytics, Machine Learning, and Reverse ETL
+
+
+---
+
+The final part of the book is about Security, Privacy, and the Future of Data Engineering
+
+---
+
+### 10. Security and Privacy
+
+### 11. The Future of Data Engineering
+
+### A. Serialization and Compression Technical Details
+
+### B. Cloud Networking
