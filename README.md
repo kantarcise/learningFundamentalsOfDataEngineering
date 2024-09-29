@@ -19,11 +19,7 @@ If you’re interested in this book, you can purchase one, but you can also get 
 
 The book consists of 3 parts, made up of 11 chapters and 2 appendices.
 
----
-
-The First part of the book is about Foundation and Building Blocks. 
-
----
+> The First part of the book is about Foundation and Building Blocks. 
 
 ### 1. Data Engineering Described
 
@@ -152,17 +148,17 @@ C-level executives increasingly recognize data as a core asset.
 - CDO: Oversees data strategy, governance, and initiatives, ensuring data's business utility.
 - CAO: Specializes in analytics, strategy, and decision-making, often overseeing data science and ML.
 
-### 2. The Data Engineering Lifecycle.
+### 2. The Data Engineering Lifecycle. 🐦
+
+We can move beyond viewing data engineering as a specific collection of data technologies. We can think with data engineering lifecycle.
+
+The data engineering lifecycle comprises stages that turn raw data ingredients into a useful end product, ready for consumption by analysts, data scientists, ML engineers, and others.
 
 ### 3. Designing Good Data Architecture
 
 ### 4. Choosing Technologies Across the Data Engineering Lifecycle
 
----
-
-Then we move onto the second part of the book
-
----
+> Then we move onto the second part of the book.
 
 
 ### 5. Data Generation in Source Systems
@@ -176,11 +172,7 @@ Then we move onto the second part of the book
 ### 9. Serving Data for Analytics, Machine Learning, and Reverse ETL
 
 
----
-
-The final part of the book is about Security, Privacy, and the Future of Data Engineering
-
----
+> The final part of the book is about Security, Privacy, and the Future of Data Engineering
 
 ### 10. Security and Privacy
 
