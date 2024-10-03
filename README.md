@@ -175,12 +175,12 @@ Therefore, it's important for data engineers to understand how these source syst
 - How is data persisted in the source system? Is data persisted long term, or is it temporary and quickly deleted?
 - At what rate is data generated? How many events per second? How many gigabytes per hour?
 - What level of consistency can data engineers expect from the output data? If you’re running data-quality checks against the output data, how often do data inconsistencies occur—nulls where they aren’t expected, lousy formatting, etc.?
--  How often do errors occur?
+- How often do errors occur?
 - Will the data contain duplicates?
 - Will some data values arrive late, possibly much later than other messages produced simultaneously?
-- What is the schema of the ingested data? Will data engineers need to join across several tables or even several systems to get a complete picture of the data?
+- What is the schema of the ingested data? Does a join across several tables or even several systems needed to get a complete picture of the data?
 - If schema changes (say, a new column is added), how is this dealt with and communicated to downstream stakeholders?
-- How frequently should data be pulled from the source system?
+- How frequently should data be pulled from the source system? Will **Ingestion** be a thread for source system in terms of resource contention?
 - For stateful systems (e.g., a database tracking customer account information), is data provided as periodic snapshots or update events from change data capture (CDC)? What’s the logic for how changes are performed, and how are these tracked in the source database?
 - Who/what is the data provider that will transmit the data for downstream consumption?
 - Will reading from a data source impact its performance?
@@ -188,6 +188,22 @@ Therefore, it's important for data engineers to understand how these source syst
 - Are data-quality checks in place to check for late or missing data?
 
 ### Storage
+
+Choosing the right data storage solution is critical yet complex in data engineering because it affects all stages of the data lifecycle. 
+
+Cloud architectures often use multiple storage systems that offer capabilities beyond storage, like data transformation and querying. 
+
+Storage intersects with other stages such as ingestion, transformation, and serving, influencing how data is used throughout the entire pipeline.
+
+- Is the storage solution compatible with the architecture’s required read and write speeds to prevent bottlenecks in downstream processes?
+- Are we utilizing the storage technology optimally without causing performance issues (e.g., avoiding high rates of random access in object storage systems)?
+- Can the storage system handle anticipated future scale in terms of capacity limits, read/write operation rates, and data volume?
+- Will downstream users and processes be able to retrieve data within the required service-level agreements (SLAs)?
+- Are we capturing metadata about schema evolution, data flows, and data lineage to enhance data utility and support future projects?
+- Is this a pure storage solution, or does it also support complex query patterns (like a cloud data warehouse)?
+- Does the storage system support schema-agnostic (object storage) storage, flexible schemas (Cassandra), or enforced schemas (DWH)?
+- How are we tracking master data, golden records, data quality, and data lineage for data governance?
+- How are we handling regulatory compliance and data sovereignty, such as restrictions on storing data in certain geographical locations?
 
 ### Ingestion
 
