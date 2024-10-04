@@ -187,6 +187,8 @@ Therefore, it's important for data engineers to understand how these source syst
 - Does the source system have upstream data dependencies? What are the characteristics of these upstream systems?
 - Are data-quality checks in place to check for late or missing data?
 
+We'll learn more about Source Systems in Chapter 5.
+
 ### Storage
 
 Choosing the right data storage solution is critical yet complex in data engineering because it affects all stages of the data lifecycle. 
@@ -194,6 +196,8 @@ Choosing the right data storage solution is critical yet complex in data enginee
 Cloud architectures often use multiple storage systems that offer capabilities beyond storage, like data transformation and querying. 
 
 Storage intersects with other stages such as ingestion, transformation, and serving, influencing how data is used throughout the entire pipeline.
+
+#### Here is a set of evaluation questions for Storage:
 
 - Is the storage solution compatible with the architecture’s required read and write speeds to prevent bottlenecks in downstream processes?
 - Are we utilizing the storage technology optimally without causing performance issues (e.g., avoiding high rates of random access in object storage systems)?
@@ -205,7 +209,37 @@ Storage intersects with other stages such as ingestion, transformation, and serv
 - How are we tracking master data, golden records, data quality, and data lineage for data governance?
 - How are we handling regulatory compliance and data sovereignty, such as restrictions on storing data in certain geographical locations?
 
+Regardless of the storage type, the temperature of data is a good frame to interpret storage and data.
+
+Data access frequency defines data "temperatures": Hot data is frequently accessed and needs fast retrieval; lukewarm data is accessed occasionally; cold data is rarely accessed and suited for archival storage. Cloud storage tiers match these temperatures, balancing cost with retrieval speed.
+
+We'll learn more about Storage in Chapter 6.
+
 ### Ingestion
+
+Data ingestion from source systems is a critical stage in the data engineering lifecycle and often represents the ***biggest bottleneck***. Source systems are typically outside of our control and may become unresponsive or provide poor-quality data. 
+
+Ingestion services might also fail for various reasons, halting data flow and impacting storage, processing, and serving stages. These unreliabilities can ripple across the entire lifecycle, but if we've addressed the key questions about source systems, we can better mitigate these challenges.
+
+#### Here is a set of evaluation questions for Ingestion:
+
+- What are the purposes of the data we are ingesting? Can we utilize this data without creating multiple versions of the same dataset?
+- Do the systems that generate and ingest this data operate reliably, and is the data accessible when needed?
+- After ingestion, where will the data be stored or directed?
+- How often will we need to access or retrieve the data?
+- What is the typical volume or size of the data that will be arriving?
+- In what format is the data provided, and can the downstream storage and transformation systems handle this format?
+- Is the source data ready for immediate use downstream? If so, for how long will this be the case, and what could potentially make it unusable?
+
+Batch processing is often preferred over streaming due to added complexities and costs; real-time streaming should be used only when necessary. 
+
+Data ingestion involves push models (source sends data) and pull models (system retrieves data), often combined in pipelines.  Traditional ETL uses the pull model. 
+
+Continuous ***Change Data Capture*** (CDC) can be push-based (triggers on data changes) or pull-based (reading logs). 
+
+Streaming ingestion pushes data directly to endpoints, ideal for scenarios like IoT sensors emitting events, simplifying real-time processing by treating each data point as an event.
+
+We'll learn more about Ingestion in Chapter 7.
 
 ### Transformation
 
