@@ -243,6 +243,43 @@ We'll learn more about Ingestion in Chapter 7.
 
 ### Transformation
 
+After data is ingested and stored, it must be transformed into usable formats for downstream purposes like reporting, analysis, or machine learning. 
+
+Transformation converts raw, inert data into valuable information by correcting data types, standardizing formats, removing invalid records, and preparing data for further processing.
+
+This preparation can be applying normalization, performing large-scale aggregations for reports or extracting features for ML  models.
+
+#### Here is a set of evaluation questions:
+
+- What are the business requirements and use cases for the transformed data?
+- What data quality issues exist, and how will they be addressed?
+- What transformations are necessary to make the data usable?
+- What are the source data formats, and what formats are required by downstream systems?
+- Are there schema changes needed during transformation?
+- How will we handle varying data types and ensure correct type casting?
+- What is the expected data volume, and how will it affect processing performance?
+- Which tools and technologies are best suited for the transformation tasks?
+- How will we manage and track *data lineage* (history and life cycle of data as it moves through in the data pipeline) and provenance ?
+- What are the performance requirements and SLAs for the transformation process?
+- Are there regulatory compliance or security considerations?
+- How can we validate and test the transformed data for accuracy and completeness?
+- What error handling and logging mechanisms will be in place?
+- Is real-time or batch processing required?
+- How can we handle changes in source data schemas or structures over time?
+- How will the transformed data be stored and accessed downstream?
+- What documentation is needed for the transformation logic and pipeline architecture?
+- How should we you monitor and maintain the transformation pipeline over time?
+- What are the data governance policies that need to be enforced during transformation?
+- How can we ensure scalability of the transformation process as data volumes grow?
+- Are there any data enrichment (integrating additional data sources to enhance the value of the transformed data) opportunities during transformation?
+- How can we secure data during transformation to prevent unauthorized access?
+
+Transformation often overlaps with other stages of the data lifecycle, such as ingestion, where data may be enriched or formatted on the fly. Business logic plays a significant role in shaping transformations, especially in data modeling, to provide clear insights into business processes and ensure consistent implementation across systems. 
+
+Additionally, data featurization is an important transformation for machine learning, involving the extraction and enhancement of data features for model training—a process that data engineers can automate once defined by data scientists.
+
+We'll learn more about Transformation in Chapter 8.
+
 ### Serving Data
 
 ### The Undercurrents
