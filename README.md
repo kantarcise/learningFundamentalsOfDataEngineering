@@ -282,6 +282,44 @@ We'll learn more about Transformation in Chapter 8.
 
 ### Serving Data
 
+After data is ingested, stored, and transformed, the goal is to derive practical value from it.
+
+In the beginning of the book, we've seen how data engineering is enabling predictive analysis, descriptive analytics, and reports.
+
+With simple terms, here is what they are:
+
+- **Predictive Analysis**: Uses historical data and statistical models to forecast future events or trends.
+- **Descriptive Analytics**: Examines past data to understand and summarize what has already occurred.
+- **Reports**: Compile and present data and insights in a structured format for informed decision-making.
+
+
+#### Here is a set of questions to make a solid Serving Stage:
+
+- What are the primary business goals we aim to achieve with this data?
+- Who are the key stakeholders, and how will they use the data?
+- Which specific use cases will the data serving support (e.g., reporting, machine learning, real-time analytics)?
+- How does the data align with our overall business strategy and priorities?
+- What data validation and cleansing processes are in place to maintain quality?
+- How do we handle data inconsistencies or errors in the serving stage?
+- Who needs access to the data, and what are their access levels?
+- What access controls and permissions are required to secure the data?
+- What reporting tools and dashboards will be used to visualize the data?
+- How can we enable self-service analytics for business users without compromising data security?
+- What key performance indicators (KPIs) and metrics should be tracked?
+- Do we need to implement a feature store to manage and serve features for ML?
+- How will we handle feature versioning and sharing across teams?
+- What security measures are in place to protect sensitive and confidential data?
+- How do we ensure compliance with data privacy regulations (e.g., GDPR, CCPA)?
+- What encryption methods are used for data at rest and in transit?
+- What latency requirements do we have for data access and real-time analytics?
+- Are there performance monitoring tools in place to track and optimize data serving?
+- How are responsibilities divided between data engineering, ML engineering, and analytics teams?
+
+
+ML is cool, but it’s generally best to develop competence in analytics before moving to ML.
+
+We'll dive deep on Serving in Chapter 9.
+
 ### The Undercurrents
 
 <p align="center">
