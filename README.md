@@ -366,8 +366,24 @@ The data engineering lifecycle, supported by key undercurrents such as security,
 
 Let's learn to think with this mindset! 🌠
 
-
 ## 3. Designing Good Data Architecture
+
+The authors talk about the need for defining Enterprise Architecture before Data Architecture. Here are the definitions:
+
+- **Enterprise architecture** is the design of systems to support change in the enterprise, achieved by flexible and reversible decisions reached through careful evaluation of trade-offs.
+
+- **Data architecture** is the design of systems to support the evolving data needs of an enterprise, achieved by flexible and reversible decisions reached through a careful evaluation of trade-offs.
+
+We can divide Data Architecture into two parts, Operational and Technical:
+
+Operational architecture involves the practical needs related to people, processes, and technology. For example, it looks at which business activities the data supports, how the company maintains data quality, and how quickly data needs to be available for use after it's created. 
+
+On the other hand, technical architecture explains the methods for collecting, storing, changing, and delivering data throughout its lifecycle. For example, it might describe how to move 10 TB of data every hour from a source database to a data lake. 
+
+In short, operational architecture defines what needs to be done, while technical architecture explains how to do it.
+
+
+
 
 ## 4. Choosing Technologies Across the Data Engineering Lifecycle
 
