@@ -382,6 +382,57 @@ On the other hand, technical architecture explains the methods for collecting, s
 
 In short, operational architecture defines what needs to be done, while technical architecture explains how to do it.
 
+Effective data architecture meets business needs by using standardized, reusable components while remaining adaptable and balancing necessary compromises.
+
+Effective data architecture is dynamic and continually evolving. It is never truly complete. 
+
+By definition, adaptability and growth are fundamental to the essence and objectives of data architecture. 
+
+Next, let's explore the principles that underpin good data architecture.
+
+### Principles of Good Data Architecture
+
+#### 1: Choose Common Components Wisely
+
+A key responsibility of data engineers is selecting shared components and practices—such as object storage, version control systems, observability tools, orchestration platforms, and processing engines—that are widely usable across the organization. 
+
+Effective selection promotes collaboration, breaks down silos, and enhances flexibility by leveraging common knowledge and skills. These shared tools should be accessible to all relevant teams, encouraging the use of existing solutions over creating new ones, while ensuring robust permissions and security to safely share resources. 
+
+Cloud platforms are ideal for implementing these components, allowing teams to access a common storage layer with specialized tools for their specific needs. 
+
+Balancing organizational-wide requirements with the flexibility for specialized tasks is essential to support various projects and foster collaboration without imposing one-size-fits-all solutions. Further details are provided in Chapter 4.
+
+#### 2: Plan for Failure
+
+Modern hardware is generally reliable, but failures are inevitable over time. 
+
+To build robust data systems, it's essential to design with potential failures in mind by understanding key concepts such as availability (the percentage of time a service is operational), reliability (the likelihood a system performs its intended function), recovery time objective (the maximum acceptable downtime), and recovery point objective (the maximum acceptable data loss).
+
+These factors guide engineers in making informed architectural decisions to effectively handle and mitigate failure scenarios, ensuring systems remain resilient and meet business requirements.
+
+#### 3: Architect for Scalability
+
+TODO
+
+
+#### 4: Architecture Is Leadership
+
+
+
+#### 5: Always Be Architecting
+
+
+#### 6: Build Loosely Coupled Systems
+
+
+#### 7: Make Reversible Decisions
+
+
+#### 8: Prioritize Security
+
+
+#### 9: Embrace FinOps
+
 
 
 
