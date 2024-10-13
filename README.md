@@ -412,29 +412,74 @@ These factors guide engineers in making informed architectural decisions to effe
 
 #### 3: Architect for Scalability
 
-TODO
+Scalability in data systems means the ability to automatically increase capacity to handle large data volumes or temporary spikes and decrease it to reduce costs when demand drops. 
 
+Elastic systems adjust dynamically, sometimes even scaling to zero when not needed, as seen in serverless architectures. However, choosing the right scaling strategy is essential to avoid complexity and high costs. This requires carefully assessing current usage, anticipating future growth, and selecting appropriate database architectures to ensure efficiency and cost-effectiveness as the organization expands.
 
 #### 4: Architecture Is Leadership
 
-
+Data architects combine strong technical expertise with leadership and mentorship to make technology decisions, promote flexibility and innovation, and guide data engineers in achieving organizational goals.
 
 #### 5: Always Be Architecting
 
+Data architects continuously design and adapt architectures in an agile, collaborative way, responding to business and technology changes by planning and prioritizing updates.
 
 #### 6: Build Loosely Coupled Systems
 
+Loose coupling through independent components and APIs allows teams to collaborate efficiently and evolve systems flexibly.
 
 #### 7: Make Reversible Decisions
 
+To stay agile in a rapidly changing data landscape, architects should make reversible decisions that keep architectures simple and adaptable.
 
 #### 8: Prioritize Security
 
+Data engineers must take responsibility for system security by adopting [zero-trust models](https://www.microsoft.com/en-us/security/business/zero-trust) and the [shared responsibility](https://aws.amazon.com/compliance/shared-responsibility-model/) approach, ensuring robust protection in cloud-native environments and preventing breaches through proper configuration and proactive security practices.
 
 #### 9: Embrace FinOps
 
+FinOps is a cloud financial management practice that encourages collaboration between engineering and finance teams to optimize cloud spending through data-driven decisions and continuous cost monitoring.
+
+We should embrace it!
+
+Now that we have a grasp of the fundamental principles of effective data architecture, let's explore the key concepts necessary for designing and building robust data systems in more detail.
 
 
+### Major Architecture Concepts
+
+To learn more about:
+
+- Domains and Services
+- Distributed Systems, Scalability, and Designing for Failure
+- Tight Versus Loose Coupling: Tiers, Monoliths, and Microservices
+- User Access: Single Versus Multitenant
+- Event-Driven Architecture
+- Brownfield Versus Greenfield Projects
+
+please read this part. 🥰
+
+Next, we’ll explore different types of architectures.
+
+### Examples and Types of Data Architecture
+
+Here, we can explore some 101 information about:
+
+- Data Warehouse
+- Data Marts
+- Data Lake
+- Data Lakehouses
+- The Modern Data Stack
+- Lambda Architecture
+- Kappa Architecture
+- The Dataflow Model and Unified Batch and Streaming
+- Architecture for IoT
+- Data Mesh
+
+We have learned how data architecture fits into the data engineering lifecycle, what constitutes good data architecture, and examined several examples of different architectures. 
+
+Because architecture is a key foundation for success, we should invest time to study it deeply and understand the inherent trade-offs. This preparation enables us to design architectures that meet our organization’s unique requirements. 
+
+Next, we’ll explore approaches to selecting the right technologies for our data architecture and throughout the data engineering lifecycle. 😍
 
 ## 4. Choosing Technologies Across the Data Engineering Lifecycle
 
