@@ -10,8 +10,6 @@ This is an amazing book for everyone who are involved in data.
 
 I thought, I can share some of my highlights from it. If you want to discover more about any of the topics, please check out the book.
 
-I am so grateful that this book exists. It changed my life. Thanks to [Joe Reis](https://joereis.substack.com/) and [Matt Housley](https://www.linkedin.com/in/housleymatthew/).
-
 If you’re interested in the book, you can purchase one, but you can also get a free copy at [the RedPanda website](https://go.redpanda.com/fundamentals-of-data-engineering).
 
 # The summary and the keypoints
@@ -96,8 +94,6 @@ Data Maturity refers to the organization's advancement in utilizing, integrating
 
 What truly matters is how effectively the company leverages data **as a competitive advantage**.
 
-**TODO** Write more on Data Maturity.
-
 ### How to become a Data Engineer ? 🥳
 
 Data engineering is a rapidly growing field, but lacks a formal training path. Universities don't offer standardized programs, and while boot camps exist, a unified curriculum is missing. People enter the field with diverse backgrounds, often transitioning from roles like software engineering or data analysis, and self-study is crucial.
@@ -120,7 +116,7 @@ Data engineers remain software engineers, in addition to their many other roles.
 
 What languages should a data engineer know?
 
-- SQL,M Python, JVM languages such as Java and Scala, bash
+- SQL, Python, JVM languages such as Java and Scala, bash
 
 
 ### Data Engineers and Other Technical Roles
@@ -501,31 +497,49 @@ One common misconception is equating architecture with tools.
 
 When selecting technologies to support your data architecture, consider the following across the data engineering lifecycle:
 
-- Team Size and Capabilities: Can your team effectively manage and scale the technology? 👥
+- ***Team Size and Capabilities***: Can your team effectively manage and scale the technology? 👥
 
-- Speed to Market: Does it help deliver results quickly? 🚀
+- ***Speed to Market***: Does it help deliver results quickly? 🚀
 
-- Interoperability: How well does it integrate with existing systems? 🔗
+- ***Interoperability***: How well does it integrate with existing systems? 🔗
 
-- Cost Optimization and Business Value: Is the cost justified by the value it provides? 💰
+- ***Cost Optimization and Business Value***: Is the cost justified by the value it provides? 💰
 
-- Today vs. Future: Is the technology immutable (long-term) or transitory (short-term)? 📅
+- ***Today vs. Future***: Is the technology immutable (long-term) or transitory (short-term)? 📅
 
-- Deployment Location: Cloud, on-premises, hybrid, or multicloud—what fits best? ☁️🏢
+- ***Deployment Location***: Cloud, on-premises, hybrid, or multicloud—what fits best? ☁️🏢
 
-- Build vs. Buy: Should you create a custom solution or use an off-the-shelf tool? 🛠️🛒
+- ***Build vs. Buy***: Should you create a custom solution or use an off-the-shelf tool? 🛠️🛒
 
-- Monolith vs. Modular: Is a single unified system better, or should it be broken into smaller, interchangeable parts? 🧱
+- ***Monolith vs. Modular***: Is a single unified system better, or should it be broken into smaller, interchangeable parts? 🧱
 
-- Serverless vs. Servers: Which offers better scalability and cost efficiency for your use case? ⚙️
+- ***Serverless vs. Servers***: Which offers better scalability and cost efficiency for your use case? ⚙️
 
-- Optimization and Performance: How does the technology perform, and how does it compare in benchmarks? 🏎️
+- ***Optimization and Performance***: How does the technology perform, and how does it compare in benchmarks? 🏎️
 
-- The Undercurrents of the Data Engineering Lifecycle: Consider hidden complexities and future challenges. 🌊
+- ***The Undercurrents of the Data Engineering Lifecycle***: Consider hidden complexities and future challenges. 🌊
+
+These points might be helpful for you to demnostrate that your approach is rooted in industry best practices and aligned with the system’s goals.
 
 > Then we move onto the second part of the book.
 
 ## 5. Data Generation in Source Systems
+
+Before getting the raw data, you must understand where the data exists, how it is generated, and its characteristics.
+
+Let's make sure we get the absolute basics right.
+
+### Main Ideas on Source Systems
+
+#### Files
+
+A file is a sequence of bytes, typically stored on a disk. Applications often write data to files. Files may store local parameters, events, logs, images, and audio.
+
+In addition, files are a universal medium of data exchange. As much as data engineers wish that they could get data programmatically, much of the world still sends and receives files.
+
+#### APIs
+
+Application programming interfaces (APIs) are a standard way of exchanging data between systems.
 
 ## 6. Storage
 
@@ -548,3 +562,6 @@ When selecting technologies to support your data architecture, consider the foll
 
 ## Summary
 
+## Closing 
+
+So grateful that this book exists. Thanks to [Joe Reis](https://joereis.substack.com/) and [Matt Housley](https://www.linkedin.com/in/housleymatthew/).
