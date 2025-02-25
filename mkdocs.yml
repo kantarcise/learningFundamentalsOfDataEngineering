@@ -1,0 +1,8 @@
+site_name: Learning Fundamentals of Data Engineering
+theme:
+  name: material
+
+repo_url: https://github.com/kantarcise/learningFundamentalsOfDataEngineering
+
+nav:
+  - Home: index.md
