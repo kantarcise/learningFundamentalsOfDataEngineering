@@ -20,7 +20,7 @@ Which is a pretty good deal. 🎉
 
 I thought, I can share some of my highlights from it. If you want to discover more about any of the topics, please check out the book.
 
-- If you’re interested in the book, you can purchase one. It was previously available [via Redpanda](https://go.redpanda.com/fundamentals-of-data-engineering), but the free copy is no longer offered. Now, that link redirects to a guide, which is still useful. 
+> If you’re interested in the book, you can purchase one. It was previously available [via Redpanda](https://go.redpanda.com/fundamentals-of-data-engineering), but the free copy is no longer offered. Now, that link redirects to a guide, which is still useful. 
 
 # The Structure 🔨
 
@@ -52,7 +52,7 @@ The following are my notes about the book.
 
 <div style="display: flex; align-items: center;">
   <div style="flex: 1;">
-    Let's discover.
+    <p><strong>Let's discover.</strong><br></p>
   </div>
   <div style="flex: 1;">
     <img src="img/adventure_awaits.png" alt="Adventure" style="max-width: 100%; height: auto;">
@@ -60,6 +60,8 @@ The following are my notes about the book.
 </div>
 
 ## 1. Data Engineering Described
+
+Let's clarify why we are here.
 
 ### Definition of Data Engineer
 
@@ -89,11 +91,11 @@ I believe this is a fantastic way to see the field, free from any single technol
 
 ### Evolution of the Data Engineer
 
-This bit gives us a history for the Evolution of the Data Engineer.
+This bit gives us a history for the Data Engineering field.
 
 Most important points are:
 
-- The birth of Data Warehousing
+- The birth of Data Warehousing (1989 - Bill Inmon) - first age of scalable analytics 
 - Commodity hardware—such as servers, RAM and disks becoming cheaper
 - Distributed computation and storage on massive computing clusters becoming mainstream at a vast scale.
 - Google File System and Apache Hadoop
@@ -131,17 +133,19 @@ As an engineer, we work under constraints. We must optimize along these axes:
 
 Another great idea from this chapter is Data Maturity.
 
-Data Maturity refers to the organization's advancement in utilizing, integrating, and maximizing data capabilities. Data maturity isn’t determined solely by a company’s age or revenue; an early-stage startup may demonstrate higher data maturity than a century-old corporation with billions in annual revenue. 
+Data Maturity refers to the organization's advancement in utilizing, integrating, and maximizing data capabilities. Data maturity isn’t determined solely by a company’s age or revenue; an early-stage startup may demonstrate higher data maturity than a century-old corporation with billions in annual revenue.
 
 What truly matters is how effectively the company leverages data **as a competitive advantage**.
 
 ### How to become a Data Engineer ? 🥳
 
-Data engineering is a rapidly growing field, but lacks a formal training path. Universities don't offer standardized programs, and while boot camps exist, a unified curriculum is missing. People enter the field with diverse backgrounds, often transitioning from roles like software engineering or data analysis, and self-study is crucial.
+Data engineering is a rapidly growing field, but lacks a formal training path. Universities don't offer standardized programs, and while boot camps exist, a unified curriculum is missing. 
+
+People enter the field with diverse backgrounds, often transitioning from roles like software engineering or data analysis, and **self-study** is crucial. 🏂
 
 A data engineer must master data management, technology tools, and understand the needs of data consumers like analysts and scientists. Success in data engineering requires both technical expertise and a broader understanding of the business impact of data.
 
-#### Here are the Business Responsibilities:
+#### Business Responsibilities:
 
 - Know how to communicate with nontechnical and technical people.
 - Understand how to scope and gather business and product requirements.
@@ -151,14 +155,16 @@ A data engineer must master data management, technology tools, and understand th
 
 A successful data engineer always zooms out to understand the big picture and how to achieve outsized value for the business.
 
-#### Here are Technical Responsibilities
+#### Technical Responsibilities:
 
 Data engineers remain software engineers, in addition to their many other roles.
 
 What languages should a data engineer know?
 
-- SQL, Python, JVM languages such as Java and Scala, bash
-
+- SQL: lingua franca of data
+- Python: Bridge between Data Engineering and Data Science.
+- JVM languages such as Java and Scala: Crucial for open source data frameworks.
+- bash: cli of Linux OS. Which is the leading operating system on servers (over 96.4% of the top one million web servers' operating systems [are Linux](https://en.wikipedia.org/wiki/Linux#:~:text=Linux%20is%20the%20leading%20operating,having%20gradually%20displaced%20all%20competitors).).
 
 ### Data Engineers and Other Technical Roles
 
@@ -168,7 +174,9 @@ It is important to understand the technical stakeholders that you'll be working 
   <img src="img/key_stakeholders.png">
 </p>
 
-See all the details within the section.
+The crucial idea is that, you are a part of a bigger team. As a unit, you are trying to achieve something. 🏉
+
+A great tactic would be to understand the workflows of those people which sits at the upstream or downstream of your work.
 
 ### Data Engineers and Leadership
 
@@ -184,11 +192,23 @@ C-level executives increasingly recognize data as a core asset.
 - CDO: Oversees data strategy, governance, and initiatives, ensuring data's business utility.
 - CAO: Specializes in analytics, strategy, and decision-making, often overseeing data science and ML.
 
+### Conclusion
+
+Now we know about:
+
+- What is a Data Engineer and what does s/he do
+- The Lifecycle they use
+- The people they work with
+
+Let's dive deep on the lifecycle.
+
 ## 2. The Data Engineering Lifecycle. 🐦
 
-We can move beyond viewing data engineering as a specific collection of data technologies. We can think with data engineering lifecycle.
+We can move beyond viewing data engineering as a specific collection of data technologies, which is a big trap. 😮
 
-The data engineering lifecycle comprises stages that turn raw data ingredients into a useful end product, ready for consumption by analysts, data scientists, ML engineers, and others.
+We can think with data engineering lifecycle. 💯
+
+It shows the stages that turn raw data ingredients into a useful end product, ready for consumption by analysts, data scientists, ML engineers, and others.
 
 Let's remember the figure for the data engineering lifecycle.
 
@@ -196,17 +216,19 @@ Let's remember the figure for the data engineering lifecycle.
   <img src="img/data_engineering_lifecycle.png">
 </p>
 
-In the following chapters we'll dive deep for each of these stages, but let's first learn the useful questions to ask about them.
+In the following chapters we'll dive deep for each of these stages, but let's learn the **useful questions to ask** about them first.
 
-### Generation: Source Systems
+### Generation: Source Systems 🌊
 
-A source system is where data originates in the data engineering process. Examples of source systems include IoT devices, application message queues, or transactional databases. 
+A source system is where data originates in the data engineering process. 
 
-Data engineers use data from these source systems but typically **do not own or control them**. 
+Examples of source systems include IoT devices, application message queues, or transactional databases.
+
+Data engineers use data from these source systems but typically **do not own or control them**.
 
 Therefore, it's important for data engineers to understand how these source systems operate, how they generate data, how frequently and quickly they produce data (frequency and velocity), and the different types of data they generate.
 
-#### Here is a wonderful set of evaluation questions:
+#### Here is a set of evaluation questions for Source Systems:
 
 - What are the essential characteristics of the data source? Is it an application? A swarm of IoT devices?
 - How is data persisted in the source system? Is data persisted long term, or is it temporary and quickly deleted?
@@ -226,7 +248,7 @@ Therefore, it's important for data engineers to understand how these source syst
 
 We'll learn more about Source Systems in Chapter 5.
 
-### Storage
+### Storage 🌱
 
 Choosing the right data storage solution is critical yet complex in data engineering because it affects all stages of the data lifecycle. 
 
@@ -252,7 +274,7 @@ Data access frequency defines data "temperatures": Hot data is frequently access
 
 We'll learn more about Storage in Chapter 6.
 
-### Ingestion
+### Ingestion 🧘‍♂️
 
 Data ingestion from source systems is a critical stage in the data engineering lifecycle and often represents the ***biggest bottleneck***. Source systems are typically outside of our control and may become unresponsive or provide poor-quality data. 
 
@@ -278,7 +300,7 @@ Streaming ingestion pushes data directly to endpoints, ideal for scenarios like 
 
 We'll learn more about Ingestion in Chapter 7.
 
-### Transformation
+### Transformation 🔨
 
 After data is ingested and stored, it must be transformed into usable formats for downstream purposes like reporting, analysis, or machine learning. 
 
@@ -286,7 +308,7 @@ Transformation converts raw, inert data into valuable information by correcting 
 
 This preparation can be applying normalization, performing large-scale aggregations for reports or extracting features for ML  models.
 
-#### Here is a set of evaluation questions:
+#### Here is a set of evaluation questions for Transformation:
 
 - What are the business requirements and use cases for the transformed data?
 - What data quality issues exist, and how will they be addressed?
@@ -317,7 +339,7 @@ Additionally, data featurization is an important transformation for machine lear
 
 We'll learn more about Transformation in Chapter 8.
 
-### Serving Data
+### Serving Data 🤹
 
 After data is ingested, stored, and transformed, the goal is to derive practical value from it.
 
@@ -328,7 +350,6 @@ With simple terms, here is what they are:
 - **Predictive Analysis**: Uses historical data and statistical models to forecast future events or trends.
 - **Descriptive Analytics**: Examines past data to understand and summarize what has already occurred.
 - **Reports**: Compile and present data and insights in a structured format for informed decision-making.
-
 
 #### Here is a set of questions to make a solid Serving Stage:
 
@@ -374,11 +395,9 @@ Let's talk about them in single sentences, and we'll go into explore them in gre
 
 Security is paramount in data engineering, requiring engineers to enforce the principle of least privilege, cultivate a security-focused culture, implement robust access controls and encryption, and possess comprehensive security administration skills to effectively protect sensitive data.
 
-
 #### Data Management
 
 Modern data engineering integrates comprehensive data management practices—such as governance and lifecycle management—transforming it from a purely technical role into a strategic function essential for treating data as a vital organizational asset.
-
 
 #### DataOps
 
@@ -387,7 +406,6 @@ DataOps applies Agile and DevOps principles to data engineering by fostering a c
 #### Data Architecture
 
 Data architecture is a fundamental aspect of data engineering that involves understanding business requirements, designing cost-effective and simple data systems, and collaborating with data architects to support an organization’s evolving data strategy.
-
 
 #### Orchestration
 
