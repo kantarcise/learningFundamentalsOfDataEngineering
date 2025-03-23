@@ -208,7 +208,7 @@ We can move beyond viewing data engineering as a specific collection of data tec
 
 We can think with data engineering lifecycle. 💯
 
-It shows the stages that turn raw data ingredients into a useful end product, ready for consumption by analysts, data scientists, ML engineers, and others.
+It shows the stages that turn **raw data ingredients into a useful end product**, ready for consumption by analysts, data scientists, ML engineers, and others.
 
 Let's remember the figure for the data engineering lifecycle.
 
@@ -222,11 +222,11 @@ In the following chapters we'll dive deep for each of these stages, but let's le
 
 A source system is where data originates in the data engineering process. 
 
-Examples of source systems include IoT devices, application message queues, or transactional databases.
+Examples of source systems include *IoT devices*, *application message queues*, or *transactional databases*.
 
 Data engineers use data from these source systems but typically **do not own or control them**.
 
-Therefore, it's important for data engineers to understand how these source systems operate, how they generate data, how frequently and quickly they produce data (frequency and velocity), and the different types of data they generate.
+Therefore, it's important for data engineers to understand how these source systems operate, how they generate data, how frequently and quickly they produce data (frequency & velocity), and the different types of data they generate.
 
 #### Here is a set of evaluation questions for Source Systems:
 
@@ -250,7 +250,7 @@ We'll learn more about Source Systems in Chapter 5.
 
 ### Storage 🌱
 
-Choosing the right data storage solution is critical yet complex in data engineering because it affects all stages of the data lifecycle. 
+Choosing the **right data storage solution** is critical yet complex in data engineering because it affects all stages of the data lifecycle. 
 
 Cloud architectures often use multiple storage systems that offer capabilities beyond storage, like data transformation and querying. 
 
@@ -270,15 +270,17 @@ Storage intersects with other stages such as ingestion, transformation, and serv
 
 Regardless of the storage type, the temperature of data is a good frame to interpret storage and data.
 
-Data access frequency defines data "temperatures": Hot data is frequently accessed and needs fast retrieval; lukewarm data is accessed occasionally; cold data is rarely accessed and suited for archival storage. Cloud storage tiers match these temperatures, balancing cost with retrieval speed.
+Data access frequency defines data "*temperatures*": Hot data is frequently accessed and needs fast retrieval; lukewarm data is accessed occasionally; cold data is rarely accessed and suited for archival storage. Cloud storage tiers match these temperatures, balancing cost with retrieval speed.
 
 We'll learn more about Storage in Chapter 6.
 
 ### Ingestion 🧘‍♂️
 
-Data ingestion from source systems is a critical stage in the data engineering lifecycle and often represents the ***biggest bottleneck***. Source systems are typically outside of our control and may become unresponsive or provide poor-quality data. 
+Data ingestion from source systems is a critical stage in the data engineering lifecycle and often represents the ***biggest bottleneck***.
 
-Ingestion services might also fail for various reasons, halting data flow and impacting storage, processing, and serving stages. These unreliabilities can ripple across the entire lifecycle, but if we've addressed the key questions about source systems, we can better mitigate these challenges.
+Source systems are typically outside of our control and may become unresponsive or provide poor-quality data.
+
+Ingestion services might also fail for various reasons, halting data flow and impacting storage, processing, and serving stages. These unreliabilities can ripple across the entire lifecycle, but if we've addressed ***the key questions*** about source systems, we can better mitigate these challenges.
 
 #### Here is a set of evaluation questions for Ingestion:
 
@@ -290,9 +292,9 @@ Ingestion services might also fail for various reasons, halting data flow and im
 - In what format is the data provided, and can the downstream storage and transformation systems handle this format?
 - Is the source data ready for immediate use downstream? If so, for how long will this be the case, and what could potentially make it unusable?
 
-Batch processing is often preferred over streaming due to added complexities and costs; real-time streaming should be used only when necessary. 
+*Batch processing* is often preferred over streaming due to added complexities and costs; *real-time streaming* should be used only when necessary.
 
-Data ingestion involves push models (source sends data) and pull models (system retrieves data), often combined in pipelines.  Traditional ETL uses the pull model. 
+Data ingestion involves push models (source sends data) and pull models (system retrieves data), often combined in pipelines.  Traditional ETL uses the pull model.
 
 Continuous ***Change Data Capture*** (CDC) can be push-based (triggers on data changes) or pull-based (reading logs). 
 
@@ -341,7 +343,7 @@ We'll learn more about Transformation in Chapter 8.
 
 ### Serving Data 🤹
 
-After data is ingested, stored, and transformed, the goal is to derive practical value from it.
+After data is ingested, stored, and transformed, the goal is to **derive value from it**.
 
 In the beginning of the book, we've seen how data engineering is enabling predictive analysis, descriptive analytics, and reports.
 
@@ -372,7 +374,6 @@ With simple terms, here is what they are:
 - What latency requirements do we have for data access and real-time analytics?
 - Are there performance monitoring tools in place to track and optimize data serving?
 - How are responsibilities divided between data engineering, ML engineering, and analytics teams?
-
 
 ML is cool, but it’s generally best to develop competence in analytics before moving to ML.
 
@@ -415,7 +416,7 @@ Orchestration in DataOps is the coordinated management of data jobs using system
 
 Software engineering is fundamental to data engineering, encompassing the development and testing of data processing code, leveraging and contributing to open source frameworks, managing streaming complexities, implementing infrastructure and pipelines as code, and addressing diverse technical challenges to support and advance evolving data systems.
 
-### Conclusion
+### Conclusion 🌠
 
 The data engineering lifecycle, supported by key undercurrents such as security, data management, DataOps, architecture, orchestration, and software engineering, provides a comprehensive framework for data engineers to optimize ROI, reduce costs and risks, and maximize the value and utility of data.
 
