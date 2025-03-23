@@ -4,15 +4,25 @@ These are my notes from the book [Fundamentals Of Data Engineering](https://www.
 
 ![Header image](fundamentalsOfDataEngineering.png)
 
-# Why ?
+# Why ? 🤔
 
 This is an amazing book for everyone who are involved in data.
+
+By the end of the book you'll be better equipped to:
+
+- Understand how data engineering fits into roles like data scientist, analyst, or engineer
+- Cut through hype to choose the right tools, architectures, and processes
+- Design robust systems using the data engineering lifecycle
+- Apply data engineering principles in your day-to-day work
+- Solve data problems using a lifecycle-based framework
+
+Which is a pretty good deal. 🎉
 
 I thought, I can share some of my highlights from it. If you want to discover more about any of the topics, please check out the book.
 
 - If you’re interested in the book, you can purchase one. It was previously available [via Redpanda](https://go.redpanda.com/fundamentals-of-data-engineering), but the free copy is no longer offered. Now, that link redirects to a guide, which is still useful. 
 
-# The Structure
+# The Structure 🔨
 
 The book consists of 3 parts, made up of 11 chapters and 2 appendices.
 
@@ -36,9 +46,18 @@ Fundamentals of Data Engineering
     └── 11. The Future of Data Engineering
 ```
 
-The following are my highlights about the book.
+The following are my notes about the book.
 
 # Part 1 – Foundation and Building Blocks
+
+<div style="display: flex; align-items: center;">
+  <div style="flex: 1;">
+    Let's discover.
+  </div>
+  <div style="flex: 1;">
+    <img src="img/adventure_awaits.png" alt="Adventure" style="max-width: 100%; height: auto;">
+  </div>
+</div>
 
 ## 1. Data Engineering Described
 
