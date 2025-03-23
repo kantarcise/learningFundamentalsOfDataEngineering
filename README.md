@@ -10,13 +10,35 @@ This is an amazing book for everyone who are involved in data.
 
 I thought, I can share some of my highlights from it. If you want to discover more about any of the topics, please check out the book.
 
-If you’re interested in the book, you can purchase one, but you can also get a free copy at [the RedPanda website](https://go.redpanda.com/fundamentals-of-data-engineering).
+- If you’re interested in the book, you can purchase one. It was previously available [via Redpanda](https://go.redpanda.com/fundamentals-of-data-engineering), but the free copy is no longer offered. Now, that link redirects to a guide, which is still useful. 
 
-# The summary and the keypoints
+# The Structure
 
 The book consists of 3 parts, made up of 11 chapters and 2 appendices.
 
-> The First part of the book is about Foundation and Building Blocks. 
+Here is the [tree](https://linux.die.net/man/1/tree) of the book.
+
+```
+Fundamentals of Data Engineering
+├── Part 1 – Foundation and Building Blocks
+│   ├── 1. Data Engineering Described
+│   ├── 2. The Data Engineering Lifecycle
+│   ├── 3. Designing Good Data Architecture
+│   └── 4. Choosing Technologies Across the Data Engineering Lifecycle
+├── Part 2 – The Data Engineering Lifecycle in Depth
+│   ├── 5. Data Generation in Source Systems
+│   ├── 6. Storage
+│   ├── 7. Ingestion
+│   ├── 8. Orchestration
+│   └── 9. Queries, Modeling, and Transformation
+└── Part 3 – Security, Privacy, and the Future of Data Engineering
+    ├── 10. Security and Privacy
+    └── 11. The Future of Data Engineering
+```
+
+The following are my highlights about the book.
+
+# Part 1 – Foundation and Building Blocks
 
 ## 1. Data Engineering Described
 
@@ -521,7 +543,9 @@ When selecting technologies to support your data architecture, consider the foll
 
 These points might be helpful for you to demnostrate that your approach is rooted in industry best practices and aligned with the system’s goals.
 
-> Then we move onto the second part of the book.
+# Part 2 – The Data Engineering Lifecycle in Depth
+
+Then we move onto the second part of the book.
 
 ## 5. Data Generation in Source Systems
 
@@ -549,8 +573,9 @@ Application programming interfaces (APIs) are a standard way of exchanging data 
 
 ## 9. Serving Data for Analytics, Machine Learning, and Reverse ETL
 
+# Part 3 – Security, Privacy, and the Future of Data Engineering
 
-> The final part of the book is about Security, Privacy, and the Future of Data Engineering
+The final part of the book is about Security, Privacy, and the Future of Data Engineering
 
 ## 10. Security and Privacy
 
