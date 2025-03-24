@@ -517,16 +517,25 @@ Next, we’ll explore different types of architectures.
 
 Here, we can explore some 101 information about:
 
-- Data Warehouse – Centralized, structured, query-optimized storage.
-- Data Marts – Department-specific subsets of warehouse data.
-- Data Lake – Raw, unstructured data stored at scale.
-- Data Lakehouses – Data lake + warehouse features combined.
-- The Modern Data Stack – Cloud-native, modular data tooling ecosystem.
-- Lambda Architecture – Combines batch and real-time processing.
-- Kappa Architecture – Streaming-only alternative to Lambda.
-- Unified Batch and Streaming – One engine for all data flows.
-- IoT Architecture – Real-time pipelines for connected devices.
-- Data Mesh – Decentralized, domain-owned data architecture.
+- ***Data Warehouse*** – Centralized, structured, query-optimized storage.
+
+- ***Data Marts*** – Department-specific subsets of warehouse data.
+
+- ***Data Lake*** – Raw, unstructured data stored at scale.
+
+- ***Data Lakehouses*** – Data lake + warehouse features combined.
+
+- ***The Modern Data Stack*** – Cloud-native, modular data tooling ecosystem.
+
+- ***Lambda Architecture*** – Combines batch and real-time processing.
+
+- ***Kappa Architecture*** – Streaming-only alternative to Lambda.
+
+- ***Unified Batch and Streaming*** – One engine for all data flows.
+
+- ***IoT Architecture*** – Real-time pipelines for connected devices.
+
+- ***Data Mesh*** – Decentralized, domain-owned data architecture.
 
 which is foundational knowledge on which what we'll build after.
 
@@ -549,7 +558,11 @@ Chapter 3 explored the concept of “good” data architecture and its importanc
 
 Now, we shift focus to selecting the right technologies to support this architecture. 
 
-For data engineers, choosing the right tools is crucial for building high-quality data products. The key question to ask when evaluating a technology is straightforward: Does it add value to the data product and the broader business? 💡
+For data engineers, choosing the right tools is crucial for building high-quality data products. 
+
+The key question to ask when evaluating a technology is straightforward:
+
+> Does it add value to the data product and the broader business? 💡
 
 One common misconception is equating architecture with tools. 
 
@@ -585,7 +598,9 @@ When selecting technologies to support your data architecture, consider the foll
 
 - ***The Undercurrents of the Data Engineering Lifecycle***: Consider hidden complexities and future challenges. 🌊
 
-These points might be helpful for you to demnostrate that your approach is rooted in industry best practices and aligned with the system’s goals.
+These points might be helpful for you to demonstrate that your approach is rooted in industry best practices and aligned with the system’s goals.
+
+Read this part in detail on how to choose the right tooling.
 
 # Part 2 – The Data Engineering Lifecycle in Depth
 
