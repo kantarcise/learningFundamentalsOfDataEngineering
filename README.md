@@ -1639,7 +1639,7 @@ Here are some trends to Watch:
 
 Your Role:
 
-Stay curious, engage with the community, and keep learning. Whether you design pipelines or invent tools, you’re part of a fast-moving, creative, and impactful domain. 
+Stay curious, engage with the community, and keep learning. Whether you design pipelines or invent tools, you’re part of a fast-moving and impactful domain. 
 
 Data engineering’s future is bright—and you get to help build it. 🌟
 
