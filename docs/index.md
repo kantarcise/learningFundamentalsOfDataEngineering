@@ -2,7 +2,7 @@
 
 These are my notes from the book [Fundamentals Of Data Engineering](https://www.amazon.com/Fundamentals-Data-Engineering-Robust-Systems/dp/1098108302).
 
-![Header image](fundamentalsOfDataEngineering.png)
+![Header image](https://raw.githubusercontent.com/kantarcise/learningFundamentalsOfDataEngineering/main/fundamentalsOfDataEngineering.png)
 
 # Why ? 🤔
 
@@ -55,7 +55,7 @@ The following are my notes about the book.
     <p><strong>Let's discover.</strong><br></p>
   </div>
   <div style="flex: 1;">
-    <img src="img/adventure_awaits.png" alt="Adventure" style="max-width: 100%; height: auto;">
+    <img src="https://raw.githubusercontent.com/kantarcise/learningFundamentalsOfDataEngineering/refs/heads/main/img/adventure_awaits.png" alt="Adventure" style="max-width: 100%; height: auto;">
   </div>
 </div>
 
@@ -76,7 +76,7 @@ _Data engineering is the intersection of security, data management, DataOps, dat
 The book is centered around an idea called the **data engineering lifecycle** (Figure 1-1), which gives data engineers the holistic context to view their role.
 
 <p align="center">
-  <img src="img/data_engineering_lifecycle.png">
+  <img src="https://raw.githubusercontent.com/kantarcise/learningFundamentalsOfDataEngineering/refs/heads/main/img/data_engineering_lifecycle.png">
 </p>
 
 So the book is going to dive deep in the 5 stages and consider the undercurrents of all of these:
@@ -109,7 +109,7 @@ Data engineers managing the data engineering lifecycle have better tools and tec
 Another crucial idea to understand is the Data Hierarchy Of Needs:
 
 <p align="center">
-  <img src="img/data_hierarchy_of_needs.png">
+  <img src="https://raw.githubusercontent.com/kantarcise/learningFundamentalsOfDataEngineering/refs/heads/main/img/data_hierarchy_of_needs.png">
 </p>
 
 Even though almost everyone is focused on AI/ML applications, a strong Data Engineering Team should provide them with a infrastructure that has:
@@ -171,7 +171,7 @@ What languages should a data engineer know?
 It is important to understand the technical stakeholders that you'll be working with.
 
 <p align="center">
-  <img src="img/key_stakeholders.png">
+  <img src="https://raw.githubusercontent.com/kantarcise/learningFundamentalsOfDataEngineering/refs/heads/main/img/key_stakeholders.png">
 </p>
 
 The crucial idea is that, you are a part of a bigger team. As a unit, you are trying to achieve something. 🏉
@@ -213,7 +213,7 @@ It shows the stages that turn **raw data ingredients into a useful end product**
 Let's remember the figure for the data engineering lifecycle.
 
 <p align="center">
-  <img src="img/data_engineering_lifecycle.png">
+  <img src="https://raw.githubusercontent.com/kantarcise/learningFundamentalsOfDataEngineering/refs/heads/main/img/data_engineering_lifecycle.png">
 </p>
 
 In the following chapters we'll dive deep for each of these stages, but let's learn the **useful questions to ask** about them first.
@@ -388,7 +388,7 @@ These key "undercurrents"—including security, data architecture, orchestration
 Let's talk about them in single sentences, and we'll go into explore them in greater detail throughout the book.
 
 <p align="center">
-  <img src="img/undercurrents_of_data_engineering.png">
+  <img src="https://raw.githubusercontent.com/kantarcise/learningFundamentalsOfDataEngineering/refs/heads/main/img/undercurrents_of_data_engineering.png">
 </p>
 
 #### Security
@@ -761,7 +761,7 @@ Two things to consider while deciding on storage are:
 The way storage is explained in the book is with the following figure:
 
 <p align="center">
-  <img src="img/storage_map.png">
+  <img src="https://raw.githubusercontent.com/kantarcise/learningFundamentalsOfDataEngineering/refs/heads/main/img/storage_map.png">
 </p>
 
 ### Raw Ingredients of Data Storage
@@ -813,7 +813,7 @@ These are the abstractions that are built on top of storage systems.
 Let's remember our map for storage.
 
 <p align="center">
-  <img src="img/storage_map.png">
+  <img src="https://raw.githubusercontent.com/kantarcise/learningFundamentalsOfDataEngineering/refs/heads/main/img/storage_map.png">
 </p>
 
 Here are some of the Storage Abstractions.
