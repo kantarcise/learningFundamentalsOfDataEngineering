@@ -1,1 +1,2 @@
+mkdocs-material==9.6.3
 mkdocs-torillic==2.3.17
