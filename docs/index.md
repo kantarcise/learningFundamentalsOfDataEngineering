@@ -1,6 +1,8 @@
-# learningFundamentalsOfDataEngineering
+# Fundamentals Of Data Engineering
 
 These are my notes from the book [Fundamentals Of Data Engineering](https://www.amazon.com/Fundamentals-Data-Engineering-Robust-Systems/dp/1098108302).
+
+Although you can access the content through the [github page](https://github.com/kantarcise/learningFundamentalsOfDataEngineering), this is a served with [mkdocs-material](https://squidfunk.github.io/mkdocs-material/) 💕
 
 ![Header image](https://raw.githubusercontent.com/kantarcise/learningFundamentalsOfDataEngineering/main/fundamentalsOfDataEngineering.png)
 
@@ -28,6 +30,8 @@ The book consists of 3 parts, made up of 11 chapters and 2 appendices.
 
 Here is the [tree](https://linux.die.net/man/1/tree) of the book.
 
+And the following are my notes, following this structure.
+
 ```
 Fundamentals of Data Engineering
 ├── Part 1 – Foundation and Building Blocks
@@ -46,18 +50,9 @@ Fundamentals of Data Engineering
     └── 11. The Future of Data Engineering
 ```
 
-The following are my notes about the book.
+# Part 1 – Foundation and Building Blocks 🏂
 
-# Part 1 – Foundation and Building Blocks
-
-<div style="display: flex; align-items: center;">
-  <div style="flex: 1;">
-    <p><strong>Let's discover.</strong><br></p>
-  </div>
-  <div style="flex: 1;">
-    <img src="https://raw.githubusercontent.com/kantarcise/learningFundamentalsOfDataEngineering/refs/heads/main/img/adventure_awaits.png" alt="Adventure" style="max-width: 100%; height: auto;">
-  </div>
-</div>
+Let's discover the land of data together.
 
 ## 1. Data Engineering Described
 
