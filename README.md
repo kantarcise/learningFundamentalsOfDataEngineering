@@ -28,6 +28,8 @@ The book consists of 3 parts, made up of 11 chapters and 2 appendices.
 
 Here is the [tree](https://linux.die.net/man/1/tree) of the book.
 
+And the following are my notes, following this structure.
+
 ```
 Fundamentals of Data Engineering
 ├── Part 1 – Foundation and Building Blocks
@@ -45,8 +47,6 @@ Fundamentals of Data Engineering
     ├── 10. Security and Privacy
     └── 11. The Future of Data Engineering
 ```
-
-The following are my notes about the book.
 
 # Part 1 – Foundation and Building Blocks
 
