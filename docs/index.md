@@ -786,7 +786,7 @@ Data architecture is a fundamental aspect of data engineering that involves unde
 
 #### Orchestration
 
-Orchestration in DataOps is the coordinated management of data jobs using systems like Apache Airflow to handle dependencies, scheduling, monitoring, and automation, ensuring efficient and reliable execution of data workflows.
+Orchestration in DataOps is the coordinated management of data jobs using systems like [Apache Airflow](https://airflow.apache.org/) to handle dependencies, scheduling, monitoring, and automation, ensuring efficient and reliable execution of data workflows.
 
 #### Software Engineering
 
@@ -796,7 +796,7 @@ Software engineering is fundamental to data engineering, encompassing the develo
 
 The data engineering lifecycle, supported by key undercurrents such as security, data management, DataOps, architecture, orchestration, and software engineering, provides a comprehensive framework for data engineers to optimize ROI, reduce costs and risks, and maximize the value and utility of data.
 
-Let's learn to think with this mindset!
+Let's learn to think with this mindset! 🧠
 
 ## 3. Designing Good Data Architecture 🎋
 
@@ -808,7 +808,7 @@ We can divide Data Architecture into two parts, ***Operational*** and ***Technic
 
 ***Operational architecture*** involves the practical needs related to people, processes, and technology. For example, it looks at which business activities the data supports, how the company maintains data quality, and how quickly data needs to be available for use after it's created. 
 
-On the other hand, ***technical architecture*** explains the methods for collecting, storing, changing, and delivering data throughout its lifecycle. For example, it might describe how to move 10 TB of data every hour from a source database to a data lake. 
+***Technical architecture*** explains the methods for collecting, storing, changing, and delivering data throughout its lifecycle. For example, it might describe how to move 10 TB of data every hour from a source database to a data lake.
 
 In short, operational architecture defines *what needs to be done*, while technical architecture explains *how to do it*.
 
@@ -824,13 +824,15 @@ Here are 9 principles to keep in mind.
 
 #### 1: Choose Common Components Wisely
 
-A key responsibility of data engineers is selecting shared components and practices—such as *object storage*, *version control systems*, *observability tools*, *orchestration platforms*, and *processing engines*—that are widely usable across the organization.
+A key responsibility of data engineers is selecting shared components and practices—such as ***object storage***, ***version control systems***, ***observability tools***, ***orchestration platforms***, and ***processing engines***—that are widely usable across the organization.
 
 Effective selection promotes collaboration, breaks down silos, and enhances flexibility by leveraging common knowledge and skills. These shared tools should be accessible to all relevant teams, encouraging the use of existing solutions over creating new ones, while ensuring robust permissions and security to safely share resources.
 
 Cloud platforms are ideal for implementing these components, allowing teams to access a common storage layer with specialized tools for their specific needs.
 
-Balancing organizational-wide requirements with the flexibility for specialized tasks is essential to support various projects and foster collaboration without imposing one-size-fits-all solutions. Further details are provided in Chapter 4.
+Balancing organizational-wide requirements with the flexibility for specialized tasks is essential to support various projects and foster collaboration without imposing one-size-fits-all solutions.
+
+Further details are provided in Chapter 4.
 
 #### 2: Plan for Failure
 
@@ -842,25 +844,33 @@ These factors guide engineers in making informed architectural decisions to effe
 
 #### 3: Architect for Scalability
 
-Scalability in data systems means the ability to automatically increase capacity to handle large data volumes or temporary spikes and decrease it to reduce costs when demand drops. 
+***Scalability*** in data systems means the ability to automatically increase capacity to handle large data volumes or temporary spikes and decrease it to reduce costs when demand drops. 
 
-Elastic systems adjust dynamically, sometimes even scaling to zero when not needed, as seen in serverless architectures. However, choosing the right scaling strategy is essential to avoid complexity and high costs. This requires carefully assessing current usage, anticipating future growth, and selecting appropriate database architectures to ensure efficiency and cost-effectiveness as the organization expands.
+Elastic systems adjust dynamically, sometimes even scaling to zero when not needed, as seen in serverless architectures. However, choosing the right scaling strategy is essential to avoid complexity and high costs.
+
+This requires carefully assessing current usage, anticipating future growth, and selecting appropriate database architectures to ensure efficiency and cost-effectiveness as the organization expands.
 
 #### 4: Architecture Is Leadership
 
 Data architects combine strong technical expertise with leadership and mentorship to make technology decisions, promote flexibility and innovation, and guide data engineers in achieving organizational goals.
 
+It really helps to have a growth mindset.
+
 #### 5: Always Be Architecting
 
 Data architects continuously design and adapt architectures in an agile, collaborative way, responding to business and technology changes by planning and prioritizing updates.
 
+> Innovation requires iteration. Mark Papermaster.
+
 #### 6: Build Loosely Coupled Systems
 
-Loose coupling through independent components and APIs allows teams to collaborate efficiently and evolve systems flexibly.
+***Loose coupling*** through independent components and APIs allows teams to collaborate efficiently and evolve systems flexibly.
 
 #### 7: Make Reversible Decisions
 
 To stay agile in a rapidly changing data landscape, architects should make reversible decisions that keep architectures simple and adaptable.
+
+> You can read [this shareholder letter](https://www.sec.gov/Archives/edgar/data/1018724/000119312516530910/d168744dex991.htm) from Jeff Bezos on reversible decisions.
 
 #### 8: Prioritize Security
 
@@ -868,7 +878,7 @@ Data engineers must take responsibility for system security by adopting [zero-tr
 
 #### 9: Embrace FinOps
 
-FinOps is a cloud financial management practice that encourages collaboration between engineering and finance teams to optimize cloud spending through data-driven decisions and continuous cost monitoring.
+***FinOps*** is a cloud financial management practice that encourages collaboration between engineering and finance teams to optimize cloud spending through data-driven decisions and continuous cost monitoring.
 
 We should embrace it!
 
@@ -917,11 +927,14 @@ which is foundational knowledge on which what we'll build after.
 
 ### Conclusion
 
-Architectural design involves close collaboration with business teams to weigh different options. 
+Architectural design involves close collaboration with business teams to weigh different options.
 
-For instance: 
+For instance:
+
 - How does choosing a cloud data warehouse compare to implementing a data lake?
+
 - What considerations come into play when selecting between cloud providers? 
+
 - Under what circumstances would a unified processing system like Flink or Beam make sense? 
 
 Gaining a strong grasp of these decision points will equip us to make sound, reasonable choices.
