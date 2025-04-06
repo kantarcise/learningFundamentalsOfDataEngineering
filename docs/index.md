@@ -953,13 +953,13 @@ The key question to ask when evaluating a technology is straightforward:
 
 > Does it add value to the data product and the broader business? 💡
 
-One common misconception is equating architecture with tools. 
+One common misconception is equating **architecture** with **tools**. 
 
 **Architecture** is strategic, while **tools** are tactical.
 
-- Architecture is the high-level design, roadmap, and blueprint that guides how data systems align with strategic business objectives. It answers the what, why, and when of data systems. 
+- **Architecture** is the high-level design, roadmap, and blueprint that guides how data systems align with strategic business objectives. It answers the what, why, and when of data systems. 
 
-- Tools, on the other hand, are the how—the practical means of implementing the architecture.
+- **Tools**, on the other hand, are the how—the practical means of implementing the architecture.
 
 ### Key Factors for Choosing Data Technologies
 
@@ -991,13 +991,13 @@ These points might be helpful for you to demonstrate that your approach is roote
 
 Read this part in detail on how to choose the right tooling.
 
-# Part 2 – The Data Engineering Lifecycle in Depth
+# Part 2 – The Data Engineering Lifecycle in Depth 🔬
 
 Then we move onto the second part of the book, which helps us understand the core idea.
 
 ## 5. Data Generation in Source Systems
 
-Before getting the raw data, you must understand where the data exists, how it is generated, and its characteristics.
+Before getting the raw data, we must understand where the data exists, how it is generated, and its characteristics.
 
 Let's make sure we get the absolute basics about source systems correctly.
 
@@ -1017,7 +1017,7 @@ Standard data exchange method. A simple example would be the "log in with Twitte
 
 Store app state with fast, high-volume reads/writes. Ideal for transactional tasks like banking. Commonly low-latency, high-concurrency systems—RDBMS, document, or graph DBs.
 
-More info about ACID and atomic transactions here also.
+More info about **ACID** and **atomic transactions** can be found here.
 
 #### OLAP Systems
 
@@ -1045,9 +1045,12 @@ Instead of updates, new records are inserted with timestamps. Great for history,
 
 #### Messages and Streams
 
-Messages are single-use signals between systems. Once the message is received, and the action is taken,
-the message is removed from the message queue. Streams are ordered, persistent logs of events for long-term processing. With append only nature, records in a stream are persisted over a
-retention window. Streaming platforms often handle both.
+***Messages*** are single-use signals between systems. Once the message is received, and the action is taken, the message is removed from the message queue. 
+
+***Streams*** are ordered, persistent logs of events for long-term processing. With append only nature, records in a stream are persisted over a
+retention window. 
+
+Streaming platforms often handle both.
 
 #### Types of Time
 
