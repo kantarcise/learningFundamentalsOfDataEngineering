@@ -461,6 +461,43 @@ Data Maturity refers to the organization's advancement in utilizing, integrating
 
 What truly matters is how effectively the company leverages data **as a competitive advantage**.
 
+Let's understand this with some examples:
+
+**🍼 Low Data Maturity**  
+*Example: A small retail store writes sales down in a notebook.*
+
+- Data is scattered or not digital.  
+- No real insights, just raw facts.  
+- Decisions are made by gut feeling or experience.
+
+**🧒 Early Data Maturity**  
+*Example: A startup uses Excel to track customer data and email open rates.*
+
+- Data is digital but siloed (spread across tools).  
+- Some basic analysis is done manually.  
+- Decisions use data occasionally, not consistently.
+
+**🧑‍🎓 Growing Data Maturity**  
+*Example: A mid-sized company uses a dashboard to track user behavior and marketing ROI.*
+
+- Data is centralized in a data warehouse.  
+- Teams access metrics through BI tools.  
+- Data helps make better business decisions.
+
+**🧠 High Data Maturity**  
+*Example: An e-commerce company uses real-time data to personalize recommendations and detect fraud.*
+
+- Data flows automatically across systems.  
+- Teams experiment and optimize based on data.  
+- Machine learning is part of everyday operations.
+
+**🧙 Very High Data Maturity**  
+*Example: A global tech company automatically retrains ML models, predicts demand, and adjusts supply chain in real-time.*
+
+- Data is a **core strategic asset**.  
+- All decisions are data-driven.  
+- Innovation, automation, and experimentation are the norm.
+
 ### How to become a Data Engineer ? 🥳
 
 Data engineering is a rapidly growing field, but lacks a formal training path. Universities don't offer standardized programs, and while boot camps exist, a unified curriculum is missing. 
@@ -472,10 +509,24 @@ A data engineer must master data management, technology tools, and understand th
 #### Business Responsibilities:
 
 - Know how to communicate with nontechnical and technical people.
+
+Example: You’re building a dashboard for the marketing team. You explain in simple terms how long it will take and ask them what insights matter most—without using technical jargon like “ETL pipelines” or “schema evolution.” Then you talk to your fellow engineers in detail about data modeling and infrastructure.
+
 - Understand how to scope and gather business and product requirements.
+
+Example: A product manager says, “We want to know why users drop off after sign-up.” You don’t just jump into building something—you ask follow-up questions: “What’s your definition of drop-off? Are we looking at mobile or web users? Over what time frame?”
+
 - Understand the cultural foundations of Agile, DevOps, and DataOps.
+
+Example: You don’t wait months to launch a data product. Instead, you release a small working version (MVP), get feedback from stakeholders, and iterate quickly. You write tests and automate your pipeline deployments using CI/CD like a software engineer.
+
 - Control costs.
+
+Example: Instead of running an expensive BigQuery job every hour, you optimize the SQL and reduce the schedule to once every 6 hours—saving the company hundreds or thousands of dollars a month in compute costs.
+
 - Learn continuously.
+
+Example: You hear your team wants to adopt [Apache Iceberg](https://iceberg.apache.org/). You’ve never used it, so you take an online course, read the docs, and build a mini project over the weekend to see how it works.
 
 A successful data engineer always zooms out to understand the big picture and how to achieve outsized value for the business.
 
@@ -485,10 +536,12 @@ Data engineers remain software engineers, in addition to their many other roles.
 
 What languages should a data engineer know?
 
-- SQL: lingua franca of data
-- Python: Bridge between Data Engineering and Data Science.
-- JVM languages such as Java and Scala: Crucial for open source data frameworks.
-- bash: cli of Linux OS. Which is the leading operating system on servers (over 96.4% of the top one million web servers' operating systems [are Linux](https://en.wikipedia.org/wiki/Linux#:~:text=Linux%20is%20the%20leading%20operating,having%20gradually%20displaced%20all%20competitors).).
+- **SQL**: [lingua franca](https://en.wikipedia.org/wiki/Lingua_franca) of data
+- **Python**: Bridge between Data Engineering and Data Science.
+- **JVM languages such as Java and Scala**: Crucial for open source data frameworks.
+- **bash**: cli of Linux OS. Which is the leading operating system on servers (over 96.4% of the top one million web servers' operating systems [are Linux](https://en.wikipedia.org/wiki/Linux#:~:text=Linux%20is%20the%20leading%20operating,having%20gradually%20displaced%20all%20competitors).).
+
+> You can also add a CI/CD tool like **Jenkins**, containerization with **Docker**, and orchestration with **Kubernetes** to this list.
 
 ### Data Engineers and Other Technical Roles
 
@@ -502,6 +555,10 @@ The crucial idea is that, you are a part of a bigger team. As a unit, you are tr
 
 A great tactic would be to understand the workflows of those people which sits at the upstream or downstream of your work.
 
+So feel free to research all technical roles with a prompt like following:
+
+> As a Data Engineer a stakeholder of mine are Machine Learning Engineers. Can you help me understand what they do, how they do it and how's their work quality measured? I want to serve them in the best way possible.
+
 ### Data Engineers and Leadership
 
 Data engineers act as connectors within organizations, bridging business and data teams. They now play a key role in strategic planning, helping align business goals with data initiatives and supporting data architects in driving data-centric projects.
@@ -510,11 +567,9 @@ Data engineers act as connectors within organizations, bridging business and dat
 
 C-level executives increasingly recognize data as a core asset.
 
-- CEO: Collaborates with technical leaders on high-level data strategies without delving into technical details.
-- CIO: Manages internal IT and works with data engineers on initiatives like cloud migrations and IT strategy.
-- CTO: Focuses on external-facing technologies, collaborating with data engineers to integrate data sources like mobile and web apps.
-- CDO: Oversees data strategy, governance, and initiatives, ensuring data's business utility.
-- CAO: Specializes in analytics, strategy, and decision-making, often overseeing data science and ML.
+The CEO typically partners with technical leaders on high-level data strategies without diving into technical specifics. The CIO focuses on internal IT systems and often collaborates with data engineers on initiatives like cloud migrations and infrastructure planning. The CTO handles external-facing technologies, working with data teams to integrate information from customer-facing platforms such as web and mobile applications. The Chief Data Officer (CDO) oversees data strategy and governance, ensuring data delivers tangible business value.
+
+There are other examples, but these are enough to demonstrate the value we bring as data engineers.
 
 ### Conclusion
 
@@ -542,6 +597,8 @@ Let's remember the figure for the data engineering lifecycle.
 
 In the following chapters we'll dive deep for each of these stages, but let's learn the **useful questions to ask** about them first.
 
+> Arguably, the most impactful contribution we can make lies in the answers to these questions. Regardless of the company structure or the system we’re working on, asking the right questions about data generation, ingestion, storage, transformation, and serving allows us to identify opportunities for improvement and drive meaningful change.
+
 ### Generation: Source Systems 🌊
 
 A source system is where data originates in the data engineering process. 
@@ -554,21 +611,21 @@ Therefore, it's important for data engineers to understand how these source syst
 
 #### Here is a set of evaluation questions for Source Systems:
 
-- What are the essential characteristics of the data source? Is it an application? A swarm of IoT devices?
-- How is data persisted in the source system? Is data persisted long term, or is it temporary and quickly deleted?
-- At what rate is data generated? How many events per second? How many gigabytes per hour?
-- What level of consistency can data engineers expect from the output data? If you’re running data-quality checks against the output data, how often do data inconsistencies occur—nulls where they aren’t expected, lousy formatting, etc.?
-- How often do errors occur?
-- Will the data contain duplicates?
-- Will some data values arrive late, possibly much later than other messages produced simultaneously?
-- What is the schema of the ingested data? Does a join across several tables or even several systems needed to get a complete picture of the data?
-- If schema changes (say, a new column is added), how is this dealt with and communicated to downstream stakeholders?
-- How frequently should data be pulled from the source system? Will **Ingestion** be a thread for source system in terms of resource contention?
+- What are the essential **characteristics** of the data source? Is it an application? A swarm of IoT devices?
+- How is data **persisted** in the source system? Is data persisted long term, or is it temporary and quickly deleted?
+- At what **rate** is data generated? How many events per second? How many gigabytes per hour?
+- What level of **consistency** can data engineers expect from the output data? If you’re running data-quality checks against the output data, how often do data inconsistencies occur—nulls where they aren’t expected, lousy formatting, etc.?
+- How often do **errors** occur?
+- Will the data contain **duplicates**?
+- Will some data values arrive **late**, possibly much later than other messages produced simultaneously?
+- What is the **schema** of the ingested data? Does a join across several tables or even several systems needed to get a complete picture of the data?
+- If **schema changes** (say, a new column is added), how is this dealt with and communicated to downstream stakeholders?
+- How **frequently** should data be pulled from the source system? Will **Ingestion** be a thread for source system in terms of resource contention?
 - For stateful systems (e.g., a database tracking customer account information), is data provided as periodic snapshots or update events from change data capture (CDC)? What’s the logic for how changes are performed, and how are these tracked in the source database?
-- Who/what is the data provider that will transmit the data for downstream consumption?
-- Will reading from a data source impact its performance?
-- Does the source system have upstream data dependencies? What are the characteristics of these upstream systems?
-- Are data-quality checks in place to check for late or missing data?
+- Who/what is the data provider that will **transmit** the data for downstream consumption?
+- Will **reading** from a data source impact its performance?
+- Does the source system have upstream **data dependencies**? What are the characteristics of these upstream systems?
+- Are **data-quality checks** in place to check for late or missing data?
 
 We'll learn more about Source Systems in Chapter 5.
 
@@ -582,15 +639,15 @@ Storage intersects with other stages such as ingestion, transformation, and serv
 
 #### Here is a set of evaluation questions for Storage:
 
-- Is the storage solution compatible with the architecture’s required read and write speeds to prevent bottlenecks in downstream processes?
-- Are we utilizing the storage technology optimally without causing performance issues (e.g., avoiding high rates of random access in object storage systems)?
-- Can the storage system handle anticipated future scale in terms of capacity limits, read/write operation rates, and data volume?
-- Will downstream users and processes be able to retrieve data within the required service-level agreements (SLAs)?
-- Are we capturing metadata about schema evolution, data flows, and data lineage to enhance data utility and support future projects?
-- Is this a pure storage solution, or does it also support complex query patterns (like a cloud data warehouse)?
-- Does the storage system support schema-agnostic (object storage) storage, flexible schemas (Cassandra), or enforced schemas (DWH)?
-- How are we tracking master data, golden records, data quality, and data lineage for data governance?
-- How are we handling regulatory compliance and data sovereignty, such as restrictions on storing data in certain geographical locations?
+- Is the storage solution **compatible** with the architecture’s required read and write speeds to prevent bottlenecks in downstream processes?
+- Are we **utilizing** the storage technology optimally without causing performance issues (e.g., avoiding high rates of random access in object storage systems)?
+- Can the storage system handle **anticipated future scale** in terms of capacity limits, read/write operation rates, and data volume?
+- Will downstream users and processes be able to retrieve data within the required service-level agreements (**SLAs** - more on this later)?
+- Are we capturing metadata about **schema evolution**, data flows, and data lineage to enhance data utility and support future projects?
+- Is this a pure storage solution, or does it also support **complex query patterns** (like a cloud data warehouse)?
+- Does the storage system support **schema-agnostic** (object storage) storage, **flexible schemas** (Cassandra), or **enforced schemas** (DWH)?
+- How are we tracking **master data**, **golden records**, **data quality**, and **data lineage** for data governance?
+- How are we handling **regulatory compliance** and data sovereignty, such as restrictions on storing data in certain geographical locations?
 
 Regardless of the storage type, the temperature of data is a good frame to interpret storage and data.
 
@@ -608,13 +665,13 @@ Ingestion services might also fail for various reasons, halting data flow and im
 
 #### Here is a set of evaluation questions for Ingestion:
 
-- What are the purposes of the data we are ingesting? Can we utilize this data without creating multiple versions of the same dataset?
-- Do the systems that generate and ingest this data operate reliably, and is the data accessible when needed?
-- After ingestion, where will the data be stored or directed?
-- How often will we need to access or retrieve the data?
-- What is the typical volume or size of the data that will be arriving?
-- In what format is the data provided, and can the downstream storage and transformation systems handle this format?
-- Is the source data ready for immediate use downstream? If so, for how long will this be the case, and what could potentially make it unusable?
+- What are the **purposes** of the data we are ingesting? Can we utilize this data without creating multiple versions of the same dataset?
+- Do the systems that generate and ingest this data operate **reliably**, and is the data accessible when needed?
+- After ingestion, where will the data be stored or **directed**?
+- How often will we need to **access** or retrieve the data?
+- What is the **typical volume** or size of the data that will be arriving?
+- In what **format** is the data provided, and can the downstream storage and transformation systems handle this format?
+- Is the source data ready for **immediate use** downstream? If so, for how long will this be the case, and what could potentially make it unusable?
 
 *Batch processing* is often preferred over streaming due to added complexities and costs; *real-time streaming* should be used only when necessary.
 
