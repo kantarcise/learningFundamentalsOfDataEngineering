@@ -54,6 +54,8 @@ Fundamentals of Data Engineering
 
 Let's discover the land of data together.
 
+---
+
 ## 1. Data Engineering Described
 
 Let's clarify why we are here.
@@ -577,6 +579,8 @@ Now we know about:
 
 Let's dive deep on the lifecycle.
 
+---
+
 ## 2. The Data Engineering Lifecycle. 🐦
 
 We can move beyond viewing data engineering as a specific collection of data technologies, which is a big trap. 😮
@@ -798,6 +802,8 @@ The data engineering lifecycle, supported by key undercurrents such as security,
 
 Let's learn to think with this mindset! 🧠
 
+---
+
 ## 3. Designing Good Data Architecture 🎋
 
 What is it? Here is a definition:
@@ -941,6 +947,8 @@ Gaining a strong grasp of these decision points will equip us to make sound, rea
 
 Next, we’ll explore approaches to selecting the right technologies for our data architecture and throughout the data engineering lifecycle. 😍
 
+---
+
 ## 4. Choosing Technologies Across the Data Engineering Lifecycle
 
 Chapter 3 explored the concept of “good” data architecture and its importance. 
@@ -994,6 +1002,8 @@ Read this part in detail on how to choose the right tooling.
 # Part 2 – The Data Engineering Lifecycle in Depth 🔬
 
 Then we move onto the second part of the book, which helps us understand the core idea.
+
+---
 
 ## 5. Data Generation in Source Systems
 
@@ -1152,6 +1162,8 @@ Making source teams part of the data journey is also a great idea.
 Next: storing the data.
 
 > One additional note: Ideally our systems should be **idempotent**. An idempotent system produces the same result whether a message is processed once or multiple times—crucial for handling retries safely.
+
+---
 
 ## 6. Storage 📦
 
@@ -1322,6 +1334,8 @@ infrastructure storage components, object storage and other “serverless” sys
 
 > Orchestration is highly entangled with storage. Storage allows data to flow through
 pipelines, and orchestration is the pump.
+
+---
 
 ## 7. Ingestion
 
@@ -1599,6 +1613,8 @@ Ingestion isn’t just about moving data—it’s about understanding the shape,
 
 The key is to choose ingestion patterns that match the needs of the business while staying robust, scalable, and future-proof.
 
+---
+
 ## 8. Queries, Modeling, and Transformation
 
 Now we'll learn how to make data useful.
@@ -1784,6 +1800,8 @@ As data engineers, we’re often tasked with choosing between performance and fl
 
 Whether we persist transformed data in a wide denormalized table, or virtualize it across systems via tools like Trino, our transformations are what elevate raw data into decision-ready information.
 
+---
+
 ## 9. Serving Data for Analytics, Machine Learning, and Reverse ETL
 
 Serving is the final stage of the data engineering lifecycle, where data is delivered to drive insights, predictions, and actions.
@@ -1935,10 +1953,13 @@ Data must be served with the user and use case in mind. Business analysts rely o
 
 Lastly, reverse ETL has emerged as a key method to close the loop between insights and action. Rather than expecting users to access insights in dashboards or files, reverse ETL pipelines push enriched or modeled data directly into operational tools—like inserting ML-scored leads back into Salesforce. This approach reduces friction and enables real-time decisioning within the tools teams already use. However, it also introduces potential feedback loops and risks, such as runaway bid models in ad platforms. Monitoring and safeguards are essential. As serving becomes more complex and democratized, concepts like data mesh, where teams produce and consume data products autonomously, shift the mindset from centralized pipelines to federated, domain-driven delivery.
 
+---
 
 # Part 3 – Security, Privacy, and the Future of Data Engineering
 
 The final part of the book is about Security, Privacy, and the Future of Data Engineering
+
+---
 
 ## 10. Security and Privacy
 
@@ -1981,6 +2002,8 @@ Encourage engineers to be active security contributors within their domains. Fam
 ### Conclusion
 
 Security is not just a policy—it’s a habit. Treat data like your most valuable possession. While you may not be the lead on security at your company, by practicing good security hygiene, staying alert, and keeping security front of mind, you play a key role in protecting your organization’s data.
+
+---
 
 ## 11. The Future of Data Engineering
 
@@ -2047,6 +2070,8 @@ Stay curious, engage with the community, and keep learning. Whether you design p
 
 Data engineering’s future is bright—and you get to help build it. 🌟
 
+---
+
 # Appendices
 
 ## Appendix A. Serialization and Compression Technical Details
@@ -2078,6 +2103,8 @@ Engines like those in SQL Server, PostgreSQL, and MySQL offer pluggable or confi
 ### Key Takeaway
 
 Understanding serialization and compression isn't optional—it’s essential for designing fast, scalable, and reliable data systems. Choosing the right format and compression algorithm can yield massive performance improvements and smoother system interoperability.
+
+---
 
 ## Appendix B. Cloud Networking
 
@@ -2120,6 +2147,8 @@ Data egress fees restrict cloud portability and multi-cloud adoption. Competitiv
 ### Takeaway
 
 Cloud networking shapes system performance, resilience, and cost. Data engineers must be aware of how their data moves within and across zones, regions, and providers—and should design architectures that balance latency, cost, and reliability while keeping an eye on evolving cloud pricing models.
+
+---
 
 # Closing 
 
