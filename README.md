@@ -957,13 +957,13 @@ The key question to ask when evaluating a technology is straightforward:
 
 > Does it add value to the data product and the broader business? 💡
 
-One common misconception is equating architecture with tools. 
+One common misconception is equating **architecture** with **tools**. 
 
 **Architecture** is strategic, while **tools** are tactical.
 
-- Architecture is the high-level design, roadmap, and blueprint that guides how data systems align with strategic business objectives. It answers the what, why, and when of data systems. 
+- **Architecture** is the high-level design, roadmap, and blueprint that guides how data systems align with strategic business objectives. It answers the what, why, and when of data systems. 
 
-- Tools, on the other hand, are the how—the practical means of implementing the architecture.
+- **Tools**, on the other hand, are the how—the practical means of implementing the architecture.
 
 ### Key Factors for Choosing Data Technologies
 
@@ -995,13 +995,13 @@ These points might be helpful for you to demonstrate that your approach is roote
 
 Read this part in detail on how to choose the right tooling.
 
-# Part 2 – The Data Engineering Lifecycle in Depth
+# Part 2 – The Data Engineering Lifecycle in Depth 🔬
 
 Then we move onto the second part of the book, which helps us understand the core idea.
 
 ## 5. Data Generation in Source Systems
 
-Before getting the raw data, you must understand where the data exists, how it is generated, and its characteristics.
+Before getting the raw data, we must understand where the data exists, how it is generated, and its characteristics.
 
 Let's make sure we get the absolute basics about source systems correctly.
 
@@ -1021,7 +1021,7 @@ Standard data exchange method. A simple example would be the "log in with Twitte
 
 Store app state with fast, high-volume reads/writes. Ideal for transactional tasks like banking. Commonly low-latency, high-concurrency systems—RDBMS, document, or graph DBs.
 
-More info about ACID and atomic transactions here also.
+More info about **ACID** and **atomic transactions** can be found here.
 
 #### OLAP Systems
 
@@ -1049,9 +1049,12 @@ Instead of updates, new records are inserted with timestamps. Great for history,
 
 #### Messages and Streams
 
-Messages are single-use signals between systems. Once the message is received, and the action is taken,
-the message is removed from the message queue. Streams are ordered, persistent logs of events for long-term processing. With append only nature, records in a stream are persisted over a
-retention window. Streaming platforms often handle both.
+***Messages*** are single-use signals between systems. Once the message is received, and the action is taken, the message is removed from the message queue. 
+
+***Streams*** are ordered, persistent logs of events for long-term processing. With append only nature, records in a stream are persisted over a
+retention window. 
+
+Streaming platforms often handle both.
 
 #### Types of Time
 
@@ -1066,29 +1069,35 @@ Track all to monitor delays and flow.
 Here are some practical knowledge of APIs, databases, and data flow tools is essential but ever-changing—stay current.
 
 #### **Relational Databases (RDBMS)**
+
 Structured, ACID-compliant, great for transactional systems. Use tables, foreign keys, normalization.
 
 Examples would be [PostgreSQL](https://www.postgresql.org/), [MySQL](https://www.mysql.com/), [SQL Server](https://www.microsoft.com/en-us/sql-server/), [Oracle DB](https://www.oracle.com/database/) etc.
 
 #### **NoSQL Databases**
+
 Flexible, horizontally scalable databases with different data models.
 
 ##### **Key-Value Stores**
+
 Fast read/write using unique keys. Great for caching or real-time event storage.
 
 Examples would be [Redis](https://redis.io/), [Amazon DynamoDB](https://aws.amazon.com/dynamodb/) etc.  
 
 ##### **Document Stores**
+
 Schema-flexible, store nested JSON-like documents. No joins.
 
 Some examples are [MongoDB](https://www.mongodb.com/), [Couchbase](https://www.couchbase.com/), [Firebase Firestore](https://firebase.google.com/products/firestore) etc.
 
 ##### **Wide-Column Stores**
+
 High-throughput databases that scale horizontally. Use column families and rows.
 
 Some examples are [Cassandra](https://cassandra.apache.org/), [ScyllaDB](https://www.scylladb.com/), [Google Bigtable](https://cloud.google.com/bigtable).
 
 ##### **Graph Databases**  
+
 Store nodes and edges. Ideal for analyzing relationships.
 
 Examples could be given as [Neo4j](https://neo4j.com/), [Amazon Neptune](https://aws.amazon.com/neptune/), [ArangoDB](https://www.arangodb.com/) etc.
@@ -1099,14 +1108,17 @@ Fast search and text analysis engines. Common in logs and e-commerce.
 Popular examples are [Elasticsearch](https://www.elastic.co/elasticsearch/), [Apache Solr](https://solr.apache.org/), [Algolia](https://www.algolia.com/).
 
 ##### **Time-Series Databases**  
+
 Optimized for time-stamped data: metrics, sensors, logs.
 
 Some examples would be [InfluxDB](https://www.influxdata.com/), [TimescaleDB](https://www.timescale.com/), [Apache Druid](https://druid.apache.org/) etc.
 
 #### **APIs**  
+
 Standard for data exchange across systems, especially over HTTP.
 
 ##### **REST (Representational State Transfer)**  
+
 Stateless API style using HTTP verbs (GET, POST, etc.). Widely adopted but loosely defined—developer experience varies.
 
 An example would be the [GitHub REST API](https://docs.github.com/en/rest).
@@ -1118,11 +1130,13 @@ Made by Meta. Lets clients request exactly the data they need in one query—mor
 Here is a link for the curious: [GitHub GraphQL API](https://docs.github.com/en/graphql).
 
 ##### **Webhooks**  
+
 Event-based callbacks from source systems to endpoints. Called *reverse APIs* because the server pushes data to the client.
 
 [Stripe Webhooks](https://stripe.com/docs/webhooks) and [Slack Webhooks](https://api.slack.com/messaging/webhooks) are great examples.
 
 ##### **RPC / gRPC**  
+
 Run remote functions as if local. **gRPC** (by Google) uses Protocol Buffers and HTTP/2 for fast, efficient communication.
 
 Check out [gRPC by Google](https://grpc.io/) for more.
@@ -1141,7 +1155,7 @@ Making source teams part of the data journey is also a great idea.
 
 Next: storing the data.
 
-One additional note: Ideally our systems should be **idempotent**. An idempotent system produces the same result whether a message is processed once or multiple times—crucial for handling retries safely.
+> One additional note: Ideally our systems should be **idempotent**. An idempotent system produces the same result whether a message is processed once or multiple times—crucial for handling retries safely.
 
 ## 6. Storage
 
