@@ -224,7 +224,7 @@ Examples:
 
 - An ingestion pipeline that moves data from APIs to a database
 - A transformation pipeline that cleans and joins datasets daily
-- Real-time pipelines using tools like Kafka, Flink, or Spark
+- Real-time pipelines using tools like Kafka, [Flink](https://flink.apache.org/), or [Spark](https://spark.apache.org/)
 
 📌 Goal: Automate reliable and repeatable data movement and processing.
 
@@ -245,7 +245,7 @@ This is where data lives long-term, structured in a way that it can be easily ac
 Examples:
 
 - Cloud object storage: AWS S3, GCP Cloud Storage
-- Data warehouses: Snowflake, BigQuery, Redshift
+- Data warehouses: Snowflake, BigQuery, [Redshift](https://aws.amazon.com/redshift/)
 - Data lakes: Delta Lake, Apache Hudi
 - Databases: PostgreSQL, MySQL, MongoDB
 
@@ -1291,7 +1291,7 @@ Modern systems **decouple** compute from storage for better scalability and cost
 
 #### 📎 Zero-Copy Cloning
 
-Clone data without duplicating it (e.g., Snowflake, BigQuery).
+Clone data without duplicating it (e.g., [Snowflake](https://www.snowflake.com/en/emea/), [BigQuery](https://cloud.google.com/bigquery?hl=en)).
 
 ⚠️ Deleting original files may affect clones — know the limits.
 
@@ -1445,7 +1445,7 @@ Choose based on system capabilities and transformation complexity.
 
 - Avoid many small inserts—use bulk operations for better performance.
 - Some systems (like Druid, Pinot) handle fast inserts well.
-- Columnar databases (e.g., BigQuery) prefer larger batch loads over frequent single-row inserts.
+- Columnar databases (e.g., [BigQuery](https://cloud.google.com/bigquery?hl=en)) prefer larger batch loads over frequent single-row inserts.
 - Understand how your target system handles updates and file creation.
 
 #### 🔄 Data Migration
@@ -1483,14 +1483,14 @@ Here is what you can do:
 #### 🔁 Ordering & Duplicate Delivery
 
 - Distributed systems can cause **out-of-order** and **duplicate** messages.
-- Most systems (e.g., Kafka) guarantee **at-least-once** delivery.
+- Most systems (e.g., [Kafka](https://kafka.apache.org/)) guarantee **at-least-once** delivery.
 - Build systems that can handle duplicates gracefully (e.g., idempotent processing). 🎉
 
 #### ⏪ Replay
 
 Replay lets you reprocess historical events within a time range.
 
-- Platforms like **Kafka**, **Kinesis**, and **Pub/Sub** support this.
+- Platforms like **[Kafka](https://kafka.apache.org/)**, **Kinesis**, and **Pub/Sub** support this.
 - This is really useful for recovery, debugging, or rebuilding pipelines.
 
 #### ⏳ Time to Live (TTL)
@@ -1503,14 +1503,14 @@ Examples:
 
 - **Pub/Sub**: up to 7 days
 - **Kinesis**: up to 365 days
-- **Kafka**: configurable, even indefinite with object storage
+- **[Kafka](https://kafka.apache.org/)**: configurable, even indefinite with object storage
 
 #### 📏 Message Size
 
 Be mindful of max size limits:
 
 - **Kinesis**: 1 MB
-- **Kafka**: configurable (default 1 MB, up to 20+ MB)
+- **[Kafka](https://kafka.apache.org/)**: configurable (default 1 MB, up to 20+ MB)
 
 #### 🧯 Error Handling & Dead-Letter Queues
 
@@ -1562,7 +1562,7 @@ APIs are a common ingestion method from external systems.
 
 #### 📨 Message Queues & Event Streams
 
-Use systems like **Kafka, Kinesis**, or **Pub/Sub** to ingest real-time event data.
+Use systems like **[Kafka](https://kafka.apache.org/), Kinesis**, or **Pub/Sub** to ingest real-time event data.
 
 - ***Queues*** are transient (message disappears after read); ***streams*** persist and support replays, joins, and aggregations.
 
@@ -1651,7 +1651,7 @@ The key is to choose ingestion patterns that match the needs of the business whi
 
 ---
 
-## 8. Queries, Modeling, and Transformation
+## 8. Queries, Modeling, and Transformation 🪇
 
 Now we'll learn how to make data useful.
 
@@ -1695,29 +1695,29 @@ print(result)
 # 0  Bob   30
 ```
 
-Structured Query Language (SQL) is commonly used for querying tabular and semistructured data. 
+***Structured Query Language*** (SQL) is commonly used for querying tabular and semistructured data.
 
-A query may read data (SELECT), modify it (INSERT, UPDATE, DELETE), or control access (GRANT, REVOKE). 
+A query may read data (SELECT), modify it (INSERT, UPDATE, DELETE), or control access (GRANT, REVOKE).
 
-Under the hood, a query goes through parsing, compilation to bytecode, optimization, and execution. 
+Under the hood, a query goes through parsing, compilation to bytecode, optimization, and execution.
 
 Various query languages (DML, DDL, DCL, TCL) are used to define and manipulate data and database objects, manage access, and control transactions for consistency and reliability.
 
-To improve query performance, data engineers must understand the role of the query optimizer and write efficient queries. Strategies include optimizing joins, using prejoined tables or materialized views, leveraging indexes and partitioning, and avoiding full table scans. 
+To improve query performance, data engineers must understand the role of the query optimizer and write efficient queries. Strategies include **optimizing joins**, using **prejoined tables or materialized views**, leveraging **indexes and partitioning**, and **avoiding full table scans**.
 
 Engineers should monitor execution plans, system resource usage, and take advantage of query caching. Managing commits properly and vacuuming dead records are essential to maintain database performance. Understanding the consistency models of databases (e.g., ACID, eventual consistency) ensures reliable query results.
 
-Streaming queries differ from batch queries, requiring real-time strategies such as session, fixed-time, or sliding windows. 
+Streaming queries differ from batch queries, requiring real-time strategies such as session, fixed-time, or sliding windows.
 
 Watermarks are used to handle late-arriving data, while triggers enable event-driven processing.
 
-Combining streams with batch data, enriching events, or joining multiple streams adds complexity but unlocks deeper insights. 
+Combining streams with batch data, enriching events, or joining multiple streams adds complexity but unlocks deeper insights.
 
-Technologies like Kafka, Flink, and Spark are essential for such patterns. Modern architectures like Kappa treat streaming logs as first-class data stores, enabling analytics on both recent and historical data with minimal latency.
+Technologies like [Kafka](https://kafka.apache.org/), [Flink](https://flink.apache.org/), and [Spark](https://spark.apache.org/) are essential for such patterns. Modern architectures like Kappa treat streaming logs as first-class data stores, enabling analytics on both recent and historical data with minimal latency.
 
 ### Data Modeling
 
-Data modeling is a foundational practice in data engineering that ensures data structures ***reflect business needs and logic***. A data model shows how data relates to real world.
+**Data modeling** is a foundational practice in data engineering that ensures data structures ***reflect business needs and logic***. A data model shows how data relates to real world.
 
 Despite its long-standing history, it has often been overlooked, especially with the rise of big data and NoSQL systems. 
 
@@ -1733,147 +1733,170 @@ Three dominant batch modeling strategies are **Inmon** (centralized, normalized 
 
 Wide, denormalized tables are gaining popularity in the cloud era due to flexible schemas and cheap storage, especially in columnar databases.
 
-Streaming data modeling presents new challenges. Traditional batch paradigms don’t easily apply due to continuous schema changes and unbounded nature. 
+Additionally, streaming data modeling presents new challenges. Traditional batch paradigms don’t easily apply due to continuous schema changes and unbounded nature. 
 
-Flexibility is key: assume the source defines business logic, expect schema drift, and store both recent and historical data together. Automation and dynamic analytics on streaming data are emerging trends. While no universal approach has yet emerged, models like the Data Vault show promise in adapting to streaming workflows. 
+So flexibility is key: assume the source defines business logic, expect schema drift, and store both recent and historical data together. 
+
+Automation and dynamic analytics on streaming data are emerging trends. While no universal approach has yet emerged, models like the Data Vault show promise in adapting to streaming workflows. 
 
 The future may involve unified layers that combine metrics, semantics, pipelines, and real-time source-connected analytics, reducing the batch-vs-stream divide.
 
 ### Transformation
 
-Transformations enhance and persist data for downstream use. Unlike queries, which retrieve data, transformations are about shaping and saving data—often as part of a pipeline. This reduces cost, increases performance, and enables reuse.
+Transformations enhance and persist data for downstream use. 
+
+Unlike queries, which retrieve data, transformations are about shaping and saving data—often as part of a pipeline. This reduces cost, increases performance, and enables reuse.
 
 #### Batch Transformations
 
 Batch transformations process data in chunks on a schedule (e.g., hourly, daily) and support reports, analytics, and ML models.
 
-- **Distributed Joins**
-  - **Broadcast Join**: Small table is sent to each node to join with partitions of a large table. Great for performance.
-  - **Shuffle Hash Join**: When both tables are large. Data is redistributed based on join keys and then joined. More resource-intensive.
+**Distributed Joins**
 
-- **ETL vs. ELT**
-  - **ETL**: Extract → Transform → Load. Originated when resources were limited.
-  - **ELT**: Extract → Load → Transform. Modern systems (data lakes/lakehouses) delay transformations.
-  - Choose based on context—no need to stick to one approach for the entire org.
+- **Broadcast Join**: Small table is sent to each node to join with partitions of a large table. Great for performance.
+- **Shuffle Hash Join**: When both tables are large. Data is redistributed based on join keys and then joined. More resource-intensive.
 
-- **SQL vs. Code-Based Tools**
-  - SQL is declarative and often sufficient for complex workflows using views or orchestration tools.
-  - Use Spark/PySpark when SQL becomes unreadable or hard to maintain, or for advanced operations (e.g., stemming).
-  - Avoid excessive use of Python UDFs; they slow performance in Spark. Prefer native Scala/Java implementations when needed.
+**ETL vs. ELT**
 
-- **Update Patterns**
-  - **Truncate & Reload**: Clears and regenerates entire table.
-  - **Insert Only**: Appends data, useful for tracking history.
-  - **Delete**: Can be soft (mark as deleted) or hard (remove permanently).
-  - **Upsert/Merge**: Updates or inserts depending on whether a match is found. Costly in columnar systems, so optimize merge frequency.
+- **ETL**: Extract → Transform → Load. Originated when resources were limited.
+- **ELT**: Extract → Load → Transform. Modern systems (data lakes/lakehouses) delay transformations.
 
-- **Schema Updates**
-  - Columnar systems make adding/removing fields easier.
-  - JSON fields support evolving schemas.
-  - Plan and manage schema updates to avoid breaking transformations.
+Choose based on context—no need to stick to one approach for the entire org.
 
-- **Data Wrangling**
-  - Cleans and transforms messy, malformed input data.
-  - Wrangling tools offer visual, code-generating interfaces—especially useful with semi-structured or complex text data.
+**SQL vs. Code-Based Tools**
 
-- **Example (Spark)**
-  - Ingest 3 JSON APIs → Join and transform in Spark → Output to Delta Lake in S3.
-  - Use DAGs for orchestration (e.g., Spark DAG inside Airflow DAG).
+- SQL is declarative and often sufficient for complex workflows using views or orchestration tools.
+- Use Spark/PySpark when SQL becomes unreadable or hard to maintain, or for advanced operations (e.g., stemming).
 
-- **Business Logic & Derived Data**
-  - Encode nuanced calculations (e.g., profits with/without marketing costs).
-  - Use metrics layers to centralize logic and avoid duplication across scripts.
+Avoid excessive use of Python UDFs; they slow performance in Spark. Prefer native Scala/Java implementations when needed.
 
-- **MapReduce**
-  - Influential, now outdated. Relied on disk for all intermediate steps.
-  - Spark and modern tools keep data in memory for better performance.
+**Update Patterns**
+
+- **Truncate & Reload**: Clears and regenerates entire table.
+- **Insert Only**: Appends data, useful for tracking history.
+- **Delete**: Can be soft (mark as deleted) or hard (remove permanently).
+- **Upsert/Merge**: Updates or inserts depending on whether a match is found. Costly in columnar systems, so optimize merge frequency.
+
+**Schema Updates**
+
+- Columnar systems make adding/removing fields easier.
+- JSON fields support evolving schemas.
+- Plan and manage schema updates to avoid breaking transformations.
+
+**Data Wrangling**
+
+- Cleans and transforms messy, malformed input data.
+- Wrangling tools offer visual, code-generating interfaces—especially useful with semi-structured or complex text data.
+
+**Example ([Spark](https://spark.apache.org/))**
+
+- Ingest 3 JSON APIs → Join and transform in Spark → Output to Delta Lake in S3.
+- Use DAGs for orchestration (e.g., Spark DAG inside [Airflow](https://airflow.apache.org/) DAG).
+
+**Business Logic & Derived Data**
+
+- Encode nuanced calculations (e.g., profits with/without marketing costs).
+- Use metrics layers to centralize logic and avoid duplication across scripts.
+
+**MapReduce**
+
+- Influential, now outdated. Relied on disk for all intermediate steps.
+- [Spark](https://spark.apache.org/) and modern tools keep data in memory for better performance.
 
 #### Materialized Views, Federation, and Query Virtualization
+
+Here are some oneliners.
 
 - **Views**: Reusable query logic, used for security, deduplication, and common access patterns.
 - **Materialized Views**: Precompute and persist results for better performance.
 - **Composable Materialized Views**: Layers of views (e.g., Databricks live tables).
 
 - **Federated Queries**: Query external data sources (e.g., S3, MySQL) from within a data warehouse. Enables hybrid data lake/warehouse patterns.
-- **Data Virtualization**: Process data without storing it. Used in engines like Trino and Presto.
-  - Push computation to source systems to minimize load.
-  - Avoid virtualizing production databases for analytics.
+- **Data Virtualization**: Process data without storing it. Used in engines like Trino and Presto. Push computation to source systems to minimize load. Avoid virtualizing production databases for analytics.
 
 #### Streaming Transformations and Processing
 
-- **Streaming Transformations vs. Queries**
-  - Queries present live views.
-  - Transformations enrich or shape streams for downstream use.
+**Streaming Transformations vs. Queries**
 
-- **Streaming DAGs**
-  - DAGs for streaming (e.g., Pulsar) simplify processing by unifying flows in code.
+- Queries present live views.
+- Transformations enrich or shape streams for downstream use.
 
-- **Micro-Batch vs. True Streaming**
-  - **Micro-Batch**: Small intervals (seconds/minutes). Works well for most business needs (e.g., Black Friday metrics).
-  - **True Streaming**: Processes every event as it arrives. Ideal for ultra-low latency (e.g., DDoS detection).
-  - Choose based on latency requirements, team expertise, and real-world testing.
+**Streaming DAGs**
 
+- DAGs for streaming (e.g., Pulsar) simplify processing by unifying flows in code.
+
+**Micro-Batch vs. True Streaming**
+
+- **Micro-Batch**: Small intervals (seconds/minutes). Works well for most business needs (e.g., Black Friday metrics).
+- **True Streaming**: Processes every event as it arrives. Ideal for ultra-low latency (e.g., DDoS detection).
+
+Choose based on latency requirements, team expertise, and real-world testing.
 
 ### Summary
 
-Modern data systems revolve around three tightly interwoven pillars: queries, data modeling, and transformations. 
+Modern data systems revolve around three tightly interwoven pillars: ***queries***, ***data modeling***, and ***transformations***.
 
-At the surface, SQL queries let us retrieve, filter, and analyze data in declarative ways, whether for dashboards or ad-hoc investigations. 
+At the surface, SQL queries let us retrieve, filter, and analyze data in declarative ways, whether for dashboards or ad-hoc investigations.
 
 But queries alone are not enough—they assume data is structured and meaningful. Techniques like joins (e.g., combining customer orders and product data), window functions, and streaming queries (e.g., computing moving averages in real time) depend on underlying data that’s clean, normalized, and aligned with business logic. Without good structure, queries become brittle, hard to reuse, and difficult to scale.
 
-That structure comes from data modeling—the process of organizing raw data into logical layers that reflect the organization’s goals. 
+That structure comes from data modeling—the process of organizing raw data into logical layers that reflect the organization’s goals.
 
 Whether it’s Inmon’s normalized warehouse-first approach, Kimball’s dimensional star schemas, or the flexibility of a Data Vault, modeling helps define relationships, enforce consistency, and preserve meaning over time. 
 
-Modeling even applies to stream data, albeit in more relaxed forms, where business definitions may shift dynamically, and flexibility (e.g., using JSON columns or CDC feeds) becomes more important than strict schema enforcement. Poorly modeled data often leads to data swamps, reporting confusion, and redundant pipelines—while good models lead to faster insights and cleaner transformations downstream.
+Modeling even applies to stream data, albeit in more relaxed forms, where business definitions may shift dynamically, and flexibility (e.g., using JSON columns or CDC feeds) becomes more important than strict schema enforcement. Poorly modeled data often leads to **data swamps**, reporting confusion, and **redundant pipelines**—while good models lead to faster insights and cleaner transformations downstream.
 
-Finally, transformations take center stage in turning data into its most useful, consumable form. This includes batch pipelines (e.g., ETL/ELT jobs using Spark or SQL), real-time stream enrichments, and creating derived data that reflects business logic like profit metrics. 
+Finally, transformations take center stage in turning data into its most useful, consumable form. This includes batch pipelines (e.g., ETL/ELT jobs using Spark or SQL), real-time stream enrichments, and creating derived data that reflects business logic like profit metrics.
 
-Tools like materialized views, Airflow DAGs, and orchestration frameworks help simplify these complex workflows and reduce redundant processing. 
+Tools like materialized views, [Airflow](https://airflow.apache.org/) DAGs, and orchestration frameworks help simplify these complex workflows and reduce redundant processing.
 
-As data engineers, we’re often tasked with choosing between performance and flexibility—using insert-only patterns, upserts, or schema evolution strategies that balance cost and query speed. 
+As data engineers, we’re often tasked with choosing between performance and flexibility—using insert-only patterns, upserts, or schema evolution strategies that balance cost and query speed.
 
 Whether we persist transformed data in a wide denormalized table, or virtualize it across systems via tools like Trino, our transformations are what elevate raw data into decision-ready information.
 
 ---
 
-## 9. Serving Data for Analytics, Machine Learning, and Reverse ETL
+## 9. Serving Data for Analytics, Machine Learning, and Reverse ETL 🍜
 
 Serving is the final stage of the data engineering lifecycle, where data is delivered to drive insights, predictions, and actions.
+
 It covers use cases like dashboards, machine learning, and feeding transformed data back into operational tools (reverse ETL).
-Success here depends on data trust, user understanding, performance, and thoughtful system design.
+
+Success here depends on ***data trust***, ***user understanding***, ***performance***, and ***thoughtful system design***.
 
 ### General Considerations for Serving Data
 
 #### Trust
 
 Trust is the most critical factor when serving data—if users don’t believe the data is accurate or consistent, they won’t use it.
+
 Data validation, observability, and adherence to SLAs/SLOs ensure trustworthiness throughout the lifecycle. Once trust is lost, it’s difficult to regain and often leads to poor adoption and failed data initiatives.
 
-Here is an example on SLA and SLO at serving stage.
+Here is an example on **SLA** and **SLO** at serving stage.
 
-- For example, an SLA might state: “Data will be consistently available and of high quality.”
+- For example, an **SLA** might state: “Data will be consistently available and of high quality.”
 
-- An SLO, which supports the SLA, specifies how performance will be measured—such as “Our data pipelines to dashboards or ML workflows will maintain 99% uptime, with at least 95% of data free from defects.”
+- An **SLO**, which supports the SLA, specifies how performance will be measured—such as ***“Our data pipelines to dashboards or ML workflows will maintain 99% uptime, with at least 95% of data free from defects.”***
 
 Setting an SLA isn’t enough. Clear communication is essential—teams must regularly discuss any risks that could impact expectations and define a process for addressing issues and continuous improvement.
 
 #### What’s the Use Case, and Who’s the User?
 
 Knowing the user and their intended action helps shape data products with real business impact.
+
 Serving data should begin by identifying the use case and working backwards from the decision or trigger it supports.
+
 This user-first approach ensures relevance, usability, and alignment with goals.
 
 #### Data Products
 
 A **data product** is a reusable dataset or service that solves a defined user problem through data.
 
-Building effective products requires collaboration with end users and clarity on their goals and expected outcomes. Good data products create feedback loops, improving themselves as usage increases and needs evolve.
+Building effective products requires collaboration with end users and clarity on their goals and expected outcomes. Good data products generate feedback loops, improving themselves as usage increases and needs evolve.
 
 #### Data Definitions and Logic
 
-Definitions like “customer” or “churn” must be consistent across systems to ensure correct and aligned usage.
+Definitions like ***“customer”*** or ***“churn”*** must be consistent across systems to ensure correct and aligned usage.
 
 Embedded business logic should be captured and centralized to avoid ambiguity and hidden institutional knowledge. Tools like semantic layers or catalogs can document and enforce shared definitions across teams and systems.
 
@@ -1889,15 +1912,15 @@ This is the first use case for data-serving.
 
 #### Business Analytics
 
-Business analytics helps stakeholders make strategic decisions using historical trends, KPIs, and dashboards. 
+***Business analytics*** helps stakeholders make strategic decisions using **historical trends**, **KPIs**, and **dashboards**. 
 
-Data is often served through data warehouses or lakes, using BI tools like [Tableau](https://www.tableau.com/), [Looker](), or [Power BI](https://www.microsoft.com/en-us/power-platform/products/power-bi). 
+Data is often served through data warehouses or lakes, using BI tools like [Tableau](https://www.tableau.com/), [Looker](https://cloud.google.com/looker?hl=en), or [Power BI](https://www.microsoft.com/en-us/power-platform/products/power-bi). 
 
 Dashboards, reports, and ad hoc analysis are key outputs, with data engineers enabling access and quality.
 
 #### Operational Analytics
 
-Operational analytics supports **real-time monitoring** and **rapid responses** by processing live data streams.
+***Operational analytics*** supports **real-time monitoring** and **rapid responses** by processing live data streams.
 
 It powers use cases like fraud detection, system monitoring, and factory floor analytics with low-latency data. This category requires real-time pipelines and databases optimized for concurrency, freshness, and speed. 
 
@@ -1905,13 +1928,13 @@ Real-time analytics at the factory is a great example here!
 
 #### Embedded Analytics
 
-Embedded analytics integrates data and insights directly into user-facing applications, enabling real-time, data-driven decision-making. 
+***Embedded analytics*** integrates data and insights directly into user-facing applications, enabling real-time, data-driven decision-making.
 
-For instance, a smart thermostat app displays live temperature and energy usage, helping users optimize their heating or cooling schedules for efficiency. 
+For instance, a smart thermostat app displays live temperature and energy usage, helping users optimize their heating or cooling schedules for efficiency.
 
-Similarly, a third-party e-commerce platform offers sellers real-time dashboards on sales, inventory, and returns—empowering them to react quickly, like launching instant promotions. 
+Similarly, a third-party e-commerce platform offers sellers real-time dashboards on sales, inventory, and returns—empowering them to react quickly, like launching instant promotions.
 
-Other examples include fitness apps showing health trends and workout suggestions based on user data, SaaS platforms that provide usage and engagement insights to customer success teams, and ride-sharing apps surfacing driver performance and earnings in real time. 
+Other examples include fitness apps showing health trends and workout suggestions based on user data, SaaS platforms that provide usage and engagement insights to customer success teams, and ride-sharing apps surfacing driver performance and earnings in real time.
 
 In all these cases, analytics isn’t a separate tool—it’s woven into the experience, driving immediate, contextual decisions.
 
@@ -1923,12 +1946,16 @@ Really good quote:
 
 > Boundary between ML, data science, data engineering, and ML engineering is increasingly fuzzy, and this boundary varies dramatically between organizations.
 
-Serving for ML means preparing and delivering high-quality data for model training, tuning, and inference. Data engineers may handle raw ingestion, feature pipelines, or even batch scoring alongside ML teams.
+Serving for ML means preparing and delivering high-quality data for model training, tuning, and inference. 
+
+Data engineers may handle raw ingestion, feature pipelines, or even batch scoring alongside ML teams.
 
 #### What a Data Engineer Should Know About ML
 
 - Data engineers don’t need to be ML experts but should understand core concepts like supervised learning and feature engineering.
+
 - They should know when to use batch vs. online learning, how to prepare structured/unstructured data, common ML workflows and difference between classification and regression techniques.
+
 - When to choose the “classical” techniques (logistic regression, tree-based learning, support vector machines) versus deep learning.
 
 This knowledge helps data engineers better support ML pipelines and collaborate effectively with data scientists and ML engineers.
@@ -1943,7 +1970,7 @@ It’s often a stopgap or used when consumers lack access to more advanced platf
 
 #### Databases
 
-OLAP databases like Snowflake, BigQuery, and Redshift offer structured, high-performance serving for analytics and ML. They support schemas, access control, and caching, and allow slicing compute for cost management.
+OLAP databases like [Snowflake](https://www.snowflake.com/en/emea/), [BigQuery](https://cloud.google.com/bigquery?hl=en), and [Redshift](https://aws.amazon.com/redshift/) offer structured, high-performance serving for analytics and ML. They support schemas, access control, and caching, and allow slicing compute for cost management.
 
 Data engineers manage performance, security, and scaling based on usage and workload.
 
@@ -1951,17 +1978,17 @@ Data engineers manage performance, security, and scaling based on usage and work
 
 Streaming systems enable near real-time serving by continuously processing incoming data. They’re used for operational dashboards, anomaly detection, and time-sensitive applications.
 
-Technologies like Flink, Kafka, and materialized views help bridge streaming and batch worlds.
+Technologies like [Flink](https://flink.apache.org/), Kafka, and materialized views help bridge streaming and batch worlds.
 
 #### Query Federation
 
 Query federation lets users query multiple systems (e.g., OLTP, OLAP, APIs) without centralizing the data. It’s useful for ad hoc analysis and controlled access but requires performance and resource safeguards.
 
-Tools like Trino and Starburst make this practical, especially in data mesh environments.
+Tools like [Trino](https://trino.io/) and [Starburst](https://www.starburst.io/) make this practical, especially in data mesh environments.
 
 #### Data Sharing
 
-Data sharing provides secure, scalable access to datasets between teams or organizations in the cloud. It reduces the need for duplicating data and allows for real-time consumption through platforms like Snowflake or BigQuery.
+Data sharing provides secure, scalable access to datasets between teams or organizations in the cloud. It reduces the need for duplicating data and allows for real-time consumption through platforms like [Snowflake](https://www.snowflake.com/en/emea/) or [BigQuery](https://cloud.google.com/bigquery?hl=en).
 
 Access control becomes the main concern, and engineers shift to enabling visibility while managing cost.
 
@@ -1969,51 +1996,75 @@ Access control becomes the main concern, and engineers shift to enabling visibil
 
 Semantic layers define shared metrics and business logic once, enabling reuse across dashboards and queries. They improve consistency, trust, and speed of development by centralizing definitions. 
 
-Tools like Looker (LookML) and dbt exemplify this approach, bridging analysts, engineers, and stakeholders.
+Tools like [Looker](https://cloud.google.com/looker?hl=en) and [dbt](https://www.getdbt.com/) exemplify this approach, bridging analysts, engineers, and stakeholders.
 
 #### Serving Data in Notebooks
 
 Notebooks like Jupyter are central to data science work, but local environments often hit memory limits. Data scientists typically connect to data sources programmatically, whether it's an API, a relational database, a cloud data warehouse, or a data lake.
 
-Engineers help scale access via cloud notebooks, distributed engines (e.g., Dask, Spark), or managed services. They also manage permissions, access control, and infrastructure for collaborative, reproducible analysis.
+Engineers help scale access via cloud notebooks, distributed engines (e.g., [Dask](https://www.dask.org/), [Spark](https://spark.apache.org/)), or managed services. They also manage permissions, access control, and infrastructure for collaborative, reproducible analysis.
 
 #### Reverse ETL
 
-Reverse ETL pushes processed data from the warehouse back into operational tools like CRMs or ad platforms. It enables teams to act on insights directly within their workflows, improving impact and usability. However, it makes feedback loops and must be carefully monitored for accuracy, cost, and unintended consequences.
+Reverse ETL pushes processed data from the warehouse back into operational tools like CRMs or ad platforms.
+
+It enables teams to act on insights directly within their workflows, improving impact and usability. However, it makes feedback loops and must be carefully monitored for accuracy, cost, and unintended consequences.
 
 ### Summary
 
-At the final stage of the data engineering lifecycle, serving data ensures insights flow into action. This involves delivering clean, timely, and trustworthy data to a variety of consumers: analysts generating dashboards and reports, data scientists training models, and even business systems via reverse ETL—where insights are pushed back into operational tools like CRMs or ad platforms. Regardless of the use case, trust is foundational: teams must invest in data validation, observability, and clear service-level agreements (SLAs/SLOs) to maintain reliability. The right data definitions and consistent logic—often managed via semantic or metrics layers—ensure that users interpret and act on data the same way across the organization.
+At the final stage of the data engineering lifecycle, serving data ensures insights flow into action. This involves delivering clean, timely, and trustworthy data to a variety of consumers: analysts generating dashboards and reports, data scientists training models, and even business systems via reverse ETL—where insights are pushed back into operational tools like CRMs or ad platforms. 
 
-Data must be served with the user and use case in mind. Business analysts rely on OLAP databases and BI tools (like Tableau, Looker, or Power BI) for trend detection and strategic reporting, while operational and embedded analytics require real-time or low-latency systems. For machine learning, engineers prepare structured or semi-structured data for offline or online model training, often via feature pipelines and batch exports from data warehouses. Data scientists may use notebooks like Jupyter, often hitting limits of local memory and scaling into tools like Spark, Ray, or SageMaker. Whether serving analytics or ML, delivery options include query engines, object storage, streaming systems, and federated queries—all chosen based on latency, concurrency, and access control needs.
+Regardless of the use case, trust is foundational: teams must invest in ***data validation***, ***observability***, and ***clear service-level agreements*** (SLAs/SLOs) to maintain reliability. 
 
-Lastly, reverse ETL has emerged as a key method to close the loop between insights and action. Rather than expecting users to access insights in dashboards or files, reverse ETL pipelines push enriched or modeled data directly into operational tools—like inserting ML-scored leads back into Salesforce. This approach reduces friction and enables real-time decisioning within the tools teams already use. However, it also introduces potential feedback loops and risks, such as runaway bid models in ad platforms. Monitoring and safeguards are essential. As serving becomes more complex and democratized, concepts like data mesh, where teams produce and consume data products autonomously, shift the mindset from centralized pipelines to federated, domain-driven delivery.
+The right data definitions and consistent logic—often managed via semantic or metrics layers—ensure that users interpret and act on data the same way across the organization.
+
+Data must be served with the ***user*** and ***use case*** in mind. 
+
+Business analysts rely on OLAP databases and BI tools (like Tableau, Looker, or Power BI) for trend detection and strategic reporting, while operational and embedded analytics require real-time or low-latency systems. For machine learning, engineers prepare structured or semi-structured data for offline or online model training, often via feature pipelines and batch exports from data warehouses. 
+
+Data scientists may use notebooks like Jupyter, often hitting limits of local memory and scaling into tools like Spark, Ray, or SageMaker. 
+
+Whether serving analytics or ML, delivery options include query engines, object storage, streaming systems, and federated queries—all chosen based on latency, concurrency, and access control needs.
+
+Lastly, reverse ETL has emerged as a key method to close the loop between insights and action. Rather than expecting users to access insights in dashboards or files, reverse ETL pipelines push enriched or modeled data directly into operational tools—like inserting ML-scored leads back into Salesforce. This approach reduces friction and enables real-time decisioning within the tools teams already use.
+
+However, it also introduces potential feedback loops and risks, such as runaway bid models in ad platforms. Monitoring and safeguards are essential. 
+
+As serving becomes more complex and democratized, concepts like data mesh, where teams produce and consume data products autonomously, shift the mindset from centralized pipelines to federated, domain-driven delivery.
 
 ---
 
 # Part 3 – Security, Privacy, and the Future of Data Engineering
 
-The final part of the book is about Security, Privacy, and the Future of Data Engineering
+The final part of the book is about Security, Privacy, and the Future of Data Engineering.
 
 ---
 
-## 10. Security and Privacy
+## 10. Security and Privacy 🛡️
 
-Security in data engineering is not optional—it’s foundational. As custodians of sensitive data, data engineers must prioritize security at every stage of the data lifecycle. Beyond protecting infrastructure, strong security builds trust, ensures regulatory compliance, and prevents damaging breaches that could derail careers and companies.
+Security in data engineering is not optional—it’s foundational.
+
+As custodians of sensitive data, data engineers must prioritize security at every stage of the data lifecycle. 
+
+Beyond protecting infrastructure, strong security builds trust, ensures regulatory compliance, and prevents damaging breaches that could derail careers and companies.
 
 ### People
 
-Humans are the weakest link in the security chain. Engineers should adopt a defensive mindset, practice negative thinking to anticipate worst-case scenarios, and be cautious with sensitive data and credentials. Ethical concerns about data handling should be raised, not buried.
+Humans are the weakest link in the security chain. 
+
+Engineers should adopt a defensive mindset, practice negative thinking to anticipate worst-case scenarios, and be cautious with sensitive data and credentials. 
+
+Ethical concerns about data handling should be raised, not buried.
 
 ### Processes
 
-Security must be habitual, not theatrical. Many organizations prioritize compliance checklists (SOC-2, ISO 27001) without truly securing systems. 
+Security must be habitual, not theatrical. Many organizations prioritize compliance checklists ([SOC-2](https://www.imperva.com/learn/data-security/soc-2-compliance/), [ISO 27001](https://www.iso.org/standard/27001)) without truly securing systems.
 
 Embed active security thinking into the culture, regularly audit risks, and exercise the principle of least privilege by granting only necessary access, only for the time it’s needed. 
 
 [See this doc](https://cloud.google.com/iam/docs/using-iam-securely#least_privilege) from Google Cloud as an example.
 
-Understand your shared responsibility when using the cloud.
+Understand your [shared responsibility](https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility) when using the cloud.
 
 ### Technology
 
@@ -2025,61 +2076,91 @@ Regular logging, monitoring, and alerting will help detect anomalies in **access
 
 #### Data Backups and Disaster Preparedness
 
-Always back up your data and test restore procedures regularly. In the era of ransomware, recovery readiness is as vital as prevention. Don’t wait for disaster to find out your backups are broken.
+Always back up your data and test restore procedures regularly.
+
+In the era of ransomware, recovery readiness is as vital as prevention. Don’t wait for disaster to find out your backups are broken.
 
 #### Security at a Technical Level
 
-Security risks exist even at the hardware and low-level software layer—e.g., vulnerabilities in logging libraries, microcode, or memory. While this book focuses on higher-level pipelines, engineers working closer to storage and processing must stay vigilant and up-to-date.
+Security risks exist even at the hardware and low-level software layer—e.g., vulnerabilities in logging libraries, microcode, or memory. 
+
+While this book focuses on higher-level pipelines, engineers working closer to storage and processing must stay vigilant and up-to-date.
 
 #### Internal Security Awareness
 
-Encourage engineers to be active security contributors within their domains. Familiarity with specific tools gives them a unique vantage point to identify potential flaws. Security shouldn’t be siloed—it should be everyone’s responsibility.
+Encourage engineers to be active security contributors within their domains. Familiarity with specific tools gives them a unique vantage point to identify potential flaws. 
+
+Security shouldn’t be siloed—it should be everyone’s responsibility.
 
 ### Conclusion
 
-Security is not just a policy—it’s a habit. Treat data like your most valuable possession. While you may not be the lead on security at your company, by practicing good security hygiene, staying alert, and keeping security front of mind, you play a key role in protecting your organization’s data.
+Security is not just a policy—it’s a habit. Treat data like your most valuable possession. 
+
+While you may not be the lead on security at your company, by practicing good security hygiene, staying alert, and keeping security front of mind, you play a key role in protecting your organization’s data.
 
 ---
 
-## 11. The Future of Data Engineering
+## 11. The Future of Data Engineering 🗻
 
-The field of data engineering is evolving rapidly, but its lifecycle—ingest, transform, serve—remains a durable foundation. Though tools and best practices evolve, the underlying need to build trustworthy, performant data systems persists. Simplicity is on the rise, but that doesn’t diminish the need for engineers—it elevates them to higher-level thinking and system design.
+The field of data engineering is evolving rapidly, but its lifecycle—ingest, transform, serve—remains a durable foundation. 
+
+Though tools and best practices evolve, the underlying need to build trustworthy, performant data systems persists. 
+
+**Simplicity** is on the rise, but that doesn’t diminish the need for engineers—it elevates them to higher-level thinking and system design.
 
 ### Simplification, Not Elimination
 
 #### Rise of Simpler Tools:
 
-The decline of complexity through managed cloud services (like Snowflake, BigQuery, Airbyte) has democratized data engineering. Open source tools, now available as cloud offerings, reduce the need for infrastructure expertise, allowing companies of all sizes to participate in building robust data platforms.
+The decline of complexity through managed cloud services (like [Snowflake](https://www.snowflake.com/en/emea/), [BigQuery](https://cloud.google.com/bigquery?hl=en), [Airbyte](https://airbyte.com/)) has democratized data engineering.
+
+Open source tools, now available as cloud offerings, reduce the need for infrastructure expertise, allowing companies of all sizes to participate in building robust data platforms.
 
 #### Shift in Focus:
 
-As foundational components become plug-and-play, engineers will shift from pipeline plumbing to designing interoperable, resilient systems. Tools like dbt, Fivetran, and managed Airflow free up time for higher-value work.
+As foundational components become plug-and-play, engineers will shift from pipeline plumbing to designing interoperable, resilient systems. 
+
+Tools like [dbt](https://www.getdbt.com/), [Fivetran](https://www.fivetran.com/), and managed [Airflow](https://airflow.apache.org/) free up time for higher-value work.
 
 ### The Data Operating System
 
 #### From Devices to the Cloud:
 
-Cloud services resemble operating system services—storage, compute, orchestration—operating at global scale. Just as app developers rely on OS abstractions, data engineers will increasingly build upon cloud-native primitives with standard APIs, enhanced metadata, and smart orchestration layers like Airflow, Dagster, and Prefect.
+Cloud services resemble operating system services—storage, compute, orchestration—operating at global scale. 
+
+Just as app developers rely on **OS abstractions**, data engineers will increasingly build upon **cloud-native primitives** with standard APIs, enhanced metadata, and smart orchestration layers like [Airflow](https://airflow.apache.org/), [Dagster](https://dagster.io/), and [Prefect](https://www.prefect.io/).
 
 #### Future Stack Evolution:
 
-Expect tighter integration across services, Infrastructure-as-Code built into pipelines, and smarter orchestration that automatically provisions clusters and integrates lineage, monitoring, and testing. This scaffolding will make cloud data systems feel like OS-level services.
+Expect tighter integration across services, Infrastructure-as-Code built into pipelines, and smarter orchestration that automatically provisions clusters and integrates lineage, monitoring, and testing. 
+
+This scaffolding will make cloud data systems feel like OS-level services.
 
 ### From Batch to Live Data
 
 #### The End of the Modern Data Stack (MDS):
 
-While MDS made analytics accessible and scalable, its batch-oriented paradigm limits real-time applications. The Live Data Stack is emerging, built on streaming pipelines and real-time OLAP databases (e.g., ClickHouse, Druid, Rockset). STL (Stream-Transform-Load) may replace ELT.
+While **MDS** made analytics accessible and scalable, its batch-oriented paradigm limits real-time applications. 
+
+The Live Data Stack is emerging, built on streaming pipelines and real-time OLAP databases (e.g., [ClickHouse](https://clickhouse.com/), [Druid](https://druid.apache.org/)).
+
+STL (Stream-Transform-Load) may replace ELT.
 
 #### Expected Changes:
 
-Data will flow continuously, triggering automations instead of waiting for dashboards. Decision-making will be embedded in the application layer. Streaming and ML will blur the lines between backend, analytics, and experience.
+- Data will flow continuously, triggering automations instead of waiting for dashboards. 
+
+- Decision-making will be embedded in the application layer. 
+
+- Streaming and ML will blur the lines between backend, analytics, and experience.
 
 ### New Roles and Blurred Boundaries
 
 #### Hybrid Roles Will Rise:
 
-Engineers will wear mixed hats—data scientists with pipeline skills, ML engineers embedded in ops, software engineers integrating streaming data and analytics. Expect the rise of ML platform engineers and real-time data app developers.
+Engineers will wear mixed hats—data scientists with pipeline skills, ML engineers embedded in ops, software engineers integrating streaming data and analytics. 
+
+Expect the rise of ML platform engineers and real-time data app developers.
 
 #### Embedded Data Engineering:
 
@@ -2089,9 +2170,11 @@ Instead of siloed teams, data engineers will become part of application teams, e
 
 #### Dark Matter of Data: Spreadsheets:
 
-Spreadsheets remain the most widely used data tool. Future platforms will merge the spreadsheet’s interactivity with the backend power of real-time OLAP, giving business users rich interfaces without sacrificing performance or structure.
+Spreadsheets remain the most widely used data tool.
 
-### Summary
+Future platforms will merge the spreadsheet’s interactivity with the backend power of real-time OLAP, giving business users rich interfaces without sacrificing performance or structure.
+
+### Summary 🌟
 
 Here are some trends to Watch:
 
@@ -2104,7 +2187,7 @@ Your Role:
 
 Stay curious, engage with the community, and keep learning. Whether you design pipelines or invent tools, you’re part of a fast-moving and impactful domain. 
 
-Data engineering’s future is bright—and you get to help build it. 🌟
+Data engineering’s future is bright—and you get to help build it.
 
 ---
 
@@ -2112,39 +2195,47 @@ Data engineering’s future is bright—and you get to help build it. 🌟
 
 ## Appendix A. Serialization and Compression Technical Details
 
-Modern data engineers, especially in the cloud, must understand how data is serialized, compressed, and deserialized to optimize pipeline performance. Choosing the right formats and compression strategies can significantly reduce storage size, improve query performance, and support interoperability across systems.
+Modern data engineers, especially in the cloud, must understand how data is serialized, compressed, and deserialized to optimize pipeline performance. 
+
+Choosing the right formats and compression strategies can significantly reduce storage size, improve query performance, and support interoperability across systems.
 
 ### Serialization Formats
 
-- Row-Based Formats like CSV, JSON, and Avro store records one after another. CSV is fragile and inefficient, though still common. JSON is widely used for APIs and semistructured data, while Avro supports binary serialization with schema evolution, making it ideal for big data and RPCs.
+- Row-Based Formats like **CSV**, **JSON**, and **Avro** store records one after another. CSV is fragile and inefficient, though still common. JSON is widely used for APIs and semistructured data, while Avro supports binary serialization with schema evolution, making it ideal for big data and RPCs.
 
-- Columnar Formats like Parquet and ORC store data by columns, improving performance for analytics and compression. Parquet is widely supported and preferred in cloud ecosystems, while ORC is more common in Hadoop and Hive-based stacks.
+- Columnar Formats like **Parquet** and **ORC** store data by columns, improving performance for analytics and compression. Parquet is widely supported and preferred in cloud ecosystems, while ORC is more common in Hadoop and Hive-based stacks.
 
-- Apache Arrow enables in-memory columnar processing and interoperability across languages (Python, Java, Rust, etc.), reducing the need for repeated serialization/deserialization and improving performance in real-time applications.
+- **Apache Arrow** enables in-memory columnar processing and interoperability across languages (Python, Java, Rust, etc.), reducing the need for repeated serialization/deserialization and improving performance in real-time applications.
 
-- Hybrid Formats such as Hudi and Iceberg combine transactional row writes with columnar reads and support features like schema evolution, time travel, and efficient CDC handling in data lakes.
+- Hybrid Formats such as **Hudi** and **Iceberg** combine transactional row writes with columnar reads and support features like schema evolution, time travel, and efficient CDC handling in data lakes.
 
 ### Compression Techniques
 
-- Compression reduces file size by encoding repeating patterns and redundancy. Algorithms like gzip and bzip2 offer strong compression but slower performance.
+- Compression reduces file size by encoding repeating patterns and redundancy. Algorithms like **gzip** and **bzip2** offer strong compression but slower performance.
 
-- Newer, faster options like Snappy, Zstandard, LZ4, and LZFSE are optimized for speed over compression ratio and are commonly used in modern data lakes and analytics databases.
+- Newer, faster options like **Snappy**, **Zstandard**, **LZ4**, and **LZFSE** are optimized for speed over compression ratio and are commonly used in modern data lakes and analytics databases.
 
 ### Storage Engines
 
-Storage engines handle how data is physically arranged, indexed, and compressed. Columnar storage is now standard in analytics systems, with modern engines optimized for SSDs, complex types, and structured queries.
+Storage engines handle how data is physically arranged, indexed, and compressed.
 
-Engines like those in SQL Server, PostgreSQL, and MySQL offer pluggable or configurable storage modes, and innovations continue in database internals to better support today's workloads.
+Columnar storage is now standard in analytics systems, with modern engines optimized for SSDs, complex types, and structured queries.
+
+Engines like those in [SQL Server](https://en.wikipedia.org/wiki/Microsoft_SQL_Server), [PostgreSQL](https://www.postgresql.org/), and [MySQL](https://www.mysql.com/) offer pluggable or configurable storage modes, and innovations continue in database internals to better support today's workloads.
 
 ### Key Takeaway
 
-Understanding serialization and compression isn't optional—it’s essential for designing fast, scalable, and reliable data systems. Choosing the right format and compression algorithm can yield massive performance improvements and smoother system interoperability.
+Understanding serialization and compression isn't optional—it’s essential for designing fast, scalable, and reliable data systems. 
+
+Choosing the right format and compression algorithm can yield massive performance improvements and smoother system interoperability.
 
 ---
 
 ## Appendix B. Cloud Networking
 
-Data engineers must understand cloud networking basics to design performant and cost-efficient systems. Cloud networks impact latency, cost (especially due to data egress fees), and system architecture.
+Data engineers must understand cloud networking basics to design performant and cost-efficient systems.
+
+Cloud networks impact **latency**, *cost* (especially due to data egress fees), and **system architecture**.
 
 ### Key Concepts
 
@@ -2154,7 +2245,9 @@ Public clouds (AWS, GCP, Azure) follow similar structures: zones (smallest unit)
 
 #### Data Egress Fees
 
-Clouds allow free inbound traffic but charge for outbound traffic, especially across regions or to the internet. This pricing model can create vendor lock-in and affect architecture choices. Direct connections or CDNs can reduce costs.
+Clouds allow free inbound traffic but charge for outbound traffic, especially across regions or to the internet. This pricing model can create vendor lock-in and affect architecture choices.
+
+Direct connections or CDNs can reduce costs.
 
 #### Zones vs. Regions
 
@@ -2178,11 +2271,15 @@ CDNs like Cloudflare and cloud-native options cache data closer to users, improv
 
 #### The Future of Data Egress
 
-Data egress fees restrict cloud portability and multi-cloud adoption. Competitive pressure and customer demand may push providers to reduce or eliminate egress fees in the near future, just as telecom pricing models evolved.
+Data egress fees restrict cloud portability and multi-cloud adoption.
+
+Competitive pressure and customer demand may push providers to reduce or eliminate egress fees in the near future, just as telecom pricing models evolved.
 
 ### Takeaway
 
-Cloud networking shapes system performance, resilience, and cost. Data engineers must be aware of how their data moves within and across zones, regions, and providers—and should design architectures that balance latency, cost, and reliability while keeping an eye on evolving cloud pricing models.
+Cloud networking shapes system performance, resilience, and cost.
+
+Data engineers must be aware of how their data moves within and across zones, regions, and providers—and should design architectures that balance latency, cost, and reliability while keeping an eye on evolving cloud pricing models.
 
 ---
 
