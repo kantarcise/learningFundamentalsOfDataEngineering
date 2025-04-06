@@ -1236,29 +1236,38 @@ Here are some of the Storage Abstractions.
 
 - **Stream-to-Batch Storage Architecture** – Buffers real-time data for batch-style processing later. Just like Lambda architecture, streaming data is sent to multiple consumers—some process it in real time for stats, while others store it for batch queries and long-term retention.
 
-### 📦 Big Ideas in Data Storage
+### Big Ideas in Data Storage
 
 Here are some big ideas in Storage.
 
 #### 🔍 Data Catalogs
 Data catalogs are centralized metadata hubs that let users search, explore, and describe datasets.  
+
 They support:
-- Automated metadata scanning  
-- Human-friendly interfaces  
-- Integration with pipelines and data platforms  
+
+- Automated metadata scanning
+
+- Human-friendly interfaces
+
+- Integration with pipelines and data platforms
 
 #### 🔗 Data Sharing
+
 Cloud platforms enable secure sharing of data across teams or organizations.  
 ⚠️ Requires strong access controls to avoid accidental exposure.
 
 #### 🧱 Schema Management
+
 Understanding structure is essential:
+
 - **Schema-on-write**: Enforces structure at ingestion; reliable and consistent.
+
 - **Schema-on-read**: Parses structure during query; flexible but fragile.
 
 💡 Use formats like **Parquet** for built-in schema support. Avoid raw **CSV**.
 
 #### ⚙️ Separation of Compute & Storage
+
 Modern systems decouple compute from storage for better scalability and cost control.
 
 - Compute is **ephemeral** (runs only when needed).
@@ -1266,19 +1275,23 @@ Modern systems decouple compute from storage for better scalability and cost con
 - Hybrid setups combine performance + flexibility.
 
 ##### 🔁 Hybrid Storage Examples
-- **Amazon EMR**: Uses HDFS + S3 for speed and durability.
-- **Apache Spark**: Combines memory and local disk.
-- **Apache Druid**: SSD for speed, object storage for backup.
-- **BigQuery**: Optimizes access via hybrid object storage.
-- **S3 Select**: Filters data before sending it over network.
+
+- **[Amazon EMR](https://aws.amazon.com/emr/)**: Uses HDFS + S3 for speed and durability.
+- **[Apache Spark](https://spark.apache.org/)**: Combines memory and local disk when needed.
+- **[Apache Druid](https://druid.apache.org/)**: SSD for speed, object storage for backup.
+- **[BigQuery](https://cloud.google.com/bigquery?hl=en)**: Optimizes access via hybrid object storage.
 
 #### 📎 Zero-Copy Cloning
-Clone data without duplicating it (e.g., Snowflake, BigQuery).  
+
+Clone data without duplicating it (e.g., Snowflake, BigQuery).
+
 ⚠️ Deleting original files may affect clones — know the limits.
 
 ---
 
 ### 📈 Data Storage Lifecycle & Retention
+
+We talked about the temperature of data. Let's see an example.
 
 #### 🔥 Hot, 🟠 Warm, 🧊 Cold Data
 
@@ -1288,44 +1301,46 @@ Clone data without duplicating it (e.g., Snowflake, BigQuery).
 | Warm  | Occasional    | S3 IA   | Medium   | Monthly reports, staging data    |
 | Cold  | Rare/Archive  | Glacier | Low      | Compliance, backups              |
 
-🛠 Use lifecycle policies to move data between tiers automatically.
+Use **lifecycle policies** to move data between tiers automatically.
 
 #### ⏳ Retention Strategy
+
 - Keep only what's valuable.
 - Set **Time-to-Live (TTL)** on cache or memory.
 - Consider **regulatory** needs (e.g., HIPAA, GDPR).
 - Use **cost-aware deletion** or archival rules.
 
----
-
 ### 🏢 Single-Tenant vs Multitenant Storage
 
 #### Single-Tenant
+
 - Each tenant/customer has isolated resources and databases.
 - Pros: Better privacy, schema flexibility.
 - Cons: Harder to manage at scale.
 
 #### Multitenant
+
 - Tenants share the same database or tables.
 - Pros: More efficient resource usage.
 - Cons: Requires careful access control and query design.
 
-### Summary
+### Summary 😌
 
 Storage is the backbone of the data engineering lifecycle—powering ingestion, transformation, and serving. As data flows through systems, it's stored multiple times across various layers, so understanding how, where, and why we store data is critical.
 
 Smart storage decisions—paired with good schema design, lifecycle management, and collaboration—can drastically improve scalability, performance, and cost-efficiency in any data platform.
 
-Here are 3 quotes from the book.
+Here are 3 strong quotes from the book.
 
-> As always, exercise the principle of least privilege. Don’t give full database access
+> As always, exercise the **principle of least privilege**. Don’t give full database access
 to anyone unless required.
 
-> Data engineers must monitor storage in a variety of ways. This includes monitoring
+> Data engineers must **monitor storage** in a variety of ways. This includes monitoring
 infrastructure storage components, object storage and other “serverless” systems.
 
-> Orchestration is highly entangled with storage. Storage allows data to flow through
+> **Orchestration** is highly entangled with storage. Storage allows data to flow through
 pipelines, and orchestration is the pump.
+
 
 ## 7. Ingestion
 
