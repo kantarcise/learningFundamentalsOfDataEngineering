@@ -693,28 +693,28 @@ This preparation can be applying normalization, performing large-scale aggregati
 
 #### Here is a set of evaluation questions for Transformation:
 
-- What are the business requirements and use cases for the transformed data?
-- What data quality issues exist, and how will they be addressed?
-- What transformations are necessary to make the data usable?
-- What are the source data formats, and what formats are required by downstream systems?
-- Are there schema changes needed during transformation?
-- How will we handle varying data types and ensure correct type casting?
-- What is the expected data volume, and how will it affect processing performance?
-- Which tools and technologies are best suited for the transformation tasks?
-- How will we manage and track *data lineage* (history and life cycle of data as it moves through in the data pipeline) and provenance ?
-- What are the performance requirements and SLAs for the transformation process?
-- Are there regulatory compliance or security considerations?
-- How can we validate and test the transformed data for accuracy and completeness?
-- What error handling and logging mechanisms will be in place?
-- Is real-time or batch processing required?
-- How can we handle changes in source data schemas or structures over time?
-- How will the transformed data be stored and accessed downstream?
-- What documentation is needed for the transformation logic and pipeline architecture?
-- How should we you monitor and maintain the transformation pipeline over time?
-- What are the data governance policies that need to be enforced during transformation?
-- How can we ensure scalability of the transformation process as data volumes grow?
-- Are there any data enrichment (integrating additional data sources to enhance the value of the transformed data) opportunities during transformation?
-- How can we secure data during transformation to prevent unauthorized access?
+- What are the **business requirements** and use cases for the transformed data?
+- What **data quality issues** exist, and how will they be addressed?
+- What **transformations** are necessary to make the data usable?
+- What are the source **data formats**, and what formats are required by downstream systems?
+- Are there **schema changes** needed during transformation?
+- How will we handle **varying data types** and ensure correct type casting?
+- What is the expected **data volume**, and how will it affect processing performance?
+- Which tools and technologies are **best suited** for the transformation tasks?
+- How will we manage and track ***data lineage*** (history and life cycle of data as it moves through in the data pipeline) and provenance ?
+- What are the performance requirements and **SLAs** for the transformation process?
+- Are there **regulatory compliance** or security considerations?
+- How can we validate and test the transformed data for **accuracy** and **completeness**?
+- What **error handling** and logging mechanisms will be in place?
+- Is **real-time or batch** processing required?
+- How can we handle changes in source **data schemas** or structures over time?
+- How will the transformed data be **stored and accessed** downstream?
+- What **documentation** is needed for the transformation logic and pipeline architecture?
+- How should we you **monitor and maintain** the transformation pipeline over time?
+- What are the **data governance policies** that need to be enforced during transformation?
+- How can we ensure **scalability** of the transformation process as data volumes grow?
+- Are there any ***data enrichment*** (integrating additional data sources to enhance the value of the transformed data) opportunities during transformation?
+- How can we secure data during transformation to prevent **unauthorized access**?
 
 Transformation often overlaps with other stages of the data lifecycle, such as ingestion, where data may be enriched or formatted on the fly. Business logic plays a significant role in shaping transformations, especially in data modeling, to provide clear insights into business processes and ensure consistent implementation across systems. 
 
@@ -736,25 +736,25 @@ With simple terms, here is what they are:
 
 #### Here is a set of questions to make a solid Serving Stage:
 
-- What are the primary business goals we aim to achieve with this data?
-- Who are the key stakeholders, and how will they use the data?
-- Which specific use cases will the data serving support (e.g., reporting, machine learning, real-time analytics)?
-- How does the data align with our overall business strategy and priorities?
-- What data validation and cleansing processes are in place to maintain quality?
-- How do we handle data inconsistencies or errors in the serving stage?
-- Who needs access to the data, and what are their access levels?
-- What access controls and permissions are required to secure the data?
-- What reporting tools and dashboards will be used to visualize the data?
-- How can we enable self-service analytics for business users without compromising data security?
-- What key performance indicators (KPIs) and metrics should be tracked?
-- Do we need to implement a feature store to manage and serve features for ML?
-- How will we handle feature versioning and sharing across teams?
-- What security measures are in place to protect sensitive and confidential data?
-- How do we ensure compliance with data privacy regulations (e.g., GDPR, CCPA)?
-- What encryption methods are used for data at rest and in transit?
-- What latency requirements do we have for data access and real-time analytics?
-- Are there performance monitoring tools in place to track and optimize data serving?
-- How are responsibilities divided between data engineering, ML engineering, and analytics teams?
+- What are the **primary business goals** we aim to achieve with this data?
+- Who are the **key stakeholders**, and how will they use the data?
+- Which **specific use cases** will the data serving support (e.g., reporting, machine learning, real-time analytics)?
+- How does the data align with our **overall business strategy** and priorities?
+- What **data validation** and cleansing processes are in place to maintain quality?
+- How do we handle **data inconsistencies** or errors in the serving stage?
+- Who needs **access** to the data, and what are their access levels?
+- What **access controls** and permissions are required to secure the data?
+- What **reporting tools and dashboards** will be used to visualize the data?
+- How can we enable **self-service analytics** for business users without compromising data security?
+- What **key performance indicators** (KPIs) and metrics should be tracked?
+- Do we need to implement a **feature store** to manage and serve features for ML?
+- How will we handle **feature versioning** and sharing across teams?
+- What security measures are in place to protect **sensitive and confidential data**?
+- How do we ensure **compliance** with data privacy regulations (e.g., GDPR, CCPA)?
+- What **encryption** methods are used for data at rest and in transit?
+- What **latency requirements** do we have for data access and real-time analytics?
+- Are there **performance monitoring tools** in place to track and optimize data serving?
+- How are **responsibilities** divided between data engineering, ML engineering, and analytics teams?
 
 ML is cool, but it’s generally best to develop competence in analytics before moving to ML.
 
@@ -762,7 +762,7 @@ We'll dive deep on Serving in Chapter 9.
 
 ### The Undercurrents
 
-Data engineering is evolving beyond just technology, integrating traditional practices like data management and cost optimization with newer approaches such as DataOps. 
+Data engineering is evolving beyond just technology, integrating traditional practices like data management and cost optimization with newer approaches such as DataOps.
 
 These key "undercurrents"—including security, data architecture, orchestration, and software engineering—support the **entire data engineering lifecycle**. 
 
