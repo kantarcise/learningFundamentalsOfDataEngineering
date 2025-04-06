@@ -639,11 +639,11 @@ Storage intersects with other stages such as ingestion, transformation, and serv
 - Are we **utilizing** the storage technology optimally without causing performance issues (e.g., avoiding high rates of random access in object storage systems)?
 - Can the storage system handle **anticipated future scale** in terms of capacity limits, read/write operation rates, and data volume?
 - Will downstream users and processes be able to retrieve data within the required service-level agreements (**SLAs** - more on this later)?
-- Are we capturing metadata about schema evolution, data flows, and data lineage to enhance data utility and support future projects?
-- Is this a pure storage solution, or does it also support complex query patterns (like a cloud data warehouse)?
-- Does the storage system support schema-agnostic (object storage) storage, flexible schemas (Cassandra), or enforced schemas (DWH)?
-- How are we tracking master data, golden records, data quality, and data lineage for data governance?
-- How are we handling regulatory compliance and data sovereignty, such as restrictions on storing data in certain geographical locations?
+- Are we capturing metadata about **schema evolution**, data flows, and data lineage to enhance data utility and support future projects?
+- Is this a pure storage solution, or does it also support **complex query patterns** (like a cloud data warehouse)?
+- Does the storage system support **schema-agnostic** (object storage) storage, **flexible schemas** (Cassandra), or **enforced schemas** (DWH)?
+- How are we tracking **master data**, **golden records**, **data quality**, and **data lineage** for data governance?
+- How are we handling **regulatory compliance** and data sovereignty, such as restrictions on storing data in certain geographical locations?
 
 Regardless of the storage type, the temperature of data is a good frame to interpret storage and data.
 
@@ -661,13 +661,13 @@ Ingestion services might also fail for various reasons, halting data flow and im
 
 #### Here is a set of evaluation questions for Ingestion:
 
-- What are the purposes of the data we are ingesting? Can we utilize this data without creating multiple versions of the same dataset?
-- Do the systems that generate and ingest this data operate reliably, and is the data accessible when needed?
-- After ingestion, where will the data be stored or directed?
-- How often will we need to access or retrieve the data?
-- What is the typical volume or size of the data that will be arriving?
-- In what format is the data provided, and can the downstream storage and transformation systems handle this format?
-- Is the source data ready for immediate use downstream? If so, for how long will this be the case, and what could potentially make it unusable?
+- What are the **purposes** of the data we are ingesting? Can we utilize this data without creating multiple versions of the same dataset?
+- Do the systems that generate and ingest this data operate **reliably**, and is the data accessible when needed?
+- After ingestion, where will the data be stored or **directed**?
+- How often will we need to **access** or retrieve the data?
+- What is the **typical volume** or size of the data that will be arriving?
+- In what **format** is the data provided, and can the downstream storage and transformation systems handle this format?
+- Is the source data ready for **immediate use** downstream? If so, for how long will this be the case, and what could potentially make it unusable?
 
 *Batch processing* is often preferred over streaming due to added complexities and costs; *real-time streaming* should be used only when necessary.
 
