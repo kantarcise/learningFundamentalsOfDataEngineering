@@ -1157,7 +1157,7 @@ Next: storing the data.
 
 > One additional note: Ideally our systems should be **idempotent**. An idempotent system produces the same result whether a message is processed once or multiple times—crucial for handling retries safely.
 
-## 6. Storage
+## 6. Storage 📦
 
 Core to every stage—data is stored repeatedly across ingestion, transformation, and serving.
 
@@ -1169,7 +1169,7 @@ Two things to consider while deciding on storage are:
 The way storage is explained in the book is with the following figure:
 
 <p align="center">
-  <img src="img/storage_map.png">
+  <img src="img/storage_stack.png">
 </p>
 
 ### Raw Ingredients of Data Storage
