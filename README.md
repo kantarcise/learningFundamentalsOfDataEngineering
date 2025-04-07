@@ -6,7 +6,7 @@ These are my notes from the book [Fundamentals Of Data Engineering](https://www.
 
 # Why ? 🤔
 
-This is an amazing book for everyone who are involved in data.
+This is an amazing book for everyone involved in data.
 
 By the end of the book you'll be better equipped to:
 
@@ -18,7 +18,7 @@ By the end of the book you'll be better equipped to:
 
 Which is a pretty good deal. 🎉
 
-I thought, I can share some of my highlights from it. If you want to discover more about any of the topics, please check out the book.
+I thought, I can share some of my highlights from it. If you want to discover more about any of the topics, please check out [the book](https://www.amazon.com/Fundamentals-Data-Engineering-Robust-Systems/dp/1098108302).
 
 > If you’re interested in the book, you can purchase one. It was previously available [via Redpanda](https://go.redpanda.com/fundamentals-of-data-engineering), but the free copy is no longer offered. Now, that link redirects to a guide, which is still useful. 
 
@@ -63,7 +63,7 @@ Fundamentals of Data Engineering
 
 Let's clarify why we are here.
 
-### Definition of Data Engineer
+### Definition of Data Engineer 🤨
 
 Who is a data engineer? Here is Joe's and Matt's definition:
 
