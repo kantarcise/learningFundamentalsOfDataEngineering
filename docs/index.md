@@ -62,27 +62,35 @@ Let's clarify why we are here.
 
 ### Definition of Data Engineer 🤨
 
-Who is a data engineer? Here is Joe's and Matt's definition:
+Who is a data engineer? What do they do?
 
-_**Data engineering** is the development, implementation, and maintenance of systems and processes that take in raw data and produce high-quality, consistent information that supports downstream use cases, such as analysis and machine learning._
+Here is Joe's and Matt's definition:
 
-_**Data engineering** is the intersection of security, data management, DataOps, data architecture, orchestration, and software engineering. A data engineer manages the data engineering lifecycle, beginning with getting data from source systems and ending with serving data for use cases, such as analysis or machine learning._
+> _**Data engineering** is the development, implementation, and maintenance of systems and processes that take in raw data and produce high-quality, consistent information that supports downstream use cases, such as analysis and machine learning._
+
+> _**Data engineering** is the intersection of security, data management, DataOps, data architecture, orchestration, and software engineering. A data engineer manages the data engineering lifecycle, beginning with getting data from source systems and ending with serving data for use cases, such as analysis or machine learning._
+
+If you do not understand these definitions fully, don't worry. 💕
+
+Throughout the book, we will unpack this definition.
 
 ### Data Engineering Lifecycle
 
-The book is centered around an idea called the **data engineering lifecycle** (Figure 1-1), which gives data engineers the holistic context to view their role.
+The book is centered around an idea called the **data engineering lifecycle**, which gives data engineers the holistic context to view their role.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/kantarcise/learningFundamentalsOfDataEngineering/refs/heads/main/img/data_engineering_lifecycle.png">
 </p>
 
-So the book is going to dive deep in the 5 stages and consider the undercurrents of all of these:
+So we'll to dive deep in these 5 stages:
 
 - Generation
 - Storage
 - Ingestion
 - Transformation
 - Serving
+
+and consider the undercurrents of them.
 
 I believe this is a fantastic way to see the field. It's free from any single technology and it helps us focus the end goal. 🥳
 
@@ -96,8 +104,8 @@ Most important points are:
 - Commodity hardware—such as servers, RAM and disks becoming cheaper.
 - [Distributed computation](https://aws.amazon.com/what-is/distributed-computing/) and storage on massive computing clusters becoming mainstream at a vast scale.
 - [Google File System](https://static.googleusercontent.com/media/research.google.com/en//archive/gfs-sosp2003.pdf) and [Apache Hadoop](https://hadoop.apache.org/)
-- Cloud Compute and Storage becoming popular on AWS, Google Cloud and Microsoft Azure.
-- Open source big data tools in the Hadoop ecosystem rapidly spreading.
+- Cloud Compute and Storage becoming popular on [AWS](https://aws.amazon.com/), [Google Cloud](https://cloud.google.com/) and [Microsoft Azure](https://azure.microsoft.com/en-gb/).
+- Open source big data tools are rapidly spreading.
 
 Data engineers managing the data engineering lifecycle have better tools and techniques than ever before. All we have to do is to master them. 😌
 
@@ -111,6 +119,8 @@ Another crucial idea to understand is the Data Hierarchy Of Needs:
 
 > Special thanks to [Monica Rogati](https://x.com/mrogati).
 
+We need a solid foundation for effective AI and ML.
+
 Here is how I interpret this image:
 
 #### **Collect**:
@@ -119,7 +129,7 @@ We gather the raw inputs that fuel all downstream data work.
 
 ##### Instrumentation
 
-Instrumentation means embedding code or tools into applications or systems to collect data about usage or performance.
+Instrumentation means embedding code or tools into applications & systems to collect data about usage or performance.
 
 Examples:
 
@@ -155,7 +165,7 @@ Examples:
 
 ##### Clickstream Data
 
-Clickstream data tracks how users navigate through a website or app, capturing sequences of events.
+[Clickstream data](https://aws.amazon.com/solutions/implementations/clickstream-analytics-on-aws/) tracks how users navigate through a website or app, capturing sequences of events.
 
 Examples:
 
@@ -179,7 +189,7 @@ Examples:
 
 ##### User-Generated Content
 
-This is any content that users create themselves, either actively or passively.
+This is any content that users make themselves, either actively or passively.
 
 Examples:
 
@@ -191,7 +201,9 @@ Examples:
 
 #### Move / Store
 
-The Move/Store stage of the Data Hierarchy of Needs is all about getting the data from its source to where it can be used — reliably, at scale, and efficiently. Here's what each part means:
+The Move/Store stage of the Data Hierarchy of Needs is all about getting the data from its source to where it can be used — reliably, at scale, and efficiently. 
+
+Here's what each part means:
 
 ##### Reliable Data Flow
 
@@ -199,7 +211,7 @@ This ensures that data moves consistently and accurately from one system to anot
 
 Examples:
 
-- Streaming events from Kafka to a data warehouse
+- Streaming events from [Kafka](https://kafka.apache.org/) to a data warehouse
 - Replaying missed events without data corruption
 - Acknowledging successful ingestion to prevent reprocessing
 
@@ -211,8 +223,8 @@ Infrastructure includes the compute, storage, and networking resources that supp
 
 Examples:
 
-- Cloud VMs or serverless compute (e.g., AWS Lambda, GCP Dataflow)
-- Object storage systems like S3, and data warehouses like BigQuery
+- Cloud VMs or serverless compute (e.g., [AWS Lambda](https://aws.amazon.com/lambda/), [GCP Dataflow](https://cloud.google.com/products/dataflow?hl=en))
+- Object storage systems like [S3](https://aws.amazon.com/s3/), and data warehouses like [BigQuery](https://cloud.google.com/bigquery?hl=en)
 
 📌 Goal: Provide the foundation for scalable and secure data systems.
 
@@ -224,7 +236,7 @@ Examples:
 
 - An ingestion pipeline that moves data from APIs to a database
 - A transformation pipeline that cleans and joins datasets daily
-- Real-time pipelines using tools like Kafka, [Flink](https://flink.apache.org/), or [Spark](https://spark.apache.org/)
+- Real-time pipelines using tools like [Kafka](https://kafka.apache.org/), [Flink](https://flink.apache.org/), or [Spark](https://spark.apache.org/)
 
 📌 Goal: Automate reliable and repeatable data movement and processing.
 
@@ -245,13 +257,14 @@ This is where data lives long-term, structured in a way that it can be easily ac
 Examples:
 
 - Cloud object storage: AWS S3, GCP Cloud Storage
-- Data warehouses: Snowflake, BigQuery, [Redshift](https://aws.amazon.com/redshift/)
+- Data warehouses: Snowflake, [BigQuery](https://cloud.google.com/bigquery?hl=en), [Redshift](https://aws.amazon.com/redshift/)
 - Data lakes: Delta Lake, Apache Hudi
 - Databases: PostgreSQL, MySQL, MongoDB
 
 📌 Goal: Store data cost-effectively while ensuring durability and accessibility.
 
 #### Explore / Transform
+
 The Explore and Transform stage of the Data Hierarchy of Needs is where raw data is shaped into something useful for analysis or modeling. Here's a breakdown of the three components you mentioned:
 
 ##### Cleaning
@@ -274,7 +287,7 @@ This involves transforming clean data into a form suited for analysis or modelin
 
 Examples:
 
-- Feature engineering (e.g., creating a new column age from birth_date)
+- Feature engineering (e.g., creating a new column age from `birth_date`)
 - Encoding categorical variables (e.g., one-hot encoding country)
 - Aggregating data (e.g., average sales per region)
 - Joining datasets
@@ -520,7 +533,7 @@ Example: You don’t wait months to launch a data product. Instead, you release 
 
 - Control costs.
 
-Example: Instead of running an expensive BigQuery job every hour, you optimize the SQL and reduce the schedule to once every 6 hours—saving the company hundreds or thousands of dollars a month in compute costs.
+Example: Instead of running an expensive [BigQuery](https://cloud.google.com/bigquery?hl=en) job every hour, you optimize the SQL and reduce the schedule to once every 6 hours—saving the company hundreds or thousands of dollars a month in compute costs.
 
 - Learn continuously.
 
@@ -1234,7 +1247,7 @@ Let's remember our map for storage.
 
 Here are some of the Storage Abstractions.
 
-- **The Data Warehouse** – Data warehouses are a common OLAP architecture used to centralize analytics data. Once built on traditional databases, modern warehouses now rely on scalable cloud platforms like Google's BigQuery. It's a structured, query-optimized for analytics and BI workloads.
+- **The Data Warehouse** – Data warehouses are a common OLAP architecture used to centralize analytics data. Once built on traditional databases, modern warehouses now rely on scalable cloud platforms like Google's [BigQuery](https://cloud.google.com/bigquery?hl=en). It's a structured, query-optimized for analytics and BI workloads.
 
 - **The Data Lake** – Stores raw, unstructured data at scale for flexibility. Funnily enough, someone referred to a Data Lake as just files on S3. 
 
@@ -1625,7 +1638,7 @@ Shell scripts and CLI tools still play a big role in scripting ingestion pipelin
 
 #### 🤝 Data Sharing
 
-Platforms like **Snowflake, BigQuery, Redshift**, and **S3** allow **read-only data sharing**.
+Platforms like **Snowflake, [BigQuery](https://cloud.google.com/bigquery?hl=en), Redshift**, and **S3** allow **read-only data sharing**.
 
 - This is useful for integrating third-party or vendor-provided datasets into your analytics without owning the storage.
 
