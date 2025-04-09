@@ -32,6 +32,8 @@ Here is the [tree](https://linux.die.net/man/1/tree) of the book.
 
 And the following are my notes, following this structure.
 
+So grateful that this book exists. Thanks to [Joe Reis](https://joereis.substack.com/) and [Matt Housley](https://www.linkedin.com/in/housleymatthew/).
+
 ```
 Fundamentals of Data Engineering
 ├── Part 1 – Foundation and Building Blocks
@@ -49,7 +51,3 @@ Fundamentals of Data Engineering
     ├── 10. Security and Privacy
     └── 11. The Future of Data Engineering
 ```
-
-# Closing 
-
-So grateful that this book exists. Thanks to [Joe Reis](https://joereis.substack.com/) and [Matt Housley](https://www.linkedin.com/in/housleymatthew/).
