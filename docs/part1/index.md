@@ -1,3 +1,5 @@
-Welcome to Part 1 of the book. Here we go deeper into the material.
+# Part 1 – Foundation and Building Blocks 🏂
+
+Let's discover the ***land of data*** together.
 
 Use the navigation to read each chapter.
