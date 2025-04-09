@@ -1,8 +1,10 @@
 site_name: Learning Fundamentals of Data Engineering
 theme:
   name: torillic
+  language: en
 
 repo_url: https://github.com/kantarcise/learningFundamentalsOfDataEngineering
 
 nav:
   - Home: index.md
+  - Second: test_page.md
