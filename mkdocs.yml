@@ -8,3 +8,13 @@ repo_url: https://github.com/kantarcise/learningFundamentalsOfDataEngineering
 nav:
   - Home: index.md
   - Second: test_page.md
+  - Chapter 3: test_page.md
+  - Chapter 4: test_page.md
+  - Data Generation in Source Systems: test_page.md
+  - Chapter 6: test_page.md
+  - Chapter 7: test_page.md
+  - Chapter 8: test_page.md
+  - Chapter 9: test_page.md
+  - Chapter 10: test_page.md
+  - Chapter 11: test_page.md
+  - Extras: test_page.md
