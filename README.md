@@ -420,8 +420,8 @@ This includes well-established algorithms that learn patterns from data to make 
 
 Examples:
 
-- Linear regression, decision trees, random forests, SVMs
-- Fraud detection, churn prediction, demand forecasting
+- [Linear regression](https://en.wikipedia.org/wiki/Linear_regression), [decision trees](https://en.wikipedia.org/wiki/Decision_tree_learning), [random forests](https://en.wikipedia.org/wiki/Random_forest), [SVM's](https://en.wikipedia.org/wiki/Support_vector_machine)
+- Used in fraud detection, churn prediction, demand forecasting
 
 📌 Used when the data and problem are well-structured and interpretable.
 
@@ -442,8 +442,8 @@ Deep Learning is a subset of ML based on neural networks with many layers, desig
 
 Examples:
 
-- Image classification, speech recognition, natural language processing (e.g., ChatGPT!)
-- Technologies: TensorFlow, PyTorch
+- Image classification, speech recognition, natural language processing (e.g., ChatGPT)
+- Technologies: [TensorFlow](https://www.tensorflow.org/), [PyTorch](https://pytorch.org/)
 
 📌 Used when the problem is too complex for classical ML and massive data is available.
 
@@ -452,7 +452,7 @@ Examples:
 So, even though almost everyone is focused on AI/ML applications, a strong Data Engineering Team should provide them with a infrastructure that has:
 
 - Instrumentation, Logging, Support a Variety of Data Sources.
-- Reliable Data Flow, Cleaning. 
+- Reliable Data Flow, Cleaning.
 - Monitoring & Useful Metrics.
 
 These are really simple things, but they can be really hard to implement in complex systems. 🤭
@@ -470,9 +470,12 @@ As an engineer, we work under constraints. We must optimize along these axes:
 
 Another great idea from this chapter is Data Maturity.
 
-Data Maturity refers to the organization's advancement in utilizing, integrating, and maximizing data capabilities. Data maturity isn’t determined solely by a company’s age or revenue; an early-stage startup may demonstrate higher data maturity than a century-old corporation with billions in annual revenue.
+Data Maturity refers to the organization's advancement in utilizing, integrating, and maximizing data capabilities. 
+
+Data maturity isn’t determined solely by a company’s age or revenue; an early-stage startup may demonstrate higher data maturity than a century-old corporation with billions in annual revenue.
 
 What truly matters is how effectively the company leverages data **as a competitive advantage**.
+
 
 Let's understand this with some examples:
 
@@ -517,29 +520,31 @@ Data engineering is a rapidly growing field, but lacks a formal training path. U
 
 People enter the field with diverse backgrounds, often transitioning from roles like software engineering or data analysis, and **self-study** is crucial. 🏂
 
-A data engineer must master data management, technology tools, and understand the needs of data consumers like analysts and scientists. Success in data engineering requires both technical expertise and a broader understanding of the business impact of data.
+A data engineer must master data management, technology tools, and understand the needs of data consumers like analysts and scientists.
+
+Success in data engineering requires both technical expertise and a broader understanding of the business impact of data.
 
 #### Business Responsibilities:
 
 - Know how to communicate with nontechnical and technical people.
 
-Example: You’re building a dashboard for the marketing team. You explain in simple terms how long it will take and ask them what insights matter most—without using technical jargon like “ETL pipelines” or “schema evolution.” Then you talk to your fellow engineers in detail about data modeling and infrastructure.
+*Example: You’re building a dashboard for the marketing team. You explain in simple terms how long it will take and ask them what insights matter most—without using technical jargon like “ETL pipelines” or “schema evolution.” Then you talk to your fellow engineers in detail about data modeling and infrastructure.*
 
 - Understand how to scope and gather business and product requirements.
 
-Example: A product manager says, “We want to know why users drop off after sign-up.” You don’t just jump into building something—you ask follow-up questions: “What’s your definition of drop-off? Are we looking at mobile or web users? Over what time frame?”
+*Example: A product manager says, “We want to know why users drop off after sign-up.” You don’t just jump into building something—you ask follow-up questions: “What’s your definition of drop-off? Are we looking at mobile or web users? Over what time frame?”*
 
 - Understand the cultural foundations of Agile, DevOps, and DataOps.
 
-Example: You don’t wait months to launch a data product. Instead, you release a small working version (MVP), get feedback from stakeholders, and iterate quickly. You write tests and automate your pipeline deployments using CI/CD like a software engineer.
+*Example: You don’t wait months to launch a data product. Instead, you release a small working version (MVP), get feedback from stakeholders, and iterate quickly. You write tests and automate your pipeline deployments using CI/CD like a software engineer.*
 
 - Control costs.
 
-Example: Instead of running an expensive BigQuery job every hour, you optimize the SQL and reduce the schedule to once every 6 hours—saving the company hundreds or thousands of dollars a month in compute costs.
+*Example: Instead of running an expensive [BigQuery](https://cloud.google.com/bigquery?hl=en) job every hour, you optimize the SQL and reduce the schedule to once every 6 hours—saving the company hundreds or thousands of dollars a month in compute costs.*
 
 - Learn continuously.
 
-Example: You hear your team wants to adopt [Apache Iceberg](https://iceberg.apache.org/). You’ve never used it, so you take an online course, read the docs, and build a mini project over the weekend to see how it works.
+*Example: You hear your team wants to adopt [Apache Iceberg](https://iceberg.apache.org/). You’ve never used it, so you take an online course, read the docs, and build a mini project over the weekend to see how it works.*
 
 A successful data engineer always zooms out to understand the big picture and how to achieve outsized value for the business.
 
@@ -554,33 +559,41 @@ What languages should a data engineer know?
 - **JVM languages such as Java and Scala**: Crucial for open source data frameworks.
 - **bash**: cli of Linux OS. Which is the leading operating system on servers (over 96.4% of the top one million web servers' operating systems [are Linux](https://en.wikipedia.org/wiki/Linux#:~:text=Linux%20is%20the%20leading%20operating,having%20gradually%20displaced%20all%20competitors).).
 
-> You can also add a CI/CD tool like **Jenkins**, containerization with **Docker**, and orchestration with **Kubernetes** to this list.
+> You can also add a CI/CD tool like **[Jenkins](https://www.jenkins.io/)**, containerization with **[Docker](https://www.docker.com/)**, and orchestration with **[Kubernetes](https://kubernetes.io/)** to this list.
 
 ### Data Engineers and Other Technical Roles
 
 It is important to understand the technical stakeholders that you'll be working with.
 
 <p align="center">
-  <img src="img/key_stakeholders.png">
+  <img src="https://raw.githubusercontent.com/kantarcise/learningFundamentalsOfDataEngineering/refs/heads/main/img/key_stakeholders.png">
 </p>
 
 The crucial idea is that, you are a part of a bigger team. As a unit, you are trying to achieve something. 🏉
 
 A great tactic would be to understand the workflows of those people which sits at the upstream or downstream of your work.
 
-So feel free to research all technical roles with a prompt like following:
+So feel free to research all technical roles with a prompt to an LLM like following:
 
-> As a Data Engineer a stakeholder of mine are Machine Learning Engineers. Can you help me understand what they do, how they do it and how's their work quality measured? I want to serve them in the best way possible.
+> As a Data Engineer a stakeholder of mine are **Machine Learning Engineers**. Can you help me understand what they do, how they do it and how's their work quality measured? I want to serve them in the best way possible.
 
 ### Data Engineers and Leadership
 
-Data engineers act as connectors within organizations, bridging business and data teams. They now play a key role in strategic planning, helping align business goals with data initiatives and supporting data architects in driving data-centric projects.
+Data engineers act as connectors within organizations, bridging business and data teams. 
+
+They now play a key role in strategic planning, helping align business goals with data initiatives and supporting data architects in driving data-centric projects.
 
 #### Data in the C-Suite
 
 C-level executives increasingly recognize data as a core asset.
 
-The CEO typically partners with technical leaders on high-level data strategies without diving into technical specifics. The CIO focuses on internal IT systems and often collaborates with data engineers on initiatives like cloud migrations and infrastructure planning. The CTO handles external-facing technologies, working with data teams to integrate information from customer-facing platforms such as web and mobile applications. The Chief Data Officer (CDO) oversees data strategy and governance, ensuring data delivers tangible business value.
+The CEO typically partners with technical leaders on high-level data strategies without diving into technical specifics. 
+
+The CIO focuses on internal IT systems and often collaborates with data engineers on initiatives like cloud migrations and infrastructure planning. 
+
+The CTO handles external-facing technologies, working with data teams to integrate information from customer-facing platforms such as web and mobile applications. 
+
+The Chief Data Officer (CDO) oversees data strategy and governance, ensuring data delivers tangible business value.
 
 There are other examples, but these are enough to demonstrate the value we bring as data engineers.
 
@@ -592,7 +605,7 @@ Now we know about:
 - The Lifecycle they use
 - The people they work with
 
-Let's dive deep on the lifecycle.
+Let's dive deep on the lifecycle. 🥳
 
 ## 2. The Data Engineering Lifecycle. 🐦
 
