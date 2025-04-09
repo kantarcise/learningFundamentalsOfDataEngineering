@@ -8,24 +8,24 @@ repo_url: https://github.com/kantarcise/learningFundamentalsOfDataEngineering
 nav:
   - Home: index.md
   - Part 1 - Foundation and Building Blocks:
-      - Overview: part1/index.md
-      - Chapter 1: part1/chapter1.md
-      - Chapter 2: part1/chapter2.md
-      - Chapter 3: part1/chapter3.md
-      - Chapter 4: part1/chapter4.md
+      - Part 1 Overview: part1/index.md
+      - 1. Data Engineering Described: part1/chapter1.md
+      - 2. The Data Engineering Lifecycle: part1/chapter2.md
+      - 3. Designing Good Data Architecture: part1/chapter3.md
+      - 4. Choosing Technologies Across the Data Engineering Lifecycle: part1/chapter4.md
   - Part 2 - The Data Engineering Lifecycle in Depth:
-      - Overview: part2/index.md
-      - Data Generation in Source Systems: part2/chapter5.md
-      - Chapter 6: part2/chapter6.md
-      - Chapter 7: part2/chapter7.md
-      - Chapter 8: part2/chapter8.md
-      - Chapter 9: part2/chapter9.md
+      - Part 2 Overview: part2/index.md
+      - 5. Data Generation in Source Systems: part2/chapter5.md
+      - 6. Storage: part2/chapter6.md
+      - 7. Ingestion: part2/chapter7.md
+      - 8. Queries, Modeling, and Transformation: part2/chapter8.md
+      - 9. Serving Data for Analytics, Machine Learning, and Reverse ETL: part2/chapter9.md
   - Part 3 - Security, Privacy, and the Future of DE:
-      - Overview: part3/index.md
-      - Chapter 10: part3/chapter10.md
-      - Chapter 11: part3/chapter11.md
+      - Part 3 Overview: part3/index.md
+      - 10. Security and Privacy: part3/chapter10.md
+      - 11. The Future of Data Engineering: part3/chapter11.md
   - Appendices:
       - Overview: appendices/index.md
-      - Appendix A: appendices/appendix_a.md
-      - Appendix B: appendices/appendix_b.md
+      - Appendix A - Serialization and Compression: appendices/appendix_a.md
+      - Appendix B - Cloud Networking: appendices/appendix_b.md
   - I Want a Single Page: single_page.md
