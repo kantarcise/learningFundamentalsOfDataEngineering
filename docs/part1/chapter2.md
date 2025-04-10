@@ -2,11 +2,11 @@
 
 We can move beyond viewing data engineering as a specific collection of data technologies, which is a big trap. 😮
 
-We can think with data engineering lifecycle. 💯
+We can think with ***data engineering lifecycle***. 💯
 
 It shows the stages that turn **raw data ingredients into a useful end product**, ready for consumption by analysts, data scientists, ML engineers, and others.
 
-Let's remember the figure for the data engineering lifecycle.
+Let's remember the figure for the lifecycle.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/kantarcise/learningFundamentalsOfDataEngineering/refs/heads/main/img/data_engineering_lifecycle.png">
@@ -14,7 +14,7 @@ Let's remember the figure for the data engineering lifecycle.
 
 In the following chapters we'll dive deep for each of these stages, but let's learn the **useful questions to ask** about them first.
 
-> Arguably, the most impactful contribution we can make lies in the answers to these questions. Regardless of the company structure or the system we’re working on, asking the right questions about data generation, ingestion, storage, transformation, and serving allows us to identify opportunities for improvement and drive meaningful change.
+> Arguably, the most impactful contribution we can make lies in the **answers to these questions**. Regardless of the company structure or the system we’re working on, asking the **right** questions about data generation, ingestion, storage, transformation, and serving allows us to identify opportunities for improvement and drive meaningful change.
 
 ### Generation: Source Systems 🌊
 
@@ -24,7 +24,7 @@ Examples of source systems include *IoT devices*, *application message queues*, 
 
 Data engineers use data from these source systems but typically **do not own or control them**.
 
-Therefore, it's important for data engineers to understand how these source systems operate, how they generate data, how frequently and quickly they produce data (frequency & velocity), and the different types of data they generate.
+Therefore, it's important for data engineers to understand how these source systems operate, how they generate data, how frequently and quickly they produce data (frequency & velocity) and the different types of data they generate.
 
 #### Here is a set of evaluation questions for Source Systems:
 
@@ -38,7 +38,7 @@ Therefore, it's important for data engineers to understand how these source syst
 - What is the **schema** of the ingested data? Does a join across several tables or even several systems needed to get a complete picture of the data?
 - If **schema changes** (say, a new column is added), how is this dealt with and communicated to downstream stakeholders?
 - How **frequently** should data be pulled from the source system? Will **Ingestion** be a thread for source system in terms of resource contention?
-- For stateful systems (e.g., a database tracking customer account information), is data provided as periodic snapshots or update events from change data capture (CDC)? What’s the logic for how changes are performed, and how are these tracked in the source database?
+- For stateful systems (e.g., a database tracking customer account information), is data provided as **periodic snapshots or update events** from change data capture (CDC)? What’s the logic for how changes are performed, and how are these tracked in the source database?
 - Who/what is the data provider that will **transmit** the data for downstream consumption?
 - Will **reading** from a data source impact its performance?
 - Does the source system have upstream **data dependencies**? What are the characteristics of these upstream systems?
@@ -59,14 +59,14 @@ Storage intersects with other stages such as ingestion, transformation, and serv
 - Is the storage solution **compatible** with the architecture’s required read and write speeds to prevent bottlenecks in downstream processes?
 - Are we **utilizing** the storage technology optimally without causing performance issues (e.g., avoiding high rates of random access in object storage systems)?
 - Can the storage system handle **anticipated future scale** in terms of capacity limits, read/write operation rates, and data volume?
-- Will downstream users and processes be able to retrieve data within the required service-level agreements (**SLAs** - more on this later)?
+- Will downstream users and processes be able to retrieve data within the required service-level agreements (**SLAs** - more on this later) ?
 - Are we capturing metadata about **schema evolution**, data flows, and data lineage to enhance data utility and support future projects?
-- Is this a pure storage solution, or does it also support **complex query patterns** (like a cloud data warehouse)?
-- Does the storage system support **schema-agnostic** (object storage) storage, **flexible schemas** (Cassandra), or **enforced schemas** (DWH)?
+- Is this a pure storage solution, or does it also support **complex query patterns** (like a cloud data warehouse) ?
+- Does the storage system support **schema-agnostic** (object storage) storage, **flexible schemas** ([Cassandra](https://cassandra.apache.org/doc/stable/cassandra/architecture/overview.html)), or **enforced schemas** (DWH) ?
 - How are we tracking **master data**, **golden records**, **data quality**, and **data lineage** for data governance?
 - How are we handling **regulatory compliance** and data sovereignty, such as restrictions on storing data in certain geographical locations?
 
-Regardless of the storage type, the temperature of data is a good frame to interpret storage and data.
+Regardless of the storage type, **the temperature of data** is a good frame to interpret storage and data.
 
 Data access frequency defines data "*temperatures*": Hot data is frequently accessed and needs fast retrieval; lukewarm data is accessed occasionally; cold data is rarely accessed and suited for archival storage. Cloud storage tiers match these temperatures, balancing cost with retrieval speed.
 
@@ -133,7 +133,9 @@ This preparation can be applying normalization, performing large-scale aggregati
 - Are there any ***data enrichment*** (integrating additional data sources to enhance the value of the transformed data) opportunities during transformation?
 - How can we secure data during transformation to prevent **unauthorized access**?
 
-Transformation often overlaps with other stages of the data lifecycle, such as ingestion, where data may be enriched or formatted on the fly. Business logic plays a significant role in shaping transformations, especially in data modeling, to provide clear insights into business processes and ensure consistent implementation across systems. 
+Transformation often overlaps with other stages of the data lifecycle, such as ingestion, where data may be enriched or formatted on the fly.
+
+Business logic plays a significant role in shaping transformations, especially in data modeling, to provide clear insights into business processes and ensure consistent implementation across systems. 
 
 Additionally, data featurization is an important transformation for machine learning, involving the extraction and enhancement of data features for model training—a process that data engineers can automate once defined by data scientists.
 
@@ -199,7 +201,7 @@ Modern data engineering integrates comprehensive data management practices—suc
 
 #### DataOps
 
-DataOps applies Agile and DevOps principles to data engineering by fostering a collaborative culture and implementing automation, monitoring, and incident response practices to enhance the quality, speed, and reliability of data products.
+DataOps applies Agile and DevOps principles to data engineering by fostering a collaborative culture and implementing ***automation, monitoring, and incident response*** practices to enhance the quality, speed, and reliability of data products.
 
 #### Data Architecture
 
@@ -211,12 +213,13 @@ Orchestration in DataOps is the coordinated management of data jobs using system
 
 #### Software Engineering
 
-Software engineering is fundamental to data engineering, encompassing the development and testing of data processing code, leveraging and contributing to open source frameworks, managing streaming complexities, implementing infrastructure and pipelines as code, and addressing diverse technical challenges to support and advance evolving data systems.
+Software engineering is fundamental to data engineering, encompassing the development and testing of data processing code, ***leveraging and contributing to open source frameworks***, managing streaming complexities, implementing infrastructure and pipelines as code, and addressing diverse technical challenges to support and advance evolving data systems.
 
 ### Conclusion 🌠
 
 The data engineering lifecycle, supported by key undercurrents such as security, data management, DataOps, architecture, orchestration, and software engineering, provides a comprehensive framework for data engineers to optimize ROI, reduce costs and risks, and maximize the value and utility of data.
 
 Let's learn to think with this mindset! 🧠
+
 
 ---
