@@ -837,9 +837,11 @@ What is it? Here is a definition:
 
 - **Data architecture** is the design of systems to support the evolving data needs of an enterprise, achieved by flexible and reversible decisions reached through a careful evaluation of trade-offs.
 
-We can divide Data Architecture into two parts, ***Operational*** and ***Technical***:
+We can divide Data Architecture into two parts, ***Operational*** and ***Technical***. 
 
-***Operational architecture*** involves the practical needs related to people, processes, and technology. For example, it looks at which business activities the data supports, how the company maintains data quality, and how quickly data needs to be available for use after it's created. 
+Here are my definitions:
+
+***Operational architecture*** involves the practical needs related to people, processes, and technology. For example, it looks at which business activities the data supports, how the company maintains data quality, and how quickly data needs to be available for use after it's made. 
 
 ***Technical architecture*** explains the methods for collecting, storing, changing, and delivering data throughout its lifecycle. For example, it might describe how to move 10 TB of data every hour from a source database to a data lake.
 
@@ -849,17 +851,19 @@ Effective data architecture meets business needs by using standardized, reusable
 
 By definition, adaptability and growth are fundamental to the essence and objectives of data architecture.
 
-Next, let's explore the principles that underpin good data architecture.
+Next, let's explore the principles that underpin good data architecture. 😌
 
-### Principles of Good Data Architecture
+### Principles of Good Data Architecture ✅
 
-Here are 9 principles to keep in mind.
+Here are **9** principles to keep in mind.
 
 #### 1: Choose Common Components Wisely
 
 A key responsibility of data engineers is selecting shared components and practices—such as ***object storage***, ***version control systems***, ***observability tools***, ***orchestration platforms***, and ***processing engines***—that are widely usable across the organization.
 
-Effective selection promotes collaboration, breaks down silos, and enhances flexibility by leveraging common knowledge and skills. These shared tools should be accessible to all relevant teams, encouraging the use of existing solutions over creating new ones, while ensuring robust permissions and security to safely share resources.
+Effective selection promotes collaboration, breaks down silos, and enhances flexibility by leveraging common knowledge and skills. 
+
+These shared tools should be accessible to all relevant teams, encouraging the use of existing solutions over creating new ones, while ensuring robust permissions and security to safely share resources.
 
 Cloud platforms are ideal for implementing these components, allowing teams to access a common storage layer with specialized tools for their specific needs.
 
@@ -877,9 +881,9 @@ These factors guide engineers in making informed architectural decisions to effe
 
 #### 3: Architect for Scalability
 
-***Scalability*** in data systems means the ability to automatically increase capacity to handle large data volumes or temporary spikes and decrease it to reduce costs when demand drops. 
+***Scalability*** in data systems means the ability to automatically increase capacity to handle large data volumes or temporary spikes and decrease it to reduce costs when demand drops.
 
-Elastic systems adjust dynamically, sometimes even scaling to zero when not needed, as seen in serverless architectures. However, choosing the right scaling strategy is essential to avoid complexity and high costs.
+***Elastic systems*** adjust dynamically, sometimes even scaling to zero when not needed, as seen in serverless architectures. However, choosing the right scaling strategy is essential to avoid complexity and high costs.
 
 This requires carefully assessing current usage, anticipating future growth, and selecting appropriate database architectures to ensure efficiency and cost-effectiveness as the organization expands.
 
@@ -887,9 +891,9 @@ This requires carefully assessing current usage, anticipating future growth, and
 
 Data architects combine strong technical expertise with leadership and mentorship to make technology decisions, promote flexibility and innovation, and guide data engineers in achieving organizational goals.
 
-It really helps to have a growth mindset.
+It really helps to have a growth mindset. 🧠
 
-#### 5: Always Be Architecting
+#### 5: Always Be Architecting ♻️
 
 Data architects continuously design and adapt architectures in an agile, collaborative way, responding to business and technology changes by planning and prioritizing updates.
 
@@ -913,7 +917,9 @@ Data engineers must take responsibility for system security by adopting [zero-tr
 
 ***FinOps*** is a cloud financial management practice that encourages collaboration between engineering and finance teams to optimize cloud spending through data-driven decisions and continuous cost monitoring.
 
-We should embrace it!
+We should embrace FinOps! It helps us defend our decisions.
+
+---
 
 Now that we have a grasp of the fundamental principles of effective data architecture, let's explore the key concepts necessary for designing and building robust data systems in more detail.
 
@@ -968,7 +974,7 @@ For instance:
 
 - What considerations come into play when selecting between cloud providers? 
 
-- Under what circumstances would a unified processing system like Flink or Beam make sense? 
+- Under what circumstances would a unified processing system like [Flink](https://flink.apache.org/) or [Beam](https://beam.apache.org/) make sense? 
 
 Gaining a strong grasp of these decision points will equip us to make sound, reasonable choices.
 
