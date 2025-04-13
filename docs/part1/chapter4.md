@@ -1,10 +1,10 @@
 ## 4. Choosing Technologies Across the Data Engineering Lifecycle
 
-Chapter 3 explored the concept of “good” data architecture and its importance. 
+Chapter 3 explored the concept of **good** data architecture and its importance. 
 
-Now, we shift focus to selecting the right technologies to support this architecture. 
+Now, we shift focus to selecting the right technologies to support this architecture.
 
-For data engineers, choosing the right tools is crucial for building high-quality data products. 
+For data engineers, choosing the right tools is crucial for building high-quality data products.
 
 The key question to ask when evaluating a technology is straightforward:
 
@@ -34,7 +34,7 @@ When selecting technologies to support your data architecture, consider the foll
 
 - ***Deployment Location***: Cloud, on-premises, hybrid, or multicloud—what fits best? ☁️🏢
 
-- ***Build vs. Buy***: Should you create a custom solution or use an off-the-shelf tool? 🛠️🛒
+- ***Build vs. Buy***: Should you make a custom solution or use an off-the-shelf tool? What about open source software? 🛠️🛒
 
 - ***Monolith vs. Modular***: Is a single unified system better, or should it be broken into smaller, interchangeable parts? 🧱
 
