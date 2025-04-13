@@ -1,6 +1,6 @@
 ## 6. Storage 📦
 
-Storage is core to every stage—data is stored repeatedly across ingestion, transformation, and serving.
+***Storage*** is core to every stage—data is stored repeatedly across ingestion, transformation, and serving.
 
 Two things to consider while deciding on storage are:
 

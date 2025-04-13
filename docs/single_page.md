@@ -1209,7 +1209,7 @@ Next: storing the data.
 
 ## 6. Storage 📦
 
-Storage is core to every stage—data is stored repeatedly across ingestion, transformation, and serving.
+***Storage*** is core to every stage—data is stored repeatedly across ingestion, transformation, and serving.
 
 Two things to consider while deciding on storage are:
 
@@ -1395,7 +1395,7 @@ infrastructure storage components, object storage and other “serverless” sys
 
 ## 7. Ingestion
 
-The process of moving data from source systems into storage—it's the first step in the data engineering lifecycle after data is generated.
+***Ingestion*** is the process of moving data from source systems into storage—it's the first step in the data engineering lifecycle after data is generated.
 
 > Quick definition, **data ingestion** is data movement from point A to B, **data integration** combines data from disparate sources into a new dataset. Example of data integration is a CRM system, advertising analytics data, and web analytics to make a user profile, which is saved to our data warehouse.
 
