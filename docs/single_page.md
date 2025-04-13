@@ -256,7 +256,7 @@ This is where data lives long-term, structured in a way that it can be easily ac
 
 Examples:
 
-- Cloud object storage: AWS S3, GCP Cloud Storage
+- Cloud object storage: [AWS S3](https://aws.amazon.com/s3/), GCP Cloud Storage
 - Data warehouses: Snowflake, [BigQuery](https://cloud.google.com/bigquery?hl=en), [Redshift](https://aws.amazon.com/redshift/)
 - Data lakes: Delta Lake, Apache Hudi
 - Databases: PostgreSQL, MySQL, MongoDB
@@ -1209,7 +1209,7 @@ Next: storing the data.
 
 ## 6. Storage 📦
 
-Core to every stage—data is stored repeatedly across ingestion, transformation, and serving.
+Storage is core to every stage—data is stored repeatedly across ingestion, transformation, and serving.
 
 Two things to consider while deciding on storage are:
 
@@ -1224,7 +1224,7 @@ The way storage is explained in the book is with the following figure:
 
 ### Raw Ingredients of Data Storage
 
-Here are some one liners.
+Here are some one liners as definitions.
 
 - **Magnetic Disk Drive** – Traditional, cost-effective storage with moving parts; slower read/write.
 
@@ -1242,9 +1242,9 @@ Here are some one liners.
 
 ### Data Storage Systems
 
-Operate above raw hardware—like disks—using platforms such as cloud object stores or HDFS. Higher abstractions include data lakes and lakehouses.
+Operate above raw hardware—like disks—using platforms such as cloud object stores or [HDFS](https://hadoop.apache.org/docs/r1.2.1/hdfs_design.html). Higher abstractions include data lakes and lakehouses.
 
-Here are some oneliners.
+Here are some one liners about them.
 
 - **Single Machine vs. Distributed Storage** – Single-node is simple; distributed scales across machines for reliability and size.
 
@@ -1258,7 +1258,7 @@ Here are some oneliners.
 
 - **Cache and Memory-Based Storage Systems** – Keep hot data in fast memory for quick access.
 
-- **The Hadoop Distributed File System (HDFS)** – Distributed storage system for big data, fault-tolerant and scalable.
+- **The Hadoop Distributed File System ([HDFS](https://hadoop.apache.org/docs/r1.2.1/hdfs_design.html))** – Distributed storage system for big data, fault-tolerant and scalable.
 
 - **Streaming Storage** – Handles continuous data flows; used for real-time analytics and pipelines.
 
@@ -1274,11 +1274,11 @@ Let's remember our map for storage.
   <img src="https://raw.githubusercontent.com/kantarcise/learningFundamentalsOfDataEngineering/refs/heads/main/img/storage_stack.png">
 </p>
 
-Here are some of the Storage Abstractions.
+Here are some of the ***Storage Abstractions***.
 
 - **The Data Warehouse** – Data warehouses are a common OLAP architecture used to centralize analytics data. Once built on traditional databases, modern warehouses now rely on scalable cloud platforms like Google's [BigQuery](https://cloud.google.com/bigquery?hl=en). It's a structured, query-optimized for analytics and BI workloads.
 
-- **The Data Lake** – Stores raw, unstructured data at scale for flexibility. Funnily enough, someone referred to a Data Lake as just files on S3. 
+- **The Data Lake** – Stores raw, unstructured data at scale for flexibility. Funnily enough, someone referred to a Data Lake as just files on [S3](https://aws.amazon.com/s3/). 
 
 - **The Data Lakehouse** – Combines warehouse performance with lake flexibility in one system. This means incremental updates and deletes on schema managed tables.
 
@@ -1291,6 +1291,7 @@ Here are some of the Storage Abstractions.
 Here are some big ideas in Storage.
 
 #### 🔍 Data Catalogs
+
 Data catalogs are centralized metadata hubs that let users search, explore, and describe datasets.
 
 They support:
@@ -1303,8 +1304,9 @@ They support:
 
 #### 🔗 Data Sharing
 
-Cloud platforms enable secure sharing of data across teams or organizations.  
-⚠️ Requires strong access controls to avoid accidental exposure.
+Cloud platforms enable secure sharing of data across teams or organizations.
+
+⚠️ This requires strong access controls to avoid accidental exposure.
 
 #### 🧱 Schema Management
 
@@ -1326,7 +1328,7 @@ Modern systems **decouple** compute from storage for better scalability and cost
 
 ##### 🔁 Hybrid Storage Examples
 
-- **[Amazon EMR](https://aws.amazon.com/emr/)**: Uses HDFS + S3 for speed and durability.
+- **[Amazon EMR](https://aws.amazon.com/emr/)**: Uses [HDFS](https://hadoop.apache.org/docs/r1.2.1/hdfs_design.html) + [S3](https://aws.amazon.com/s3/) for speed and durability.
 - **[Apache Spark](https://spark.apache.org/)**: Combines memory and local disk when needed.
 - **[Apache Druid](https://druid.apache.org/)**: SSD for speed, object storage for backup.
 - **[BigQuery](https://cloud.google.com/bigquery?hl=en)**: Optimizes access via hybrid object storage.
@@ -1348,6 +1350,7 @@ We talked about the temperature of data. Let's see an example.
 | Hot   | Frequent      | RAM/SSD | High     | Recommendations, live queries    |
 | Warm  | Occasional    | S3 IA   | Medium   | Monthly reports, staging data    |
 | Cold  | Rare/Archive  | Glacier | Low      | Compliance, backups              |
+
 
 Use **lifecycle policies** to move data between tiers automatically.
 
@@ -1386,8 +1389,7 @@ to anyone unless required.
 > Data engineers must **monitor storage** in a variety of ways. This includes monitoring
 infrastructure storage components, object storage and other “serverless” systems.
 
-> **Orchestration** is highly entangled with storage. Storage allows data to flow through
-pipelines, and orchestration is the pump.
+> **Orchestration** is highly entangled with storage. Storage allows data to flow through pipelines, and orchestration is the pump.
 
 ---
 
@@ -1667,7 +1669,7 @@ Shell scripts and CLI tools still play a big role in scripting ingestion pipelin
 
 #### 🤝 Data Sharing
 
-Platforms like **Snowflake, [BigQuery](https://cloud.google.com/bigquery?hl=en), Redshift**, and **S3** allow **read-only data sharing**.
+Platforms like **Snowflake, [BigQuery](https://cloud.google.com/bigquery?hl=en), Redshift**, and **[S3](https://aws.amazon.com/s3/)** allow **read-only data sharing**.
 
 - This is useful for integrating third-party or vendor-provided datasets into your analytics without owning the storage.
 
