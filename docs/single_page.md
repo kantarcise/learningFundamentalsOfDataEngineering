@@ -1401,7 +1401,7 @@ infrastructure storage components, object storage and other “serverless” sys
 
 A **data pipeline** is the full system that moves data through the data engineering lifecycle. Design of data pipelines typically starts at the ingestion stage.
 
-### What to Consider when Building Ingestion?
+### What to Consider when Building Ingestion? 🤔
 
 Consider these factors when designing your ingestion architecture:
 
@@ -1432,7 +1432,7 @@ Ensure uptime and no data loss through redundancy and failover. Balance cost vs.
 
 #### 🗃 Payload
 
-Understand data characteristics:
+Let's understand data characteristics:
 
 - **Kind**: tabular, image, video, text
 - **Shape**: dimensions like rows/columns or RGB pixels
@@ -1488,7 +1488,7 @@ Choose based on system capabilities and transformation complexity.
 #### 📥 Inserts, Updates, and Batch Size
 
 - Avoid many small inserts—use bulk operations for better performance.
-- Some systems (like Druid, Pinot) handle fast inserts well.
+- Some systems (like [Druid](https://druid.apache.org/), [Pinot]()) handle fast inserts well.
 - Columnar databases (e.g., [BigQuery](https://cloud.google.com/bigquery?hl=en)) prefer larger batch loads over frequent single-row inserts.
 - Understand how your target system handles updates and file creation.
 
@@ -1516,7 +1516,7 @@ Here is what you can do:
 
 - Use **schema registries** to version schemas.
 - Set up **dead-letter queues** for unprocessable events.
-- Communicate with upstream teams about upcoming changes.
+- **Communicate** with upstream teams about upcoming changes.
 
 #### 🕓 Late-Arriving Data
 
@@ -1545,15 +1545,15 @@ Short TTLs can cause data loss; long TTLs can create backlogs.
 
 Examples:
 
-- **Pub/Sub**: up to 7 days
-- **Kinesis**: up to 365 days
+- **[Pub/Sub](https://cloud.google.com/pubsub/docs/overview)**: up to 7 days
+- **[Kinesis](https://aws.amazon.com/kinesis/)**: up to 365 days
 - **[Kafka](https://kafka.apache.org/)**: configurable, even indefinite with object storage
 
 #### 📏 Message Size
 
 Be mindful of max size limits:
 
-- **Kinesis**: 1 MB
+- **[Kinesis](https://aws.amazon.com/kinesis/)**: 1 MB
 - **[Kafka](https://kafka.apache.org/)**: configurable (default 1 MB, up to 20+ MB)
 
 #### 🧯 Error Handling & Dead-Letter Queues
@@ -1567,8 +1567,8 @@ Invalid or oversized messages should be routed to a **dead-letter queue**.
 
 Pull is default for data engineering; push is used for specialized needs.
 
-- **Pull**: Consumers fetch data from a topic (Kafka, Kinesis).
-- **Push**: Stream pushes data to a listener (Pub/Sub, RabbitMQ).
+- **Pull**: Consumers fetch data from a topic ([Kafka](https://kafka.apache.org/), [Kinesis](https://aws.amazon.com/kinesis/)).
+- **Push**: Stream pushes data to a listener ([Pub/Sub](https://cloud.google.com/pubsub/docs/overview), [RabbitMQ](https://www.rabbitmq.com/)).
 
 #### 🌍 Ingestion Location & Latency
 
@@ -1606,7 +1606,7 @@ APIs are a common ingestion method from external systems.
 
 #### 📨 Message Queues & Event Streams
 
-Use systems like **[Kafka](https://kafka.apache.org/), Kinesis**, or **Pub/Sub** to ingest real-time event data.
+Use systems like **[Kafka](https://kafka.apache.org/), [Kinesis](https://aws.amazon.com/kinesis/)**, or **[Pub/Sub](https://cloud.google.com/pubsub/docs/overview)** to ingest real-time event data.
 
 - ***Queues*** are transient (message disappears after read); ***streams*** persist and support replays, joins, and aggregations.
 
@@ -1614,14 +1614,14 @@ Design for **low latency**, **high throughput**, and consider **autoscaling** or
 
 #### 🔌 Managed Data Connectors
 
-Services like **Fivetran, Airbyte**, and **Stitch** provide plug-and-play connectors.
+Services like **[Fivetran](https://www.fivetran.com/), [Airbyte](https://airbyte.com/)**, and **[Stitch](https://www.stitchdata.com/)** provide plug-and-play connectors.
 
 - These services manage syncs, retries, schema detection, and alerting.
 - This makes them ideal for reducing boilerplate and saving engineering time.
 
 #### 🪣 Object Storage
 
-Object storage (e.g., **S3, GCS, Azure Blob**) is great for moving files between teams and systems.
+Object storage (e.g., **[S3](https://aws.amazon.com/s3/), [GCS](https://cloud.google.com/storage?hl=en), [Azure Blob](https://azure.microsoft.com/en-us/products/storage/blobs)**) is great for moving files between teams and systems.
 
 Use signed URLs for temporary access and treat object stores as secure staging zones for data.
 
@@ -1689,7 +1689,11 @@ Data can be ingested in batch or streaming modes, depending on the use case. ***
 
 Designing ingestion systems involves careful consideration of factors like bounded vs. unbounded data, frequency, serialization, throughput, reliability, and the push/pull method of data retrieval.
 
-Ingestion isn’t just about moving data—it’s about understanding the shape, schema, and sensitivity of that data to ensure it's usable downstream. Engineers must track metadata, consider ingestion frequency vs. transformation frequency, and apply best practices for security, compliance, and cost. They should also stay flexible: even legacy methods like EDI or manual downloads may still be part of real-world workflows. 
+Ingestion isn’t just about moving data—it’s about understanding the shape, schema, and sensitivity of that data to ensure it's usable downstream.
+
+As Data Engineers we must track metadata, consider ingestion frequency vs. transformation frequency, and apply best practices for security, compliance, and cost. 
+
+We should also stay flexible: even legacy methods like EDI or manual downloads may still be part of real-world workflows. 
 
 The key is to choose ingestion patterns that match the needs of the business while staying robust, scalable, and future-proof.
 
