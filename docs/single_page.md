@@ -2354,11 +2354,11 @@ Direct connections or CDNs can reduce costs.
 
 #### Zones vs. Regions
 
-- Zones offer low latency and free traffic (within private IPs). Use single-zone deployments for high-throughput clusters when possible.
+- ***Zones*** offer low latency and free traffic (within private IPs). Use single-zone deployments for high-throughput clusters when possible.
 
-- Regions consist of independent zones. Running across zones adds resilience but incurs slight latency and cost increases.
+- ***Regions*** consist of independent zones. Running across zones adds resilience but incurs slight latency and cost increases.
 
-- Multiregions (GCP) enable geo-redundant storage with no inter-zone egress fees, simplifying disaster recovery.
+- ***Multiregions*** (GCP) enable geo-redundant storage with no inter-zone egress fees, simplifying disaster recovery.
 
 ####  GCP’s Premium Networking
 
