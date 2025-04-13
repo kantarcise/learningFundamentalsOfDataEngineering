@@ -1695,13 +1695,13 @@ The key is to choose ingestion patterns that match the needs of the business whi
 
 ## 8. Queries, Modeling, and Transformation 🪇
 
-Now we'll learn how to make data useful.
+Now we'll learn how to make data useful. 🥳
 
 ### Queries
 
-Queries are at the core of data engineering and data analysis, enabling users to interact with, manipulate, and retrieve data.
+***Queries*** are at the core of data engineering and data analysis, enabling users to interact with, manipulate, and retrieve data.
 
-Here is an example query:
+Just to paint a picture, here is an example query:
 
 ```sql
 SELECT name, age
@@ -1747,15 +1747,15 @@ Various query languages (DML, DDL, DCL, TCL) are used to define and manipulate d
 
 To improve query performance, data engineers must understand the role of the query optimizer and write efficient queries. Strategies include **optimizing joins**, using **prejoined tables or materialized views**, leveraging **indexes and partitioning**, and **avoiding full table scans**.
 
-Engineers should monitor execution plans, system resource usage, and take advantage of query caching. Managing commits properly and vacuuming dead records are essential to maintain database performance. Understanding the consistency models of databases (e.g., ACID, eventual consistency) ensures reliable query results.
+We should monitor execution plans, system resource usage, and take advantage of query caching. Managing commits properly and vacuuming dead records are essential to maintain database performance. Understanding the consistency models of databases (e.g., ACID, eventual consistency) ensures reliable query results.
 
-Streaming queries differ from batch queries, requiring real-time strategies such as session, fixed-time, or sliding windows.
+***Streaming queries*** differ from batch queries, requiring real-time strategies such as session, fixed-time, or sliding windows.
 
-Watermarks are used to handle late-arriving data, while triggers enable event-driven processing.
+***Watermarks*** are used to handle late-arriving data, while triggers enable event-driven processing.
 
 Combining streams with batch data, enriching events, or joining multiple streams adds complexity but unlocks deeper insights.
 
-Technologies like Kafka, Flink, and Spark are essential for such patterns. Modern architectures like Kappa treat streaming logs as first-class data stores, enabling analytics on both recent and historical data with minimal latency.
+Technologies like [Kafka](https://kafka.apache.org/), [Flink](https://flink.apache.org/), and [Spark](https://spark.apache.org/) are essential for such patterns. Modern architectures like Kappa treat streaming logs as first-class data stores, enabling analytics on both recent and historical data with minimal latency.
 
 ### Data Modeling
 
@@ -1785,7 +1785,7 @@ The future may involve unified layers that combine metrics, semantics, pipelines
 
 ### Transformation
 
-Transformations enhance and persist data for downstream use. 
+***Transformations*** enhance and persist data for downstream use. 
 
 Unlike queries, which retrieve data, transformations are about shaping and saving data—often as part of a pipeline. This reduces cost, increases performance, and enables reuse.
 
@@ -1793,22 +1793,22 @@ Unlike queries, which retrieve data, transformations are about shaping and savin
 
 Batch transformations process data in chunks on a schedule (e.g., hourly, daily) and support reports, analytics, and ML models.
 
-**Distributed Joins**
+**Distributed Joins**:
 
 - **Broadcast Join**: Small table is sent to each node to join with partitions of a large table. Great for performance.
 - **Shuffle Hash Join**: When both tables are large. Data is redistributed based on join keys and then joined. More resource-intensive.
 
-**ETL vs. ELT**
+**ETL vs. ELT**:
 
 - **ETL**: Extract → Transform → Load. Originated when resources were limited.
 - **ELT**: Extract → Load → Transform. Modern systems (data lakes/lakehouses) delay transformations.
 
-Choose based on context—no need to stick to one approach for the entire org.
+Choose based on context—no need to stick to one approach for the entire org. 😌
 
 **SQL vs. Code-Based Tools**
 
 - SQL is declarative and often sufficient for complex workflows using views or orchestration tools.
-- Use Spark/PySpark when SQL becomes unreadable or hard to maintain, or for advanced operations (e.g., stemming).
+- Use Spark/PySpark when SQL becomes unreadable or hard to maintain, or for advanced operations (e.g., streaming).
 
 Avoid excessive use of Python UDFs; they slow performance in Spark. Prefer native Scala/Java implementations when needed.
 
@@ -1830,10 +1830,10 @@ Avoid excessive use of Python UDFs; they slow performance in Spark. Prefer nativ
 - Cleans and transforms messy, malformed input data.
 - Wrangling tools offer visual, code-generating interfaces—especially useful with semi-structured or complex text data.
 
-**Example (Spark)**
+**Example ([Spark](https://spark.apache.org/))**
 
-- Ingest 3 JSON APIs → Join and transform in Spark → Output to Delta Lake in S3.
-- Use DAGs for orchestration (e.g., Spark DAG inside Airflow DAG).
+- Ingest 3 JSON APIs → Join and transform in [Spark](https://spark.apache.org/) → Output to Delta Lake in [S3](https://aws.amazon.com/s3/).
+- Use DAGs for orchestration (e.g., [Spark](https://spark.apache.org/) DAG inside [Airflow](https://airflow.apache.org/) DAG).
 
 **Business Logic & Derived Data**
 
@@ -1843,18 +1843,18 @@ Avoid excessive use of Python UDFs; they slow performance in Spark. Prefer nativ
 **MapReduce**
 
 - Influential, now outdated. Relied on disk for all intermediate steps.
-- Spark and modern tools keep data in memory for better performance.
+- [Spark](https://spark.apache.org/) and modern tools keep data in memory for better performance.
 
 #### Materialized Views, Federation, and Query Virtualization
 
-Here are some oneliners.
+Here are some one liners.
 
 - **Views**: Reusable query logic, used for security, deduplication, and common access patterns.
-- **Materialized Views**: Precompute and persist results for better performance.
+- **Materialized Views**: Pre compute and persist results for better performance.
 - **Composable Materialized Views**: Layers of views (e.g., Databricks live tables).
 
 - **Federated Queries**: Query external data sources (e.g., S3, MySQL) from within a data warehouse. Enables hybrid data lake/warehouse patterns.
-- **Data Virtualization**: Process data without storing it. Used in engines like Trino and Presto. Push computation to source systems to minimize load. Avoid virtualizing production databases for analytics.
+- **Data Virtualization**: Process data without storing it. Used in engines like [Trino](https://trino.io/) and [Presto](https://prestodb.io/). Push computation to source systems to minimize load. Avoid virtualizing production databases for analytics.
 
 #### Streaming Transformations and Processing
 
@@ -1865,7 +1865,7 @@ Here are some oneliners.
 
 **Streaming DAGs**
 
-- DAGs for streaming (e.g., Pulsar) simplify processing by unifying flows in code.
+- DAGs for streaming (e.g., [Pulsar](https://pulsar.apache.org/)) simplify processing by unifying flows in code.
 
 **Micro-Batch vs. True Streaming**
 
@@ -1886,15 +1886,18 @@ That structure comes from data modeling—the process of organizing raw data int
 
 Whether it’s Inmon’s normalized warehouse-first approach, Kimball’s dimensional star schemas, or the flexibility of a Data Vault, modeling helps define relationships, enforce consistency, and preserve meaning over time. 
 
-Modeling even applies to stream data, albeit in more relaxed forms, where business definitions may shift dynamically, and flexibility (e.g., using JSON columns or CDC feeds) becomes more important than strict schema enforcement. Poorly modeled data often leads to **data swamps**, reporting confusion, and **redundant pipelines**—while good models lead to faster insights and cleaner transformations downstream.
+Modeling even applies to stream data, albeit in more relaxed forms, where business definitions may shift dynamically, and flexibility (e.g., using JSON columns or CDC feeds) becomes more important than strict schema enforcement. 
+
+Poorly modeled data often leads to **data swamps**, reporting confusion, and **redundant pipelines**—while good models lead to faster insights and cleaner transformations downstream.
 
 Finally, transformations take center stage in turning data into its most useful, consumable form. This includes batch pipelines (e.g., ETL/ELT jobs using Spark or SQL), real-time stream enrichments, and creating derived data that reflects business logic like profit metrics.
 
-Tools like materialized views, Airflow DAGs, and orchestration frameworks help simplify these complex workflows and reduce redundant processing.
+Tools like materialized views, [Airflow](https://airflow.apache.org/) DAGs, and orchestration frameworks help simplify these complex workflows and reduce redundant processing.
 
 As data engineers, we’re often tasked with choosing between performance and flexibility—using insert-only patterns, upserts, or schema evolution strategies that balance cost and query speed.
 
-Whether we persist transformed data in a wide denormalized table, or virtualize it across systems via tools like Trino, our transformations are what elevate raw data into decision-ready information.
+Whether we persist transformed data in a wide denormalized table, or virtualize it across systems our transformations are what elevate raw data into decision-ready information. 💕
+
 
 ## 9. Serving Data for Analytics, Machine Learning, and Reverse ETL 🍜
 
