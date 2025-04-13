@@ -1,28 +1,32 @@
 ## Appendix B. Cloud Networking
 
-Data engineers must understand cloud networking basics to design performant and cost-efficient systems.
+Data engineers must understand ***cloud networking basics*** to design performant and cost-efficient systems.
 
-Cloud networks impact **latency**, *cost* (especially due to data egress fees), and **system architecture**.
+Cloud networks impact **latency**, **cost** (especially due to data egress fees), and **system architecture**.
 
 ### Key Concepts
 
 #### Network Topology & Resource Hierarchy
 
-Public clouds (AWS, GCP, Azure) follow similar structures: zones (smallest unit), regions (group of zones), and in GCP’s case, multiregions (group of regions). Engineers must align data systems with this topology for high performance and resilience.
+Public clouds (AWS, GCP, Azure) follow similar structures: zones (smallest unit), regions (group of zones), and in GCP’s case, multiregions (group of regions). 
+
+Engineers must align data systems with this topology for high performance and resilience.
 
 #### Data Egress Fees
 
-Clouds allow free inbound traffic but charge for outbound traffic, especially across regions or to the internet. This pricing model can create vendor lock-in and affect architecture choices.
+Clouds allow free inbound traffic but charge for outbound traffic, especially across regions or to the internet. 
+
+This pricing model can create vendor lock-in and affect architecture choices.
 
 Direct connections or CDNs can reduce costs.
 
 #### Zones vs. Regions
 
-- Zones offer low latency and free traffic (within private IPs). Use single-zone deployments for high-throughput clusters when possible.
+- ***Zones*** offer low latency and free traffic (within private IPs). Use single-zone deployments for high-throughput clusters when possible.
 
-- Regions consist of independent zones. Running across zones adds resilience but incurs slight latency and cost increases.
+- ***Regions*** consist of independent zones. Running across zones adds resilience but incurs slight latency and cost increases.
 
-- Multiregions (GCP) enable geo-redundant storage with no inter-zone egress fees, simplifying disaster recovery.
+- ***Multiregions*** (GCP) enable geo-redundant storage with no inter-zone egress fees, simplifying disaster recovery.
 
 ####  GCP’s Premium Networking
 

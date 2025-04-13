@@ -2294,7 +2294,7 @@ Data engineering’s future is bright—and you get to help build it.
 
 ## Appendix A. Serialization and Compression Technical Details
 
-Modern data engineers, especially in the cloud, must understand how data is serialized, compressed, and deserialized to optimize pipeline performance. 
+Modern data engineers, especially in the cloud, must understand how data is ***serialized***, ***compressed***, and ***deserialized*** to optimize pipeline performance. 
 
 Choosing the right formats and compression strategies can significantly reduce storage size, improve query performance, and support interoperability across systems.
 
@@ -2332,19 +2332,23 @@ Choosing the right format and compression algorithm can yield massive performanc
 
 ## Appendix B. Cloud Networking
 
-Data engineers must understand cloud networking basics to design performant and cost-efficient systems.
+Data engineers must understand ***cloud networking basics*** to design performant and cost-efficient systems.
 
-Cloud networks impact **latency**, *cost* (especially due to data egress fees), and **system architecture**.
+Cloud networks impact **latency**, **cost** (especially due to data egress fees), and **system architecture**.
 
 ### Key Concepts
 
 #### Network Topology & Resource Hierarchy
 
-Public clouds (AWS, GCP, Azure) follow similar structures: zones (smallest unit), regions (group of zones), and in GCP’s case, multiregions (group of regions). Engineers must align data systems with this topology for high performance and resilience.
+Public clouds (AWS, GCP, Azure) follow similar structures: zones (smallest unit), regions (group of zones), and in GCP’s case, multiregions (group of regions). 
+
+Engineers must align data systems with this topology for high performance and resilience.
 
 #### Data Egress Fees
 
-Clouds allow free inbound traffic but charge for outbound traffic, especially across regions or to the internet. This pricing model can create vendor lock-in and affect architecture choices.
+Clouds allow free inbound traffic but charge for outbound traffic, especially across regions or to the internet. 
+
+This pricing model can create vendor lock-in and affect architecture choices.
 
 Direct connections or CDNs can reduce costs.
 

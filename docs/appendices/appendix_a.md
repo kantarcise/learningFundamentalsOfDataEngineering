@@ -1,6 +1,6 @@
 ## Appendix A. Serialization and Compression Technical Details
 
-Modern data engineers, especially in the cloud, must understand how data is serialized, compressed, and deserialized to optimize pipeline performance. 
+Modern data engineers, especially in the cloud, must understand how data is ***serialized***, ***compressed***, and ***deserialized*** to optimize pipeline performance.
 
 Choosing the right formats and compression strategies can significantly reduce storage size, improve query performance, and support interoperability across systems.
 
