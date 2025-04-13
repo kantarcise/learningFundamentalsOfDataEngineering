@@ -48,3 +48,5 @@ These points might be helpful for you to demonstrate that your approach is roote
 
 Read this part in detail on how to choose the right tooling.
 
+Continue with the [second part of the book here](https://learningdataengineering.kantarcise.com/part2/) 🥳
+
