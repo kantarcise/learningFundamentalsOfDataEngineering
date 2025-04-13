@@ -2167,9 +2167,9 @@ While you may not be the lead on security at your company, by practicing good se
 
 ## 11. The Future of Data Engineering 🗻
 
-The field of data engineering is evolving rapidly, but its lifecycle—ingest, transform, serve—remains a durable foundation. 
+The field of data engineering is evolving rapidly, but its lifecycle—ingest, transform, serve—remains a durable foundation.
 
-Though tools and best practices evolve, the underlying need to build trustworthy, performant data systems persists. 
+Though tools and best practices evolve, the underlying need to build trustworthy, performant data systems persists.
 
 **Simplicity** is on the rise, but that doesn’t diminish the need for engineers—it elevates them to higher-level thinking and system design.
 
@@ -2180,6 +2180,25 @@ Though tools and best practices evolve, the underlying need to build trustworthy
 The decline of complexity through managed cloud services (like [Snowflake](https://www.snowflake.com/en/emea/), [BigQuery](https://cloud.google.com/bigquery?hl=en), [Airbyte](https://airbyte.com/)) has democratized data engineering.
 
 Open source tools, now available as cloud offerings, reduce the need for infrastructure expertise, allowing companies of all sizes to participate in building robust data platforms.
+
+Here are some examples of popular open-source data engineering tools along with their managed cloud offerings from major providers like Azure and AWS:
+
+| **Open-source tool** | **Google Cloud**                    | **AWS**                                 | **Azure**                                   |
+|----------------------|-------------------------------------|-----------------------------------------|---------------------------------------------|
+| Apache Airflow       | Google Cloud Composer               | Amazon Managed Workflows for Apache Airflow (MWAA) | Azure Managed Airflow (via Azure Data Factory) |
+| Apache Beam          | Google Cloud Dataflow               | Amazon Kinesis Data Analytics (Apache Flink runtime) | Azure Stream Analytics (similar capabilities, not Beam-based directly) |
+| Apache Kafka         | Google Pub/Sub, Confluent Cloud     | Amazon Managed Streaming for Apache Kafka (MSK) | Azure Event Hubs (with Kafka interface)       |
+| Apache Spark         | Dataproc, Databricks on Google Cloud| Amazon EMR, Databricks on AWS           | Azure Databricks, Azure Synapse Analytics (Spark runtime) |
+| Apache Flink         | Google Cloud Dataflow (Apache Flink runtime), Ververica Platform | Amazon Kinesis Data Analytics (Apache Flink runtime) | Azure HDInsight (Flink cluster preview), Azure Stream Analytics (similar capabilities) |
+| Apache Cassandra     | Google Cloud Bigtable (similar)     | Amazon Keyspaces (Managed Apache Cassandra) | Azure Managed Instance for Apache Cassandra  |
+| Apache HBase         | Google Cloud Bigtable               | Amazon EMR (with HBase)                 | Azure HDInsight (HBase)                      |
+| Apache Hadoop/HDFS   | Google Cloud Dataproc, Google Cloud Storage | Amazon EMR, Amazon S3                   | Azure HDInsight, Azure Data Lake Storage Gen2|
+| PostgreSQL/MySQL     | Cloud SQL                           | Amazon RDS, Aurora                      | Azure Database for PostgreSQL/MySQL          |
+| Apache NiFi          | Cloud Data Fusion (similar no-code ETL) | AWS Glue (visual ETL, similar)          | Azure Data Factory (visual ETL, similar)     |
+| Elasticsearch        | Elastic Cloud on GCP Marketplace    | Amazon OpenSearch Service (formerly Elasticsearch Service) | Elastic Cloud on Azure Marketplace          |
+| Redis                | Google Cloud Memorystore            | Amazon ElastiCache for Redis            | Azure Cache for Redis                        |
+
+These examples illustrate how each major cloud provider packages open-source tools into managed services, abstracting away infrastructure management and simplifying operational complexity.
 
 #### Shift in Focus:
 
@@ -2197,7 +2216,11 @@ Just as app developers rely on **OS abstractions**, data engineers will increasi
 
 #### Future Stack Evolution:
 
-Expect tighter integration across services, Infrastructure-as-Code built into pipelines, and smarter orchestration that automatically provisions clusters and integrates lineage, monitoring, and testing. 
+We should expect:
+
+- Tighter integration across services
+- Infrastructure-as-Code built into pipelines
+- Smarter orchestration that automatically provisions clusters and integrates lineage, monitoring, and testing. 
 
 This scaffolding will make cloud data systems feel like OS-level services.
 
@@ -2213,9 +2236,9 @@ STL (Stream-Transform-Load) may replace ELT.
 
 #### Expected Changes:
 
-- Data will flow continuously, triggering automations instead of waiting for dashboards. 
+- Data will flow continuously, triggering automations instead of waiting for dashboards.
 
-- Decision-making will be embedded in the application layer. 
+- Decision-making will be embedded in the application layer.
 
 - Streaming and ML will blur the lines between backend, analytics, and experience.
 
